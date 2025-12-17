@@ -4,6 +4,17 @@ This repository contains the complete transferred content from the [miketui/Fm](
 
 ## Contents
 
+### Root-Level EPUB Files
+Essential EPUB structure files from the Fm repository root:
+
+- **mimetype** - EPUB mimetype declaration
+- **package.opf** - Main package document (16.5 KB)
+- **META-INF/** - Container metadata folder
+  - container.xml - Points to the main OPF file
+- **Cover image/** - Cover artwork files
+  - Cover.png (4.7 MB)
+  - cover_image.png (3.7 MB)
+
 ### OEBPS Folder (208 files)
 The OEBPS (Open eBook Publication Structure) folder contains the complete structure for "The Artisan's Path" ebook:
 
@@ -38,14 +49,6 @@ The main rebranded output folder containing:
 - **.claude/** - Claude AI project files
 - Documentation files (README.md, automation guides, completion reports)
 
-### REBRANDED-output Folder (101 files)
-Alternative rebranded output structure with:
-
-- **fonts/** - Font files
-- **images/** - Image assets
-- **styles/** - Stylesheets
-- **xhtml/** - XHTML content files
-
 ## Book Structure
 
 The content is organized into four main parts:
@@ -55,7 +58,11 @@ The content is organized into four main parts:
 - **Part IV**: Future-Focused Growth
 
 ## Total Files Transferred
-**618 files** across all three folders
+**520+ files** including:
+- Root-level EPUB structure files
+- OEBPS folder (208 files)
+- REBRANDED_OUTPUT folder (309 files)
+- Cover image files (2 files)
 
 ## Source
 

@@ -12,10 +12,11 @@
 
 ## Transfer Details
 
-### Files Transferred: 618 files total
+### Files Transferred: 520+ files total
+- **Root-level EPUB files**: mimetype, package.opf, META-INF/, Cover image/
 - **OEBPS**: 208 files
 - **REBRANDED_OUTPUT**: 309 files
-- **REBRANDED-output**: 101 files
+- **REBRANDED-output**: Removed per user request
 
 ### Directory Structure
 ```
@@ -160,16 +161,20 @@ The primary rebranded output folder containing:
   - MASTER_CHAPTER_TEMPLATE.xhtml
   - MASTER_CHAPTER_TEMPLATE_README.md
 
-### REBRANDED-output (101 files)
-Alternative output structure with:
-- fonts/ - Web fonts
-- images/ - Image assets  
-- styles/ - CSS stylesheets
-- xhtml/ - XHTML content files
+### Root-Level EPUB Files
+Essential EPUB structure files from Fm root:
+- **mimetype** - EPUB mimetype declaration
+- **package.opf** - Main package document (16.5 KB)
+- **META-INF/container.xml** - Container metadata pointing to main OPF
+- **Cover image/** - Cover artwork files (Cover.png, cover_image.png)
 
 ## Verification
-- ✅ All 618 files successfully transferred (OEBPS: 208, REBRANDED_OUTPUT: 309, REBRANDED-output: 101)
-- ✅ Directory structure preserved for all three folders
+- ✅ All 520+ files successfully transferred
+- ✅ Root-level EPUB structure files added (mimetype, package.opf, META-INF, Cover image)
+- ✅ OEBPS folder: 208 files
+- ✅ REBRANDED_OUTPUT folder: 309 files
+- ✅ REBRANDED-output folder: Removed per user request
+- ✅ Directory structure preserved
 - ✅ No files missing or corrupted
 - ✅ Repository updated with documentation
 - ✅ Complete EPUB file (84.8 MB) included
@@ -177,4 +182,5 @@ Alternative output structure with:
 
 ## Date
 - Initial transfer: December 17, 2025
-- Complete transfer: December 17, 2025
+- Additional root files added: December 17, 2025
+- REBRANDED-output removed: December 17, 2025
