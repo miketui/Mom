@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter [N] Quote – [BOOK TITLE]</title>
+  <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+</head>
+<body class="quote-page">
+  <!-- ================================================================
+       STANDALONE IMAGE QUOTE PAGE (Chapter Closure)
+
+       BEHAVIOR:
+       - Final page of chapter flow
+       - Nothing follows until next chapter
+       - Forced page break before and after
+       - Always appears after worksheet in EPUB spine
+
+       DESIGN:
+       - Blank white page background
+       - Image centered vertically and horizontally
+       - Soft shadow on image
+       - Rounded corners on image
+       - Filename must match chapter number (e.g., chapter-i-quote.jpeg)
+
+       EDITORIAL ROLE:
+       - Emotional closure for the chapter
+       - Visual memory anchor
+       - Clean stopping point before next chapter
+       ================================================================ -->
+  <main role="main">
+    <section class="image-quote page" role="region" aria-label="Chapter [N] Inspirational Quote">
+      <figure class="quote-figure">
+        <img
+          src="../images/chapter-[roman-lower]-quote.jpeg"
+          alt="Inspirational quote for Chapter [N]: [CHAPTER TITLE]"
+        />
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

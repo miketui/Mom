@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter [N] – [CHAPTER TITLE]</title>
+  <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+</head>
+<body class="chapter-page">
+<main epub:type="bodymatter chapter" role="main">
+
+  <!-- ================================================================
+       SECTION 1: CHAPTER TITLE PAGE (Standalone - ~90-100% viewport)
+       - Always begins on a new page
+       - No running headers, footers, or bleed-through
+       - Vertically centered content
+       ================================================================ -->
+  <section class="chap-title" role="region" aria-label="Chapter [N] Title Page">
+
+    <!-- Chapter Number Emblem -->
+    <figure class="chapter-number-figure" role="group" aria-label="Chapter number [N]">
+      <img
+        class="chapter-number-brush"
+        src="../images/brushstroke.svg"
+        alt="Decorative teal brushstroke background"
+        aria-hidden="true"
+      />
+      <figcaption class="chapter-number-roman">[ROMAN]</figcaption>
+    </figure>
+
+    <!-- Title Stack -->
+    <div class="title-stack">
+      <div class="title-bar" aria-hidden="true"></div>
+      <div class="title-lines">
+        <span class="title-line">[WORD 1]</span>
+        <span class="title-line">[WORD 2]</span>
+        <span class="title-line">[WORD 3]</span>
+        <!-- Add more <span class="title-line"> as needed for longer titles -->
+      </div>
+    </div>
+
+    <!-- Scripture / Quote Panel -->
+    <div class="bible-quote-container">
+      <p class="bible-quote-text">"[SCRIPTURE TEXT]"</p>
+      <span class="bible-quote-reference">— [BOOK CHAPTER:VERSE]</span>
+    </div>
+
+    <!-- Introduction Transition -->
+    <h2 class="introduction-heading">Introduction</h2>
+    <div class="introduction-paragraph dropcap-first-letter">
+      <p><span class="drop-cap">[FIRST LETTER]</span>[Rest of first paragraph text...]</p>
+      <p>[Additional introduction paragraphs as needed...]</p>
+    </div>
+
+  </section>
+
+  <!-- ================================================================
+       SECTION 2: CHAPTER BODY CONTENT
+       - Page break before this section
+       - Max width: 800-900px for optimal reading
+       - Consistent vertical rhythm
+       ================================================================ -->
+  <div class="page-break"></div>
+  <section class="chap-body" role="region" aria-label="Chapter [N] Content">
+    <div class="content-area">
+
+      <!-- H2: Teal color with gold underline -->
+      <h2>[Major Section Heading]</h2>
+      <p>[Body content paragraph...]</p>
+
+      <!-- H3: Dark teal -->
+      <h3>[Subsection Heading]</h3>
+      <p>[Body content paragraph...]</p>
+
+      <!-- H4: Neutral ink -->
+      <h4>[Minor Heading]</h4>
+      <p>[Body content paragraph...]</p>
+
+      <!-- Case Study Example -->
+      <div class="case-study">
+        <h3>Case Study: [Title]</h3>
+        <p><strong>Challenge:</strong> [Description of the challenge...]</p>
+        <p><strong>Solution:</strong> [Description of the solution...]</p>
+        <p><strong>Outcome:</strong> [Description of the outcome...]</p>
+      </div>
+
+      <!-- Action Steps Example -->
+      <div class="action-steps">
+        <h3>Actionable Steps</h3>
+        <ol>
+          <li><em>[Step Title]:</em> [Step description...]</li>
+          <li><em>[Step Title]:</em> [Step description...]</li>
+          <li><em>[Step Title]:</em> [Step description...]</li>
+        </ol>
+      </div>
+
+      <!-- Continue with more content sections as needed -->
+
+      <h2>Chapter Conclusion</h2>
+      <p>[Concluding paragraph...]</p>
+
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 3: ENDNOTES
+       - Page break before this section
+       ================================================================ -->
+  <div class="page-break"></div>
+  <section class="endnotes" role="doc-endnotes" aria-labelledby="endnotes-title">
+    <h2 id="endnotes-title" class="accent-teal">Endnotes</h2>
+    <ol class="notes-list">
+      <li class="note-item" id="fn-1">
+        [Citation text...]
+        <a class="backlink" href="#fnref-1" aria-label="Return to reference 1">&#8617;</a>
+      </li>
+      <li class="note-item" id="fn-2">
+        [Citation text...]
+        <a class="backlink" href="#fnref-2" aria-label="Return to reference 2">&#8617;</a>
+      </li>
+      <!-- Add more endnotes as needed -->
+    </ol>
+  </section>
+
+  <!-- ================================================================
+       SECTION 4: CHAPTER QUIZ (Single Page)
+       - Must start on a new page
+       - Must fit on one page only
+       - page-break-inside strictly avoided
+       ================================================================ -->
+  <div class="page-break"></div>
+  <section class="quiz-container chap-quiz page-break-before avoid-break" role="region" aria-labelledby="quiz-title">
+    <header class="quiz-header">
+      <h2 id="quiz-title" class="quiz-title">Chapter Quiz</h2>
+      <p class="quiz-instructions">Select the best answer for each question.</p>
+    </header>
+
+    <ol class="mcq-list">
+      <li class="mcq-item">
+        <p class="question-text"><strong>1. [Question text...]</strong></p>
+        <ol class="mcq-options" type="A">
+          <li class="option">[Option A]</li>
+          <li class="option">[Option B]</li>
+          <li class="option">[Option C]</li>
+          <li class="option">[Option D]</li>
+        </ol>
+      </li>
+      <li class="mcq-item">
+        <p class="question-text"><strong>2. [Question text...]</strong></p>
+        <ol class="mcq-options" type="A">
+          <li class="option">[Option A]</li>
+          <li class="option">[Option B]</li>
+          <li class="option">[Option C]</li>
+          <li class="option">[Option D]</li>
+        </ol>
+      </li>
+      <li class="mcq-item">
+        <p class="question-text"><strong>3. [Question text...]</strong></p>
+        <ol class="mcq-options" type="A">
+          <li class="option">[Option A]</li>
+          <li class="option">[Option B]</li>
+          <li class="option">[Option C]</li>
+          <li class="option">[Option D]</li>
+        </ol>
+      </li>
+      <li class="mcq-item">
+        <p class="question-text"><strong>4. [Question text...]</strong></p>
+        <ol class="mcq-options" type="A">
+          <li class="option">[Option A]</li>
+          <li class="option">[Option B]</li>
+          <li class="option">[Option C]</li>
+          <li class="option">[Option D]</li>
+        </ol>
+      </li>
+    </ol>
+
+    <footer class="quiz-footer">
+      <hr class="rule-gold"/>
+      <p class="print-instruction accent-muted">For answers, see the Quiz Key in backmatter</p>
+    </footer>
+  </section>
+
+  <!-- ================================================================
+       SECTION 5: CHAPTER WORKSHEET (Single Page)
+       - New page
+       - One page maximum
+       - No prompt splitting
+       ================================================================ -->
+  <div class="page-break"></div>
+  <section class="worksheet page-break-before avoid-break" role="region" aria-labelledby="worksheet-title">
+    <header class="worksheet-header bg-grad-modern">
+      <h2 id="worksheet-title" class="accent-teal">Chapter [N] Worksheet</h2>
+      <p class="worksheet-subtitle accent-gold">[CHAPTER TITLE] — Reflection &amp; Planning</p>
+    </header>
+
+    <div class="worksheet-content">
+      <div class="prompt-container">
+        <label class="prompt-label accent-teal">
+          <span class="prompt-number">1.</span> [Reflection question text...]
+        </label>
+        <div class="response-area lined">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="prompt-container">
+        <label class="prompt-label accent-teal">
+          <span class="prompt-number">2.</span> [Reflection question text...]
+        </label>
+        <div class="response-area lined">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="prompt-container">
+        <label class="prompt-label accent-teal">
+          <span class="prompt-number">3.</span> [Reflection question text...]
+        </label>
+        <div class="response-area lined">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="prompt-container">
+        <label class="prompt-label accent-teal">
+          <span class="prompt-number">4.</span> [Reflection question text...]
+        </label>
+        <div class="response-area lined">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="worksheet-footer">
+      <hr class="rule-gold"/>
+      <p class="print-instruction accent-muted">Print this page for journaling and reflection</p>
+    </footer>
+  </section>
+
+  <!-- ================================================================
+       SECTION 6: STANDALONE IMAGE QUOTE PAGE (Chapter Ending)
+       - Final page of chapter
+       - Nothing follows within this chapter file
+       - Forced page break before
+       - Links to separate quote XHTML file
+
+       NOTE: The actual quote image is in a SEPARATE standalone file
+       (e.g., 9a-chapter-i-quote.xhtml) for proper EPUB spine ordering.
+       This section provides the navigation link to that page.
+       ================================================================ -->
+  <div class="page-break"></div>
+  <section class="chapter-closing" role="region" aria-label="Chapter [N] Closing">
+    <div class="chapter-quote-navigation">
+      <p class="quote-link-text">Continue to the inspirational quote for this chapter:</p>
+      <a href="[N]a-chapter-[roman-lower]-quote.xhtml" class="quote-page-link" aria-label="View Chapter [N] Inspirational Quote">
+        <span class="quote-link-icon" aria-hidden="true">&#10024;</span>
+        <span class="quote-link-label">Chapter [N] Inspirational Quote</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
