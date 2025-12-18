@@ -11,9 +11,8 @@
 ### fonts.css (most recent)
 **File Path:** `./OEBPS/ebook/xhtml/styles/fonts.css`
 - Full absolute path: `/home/runner/work/Mom/Mom/OEBPS/ebook/xhtml/styles/fonts.css`
-- Size: 0 bytes (empty file - fonts are imported within style.css)
-- Last modified: 2025-12-18 06:31:37
-- Note: Font definitions are embedded in style.css via @import, making this file intentionally empty
+- Size: 0 bytes (empty file)
+- Note: This file is intentionally empty. The style.css file contains an `@import url('fonts.css');` statement at line 16, but the actual font face definitions are embedded directly within the style.css file itself (not in a separate fonts.css)
 
 ### print.css (most recent)
 **File Path:** `./OEBPS/ebook/xhtml/styles/print.css`
@@ -33,7 +32,7 @@
 
 ## Order of XHTML Files in content.opf
 
-The 60 xhtml files are listed in the following order in the spine:
+The 60 xhtml files are listed in the following order in the spine (nav.xhtml is present in the manifest but not included in the spine count as it serves as the navigation document with the `properties="nav"` attribute):
 
 1. 1-TitlePage.xhtml
 2. 2-Copyright.xhtml
@@ -98,10 +97,9 @@ The 60 xhtml files are listed in the following order in the spine:
 
 ## Notes
 
-- All timestamps show these files were created/modified on 2025-12-18 at 06:31:37
 - The OEBPS/ebook/xhtml/styles/ directory contains the most recent versions of the CSS files based on the directory structure
-- The content.opf file properly references all 60 xhtml files in the correct reading order
-- The nav.xhtml file is also present but is not counted in the 60 as it serves as the navigation document
+- The content.opf file properly references all 60 xhtml files in the correct reading order in its spine section
+- The nav.xhtml file is present in the manifest but not included in the spine count of 60, as it serves as the navigation document (identified by the `properties="nav"` attribute)
 - All xhtml files reference the CSS files using relative paths: `styles/fonts.css` and `styles/style.css`
 - The content.opf manifest includes references to all three CSS files: fonts.css, style.css, and print.css
 
