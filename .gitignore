@@ -1,0 +1,22 @@
+# Build artifacts - do not commit
+build/
+output/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+*.tmp
+*.log
