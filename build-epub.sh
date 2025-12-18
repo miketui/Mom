@@ -111,6 +111,26 @@ print_step "Copying fonts..."
 cp "$READY_DIR"/fonts/* "$EPUB_DIR/OEBPS/fonts/"
 print_success "$(ls -1 $READY_DIR/fonts/* | wc -l) font files copied"
 
+# Step 4b: Validate XHTML files before packaging
+print_step "Validating XHTML files..."
+VALIDATION_FAILED=0
+if command -v xmllint &> /dev/null; then
+    for file in "$READY_DIR"/xhtml/*.xhtml; do
+        if ! xmllint --noout "$file" 2>/dev/null; then
+            print_error "Validation failed: $(basename "$file")"
+            VALIDATION_FAILED=1
+        fi
+    done
+    if [ $VALIDATION_FAILED -eq 1 ]; then
+        print_error "One or more XHTML files failed validation. Please fix before building."
+        exit 1
+    fi
+    print_success "All XHTML files passed validation"
+else
+    print_warning "xmllint not found - skipping XHTML validation"
+    print_warning "Install with: sudo apt-get install libxml2-utils"
+fi
+
 # Step 5: Create content.opf (package document)
 print_step "Creating content.opf..."
 cat > "$EPUB_DIR/OEBPS/content.opf" << 'EOF'
