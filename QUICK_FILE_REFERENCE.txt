@@ -1,0 +1,13 @@
+QUICK FILE REFERENCE
+====================
+
+Most Recent Files Requested:
+
+1. style.css:    ./OEBPS/ebook/xhtml/styles/style.css
+2. fonts.css:    ./OEBPS/ebook/xhtml/styles/fonts.css
+3. print.css:    ./OEBPS/ebook/xhtml/styles/print.css
+4. content.opf:  ./OEBPS/ebook/content.opf
+
+The content.opf file includes all 60 xhtml files in proper reading order.
+
+For detailed information, see FILE_PATHS_SUMMARY.md
