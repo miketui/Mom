@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curls &amp; Contemplation - Preview Index</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+    .controls {
+      background: #f7f9f9;
+      padding: 1.5rem 2rem;
+      border-bottom: 2px solid #e0e0e0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      padding: 0.75rem 1rem;
+      border: 2px solid #2B9999;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .filter-btn {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #2B9999;
+      background: white;
+      color: #2B9999;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #2B9999;
+      color: white;
+    }
+    .content {
+      padding: 2rem;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    .section-title {
+      color: #2B9999;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #C9A961;
+    }
+    .file-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .file-card {
+      background: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+    .file-card:hover {
+      border-color: #2B9999;
+      box-shadow: 0 8px 20px rgba(43, 153, 153, 0.2);
+      transform: translateY(-4px);
+    }
+    .file-number {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #C9A961;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .file-title {
+      font-weight: 600;
+      color: #0F1616;
+      margin-bottom: 0.5rem;
+      padding-right: 2.5rem;
+      line-height: 1.4;
+    }
+    .file-type {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: #f0f0f0;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #666;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .file-type.frontmatter { background: #E3F2FD; color: #1976D2; }
+    .file-type.part { background: #F3E5F5; color: #7B1FA2; }
+    .file-type.chapter { background: #E8F5E9; color: #388E3C; }
+    .file-type.quote { background: #FFF3E0; color: #F57C00; }
+    .file-type.backmatter { background: #FCE4EC; color: #C2185B; }
+    .stats {
+      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
+      color: white;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .stat-item h3 {
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .stat-item p {
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Curls &amp; Contemplation</h1>
+      <p class="subtitle">Visual Preview &amp; Navigation System</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat-item">
+        <h3>60</h3>
+        <p>Total Files</p>
+      </div>
+      <div class="stat-item">
+        <h3>16</h3>
+        <p>Chapters</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Validated</p>
+      </div>
+      <div class="stat-item">
+        <h3>✓</h3>
+        <p>Ready to Compile</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search files by name or number...">
+      <button class="filter-btn active" data-filter="all">All Files</button>
+      <button class="filter-btn" data-filter="frontmatter">Frontmatter</button>
+      <button class="filter-btn" data-filter="chapter">Chapters</button>
+      <button class="filter-btn" data-filter="quote">Quotes</button>
+      <button class="filter-btn" data-filter="backmatter">Backmatter</button>
+    </div>
+
+    <div class="content">
+      <!-- Frontmatter -->
+      <div class="section" data-type="frontmatter">
+        <h2 class="section-title">📖 Frontmatter</h2>
+        <div class="file-grid">
+          <a href="xhtml/1-TitlePage.xhtml" target="_blank" class="file-card">
+            <div class="file-number">1</div>
+            <div class="file-title">Title Page</div>
+            <span class="file-type frontmatter">Frontmatter</span>
+          </a>
+          <a href="xhtml/2-Copyright.xhtml" target="_blank" class="file-card">
+            <div class="file-number">2</div>
+            <div class="file-title">Copyright Page</div>
+            <span class="file-type frontmatter">Frontmatter</span>
+          </a>
+          <a href="xhtml/3-TableOfContents.xhtml" target="_blank" class="file-card">
+            <div class="file-number">3</div>
+            <div class="file-title">Table of Contents</div>
+            <span class="file-type frontmatter">Frontmatter</span>
+          </a>
+          <a href="xhtml/4-Dedication.xhtml" target="_blank" class="file-card">
+            <div class="file-number">4</div>
+            <div class="file-title">Dedication</div>
+            <span class="file-type frontmatter">Frontmatter</span>
+          </a>
+          <a href="xhtml/5-SelfAssessment.xhtml" target="_blank" class="file-card">
+            <div class="file-number">5</div>
+            <div class="file-title">Self Assessment 1</div>
+            <span class="file-type frontmatter">Frontmatter</span>
+          </a>
+          <a href="xhtml/6-AffirmationOdyssey.xhtml" target="_blank" class="file-card">
+            <div class="file-number">6</div>
+            <div class="file-title">Affirmation Odyssey</div>
+            <span class="file-type frontmatter">Frontmatter</span>
+          </a>
+          <a href="xhtml/7-Preface.xhtml" target="_blank" class="file-card">
+            <div class="file-number">7</div>
+            <div class="file-title">Preface</div>
+            <span class="file-type frontmatter">Frontmatter</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Part I -->
+      <div class="section" data-type="chapter">
+        <h2 class="section-title">🎨 Part I: Foundations of Creative Hairstyling</h2>
+        <div class="file-grid">
+          <a href="xhtml/8-Part-I-Foundations-of-Creative-Hairstyling.xhtml" target="_blank" class="file-card">
+            <div class="file-number">8</div>
+            <div class="file-title">Part I Divider</div>
+            <span class="file-type part">Part Divider</span>
+          </a>
+          <a href="xhtml/9-chapter-i-unveiling-your-creative-odyssey.xhtml" target="_blank" class="file-card">
+            <div class="file-number">9</div>
+            <div class="file-title">Chapter I: Unveiling Your Creative Odyssey</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/9a-chapter-i-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">9a</div>
+            <div class="file-title">Chapter I Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/10-chapter-ii-refining-your-creative-toolkit.xhtml" target="_blank" class="file-card">
+            <div class="file-number">10</div>
+            <div class="file-title">Chapter II: Refining Your Creative Toolkit</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/10a-chapter-ii-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">10a</div>
+            <div class="file-title">Chapter II Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/11-chapter-iii-reigniting-your-creative-fire.xhtml" target="_blank" class="file-card">
+            <div class="file-number">11</div>
+            <div class="file-title">Chapter III: Reigniting Your Creative Fire</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/11a-chapter-iii-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">11a</div>
+            <div class="file-title">Chapter III Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Part II -->
+      <div class="section" data-type="chapter">
+        <h2 class="section-title">💼 Part II: Building Your Professional Practice</h2>
+        <div class="file-grid">
+          <a href="xhtml/12-Part-II-Building-Your-Professional-Practice.xhtml" target="_blank" class="file-card">
+            <div class="file-number">12</div>
+            <div class="file-title">Part II Divider</div>
+            <span class="file-type part">Part Divider</span>
+          </a>
+          <a href="xhtml/13-chapter-iv-the-art-of-networking-in-freelance-hairstyling.xhtml" target="_blank" class="file-card">
+            <div class="file-number">13</div>
+            <div class="file-title">Chapter IV: The Art of Networking</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/13a-chapter-iv-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">13a</div>
+            <div class="file-title">Chapter IV Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/14-chapter-v-cultivating-creative-excellence-through-mentorship.xhtml" target="_blank" class="file-card">
+            <div class="file-number">14</div>
+            <div class="file-title">Chapter V: Creative Excellence Through Mentorship</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/14a-chapter-v-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">14a</div>
+            <div class="file-title">Chapter V Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/15-chapter-vi-mastering-the-business-of-hairstyling.xhtml" target="_blank" class="file-card">
+            <div class="file-number">15</div>
+            <div class="file-title">Chapter VI: Mastering the Business</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/15a-chapter-vi-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">15a</div>
+            <div class="file-title">Chapter VI Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/16-chapter-vii-embracing-wellness-and-self-care.xhtml" target="_blank" class="file-card">
+            <div class="file-number">16</div>
+            <div class="file-title">Chapter VII: Wellness and Self-Care</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/16a-chapter-vii-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">16a</div>
+            <div class="file-title">Chapter VII Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/17-chapter-viii-advancing-skills-through-continuous-education.xhtml" target="_blank" class="file-card">
+            <div class="file-number">17</div>
+            <div class="file-title">Chapter VIII: Continuous Education</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/17a-chapter-viii-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">17a</div>
+            <div class="file-title">Chapter VIII Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Part III -->
+      <div class="section" data-type="chapter">
+        <h2 class="section-title">🚀 Part III: Advanced Business Strategies</h2>
+        <div class="file-grid">
+          <a href="xhtml/18-Part-III-Advanced-Business-Strategies.xhtml" target="_blank" class="file-card">
+            <div class="file-number">18</div>
+            <div class="file-title">Part III Divider</div>
+            <span class="file-type part">Part Divider</span>
+          </a>
+          <a href="xhtml/19-chapter-ix-stepping-into-leadership.xhtml" target="_blank" class="file-card">
+            <div class="file-number">19</div>
+            <div class="file-title">Chapter IX: Stepping Into Leadership</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/19a-chapter-ix-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">19a</div>
+            <div class="file-title">Chapter IX Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/20-chapter-x-crafting-enduring-legacies.xhtml" target="_blank" class="file-card">
+            <div class="file-number">20</div>
+            <div class="file-title">Chapter X: Crafting Enduring Legacies</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/20a-chapter-x-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">20a</div>
+            <div class="file-title">Chapter X Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/21-chapter-xi-advanced-digital-strategies-for-freelance-hairstylists.xhtml" target="_blank" class="file-card">
+            <div class="file-number">21</div>
+            <div class="file-title">Chapter XI: Advanced Digital Strategies</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/21a-chapter-xi-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">21a</div>
+            <div class="file-title">Chapter XI Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/22-chapter-xii-financial-wisdom-building-sustainable-ventures.xhtml" target="_blank" class="file-card">
+            <div class="file-number">22</div>
+            <div class="file-title">Chapter XII: Financial Wisdom</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/22a-chapter-xii-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">22a</div>
+            <div class="file-title">Chapter XII Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/23-chapter-xiii-embracing-ethics-and-sustainability-in-hairstyling.xhtml" target="_blank" class="file-card">
+            <div class="file-number">23</div>
+            <div class="file-title">Chapter XIII: Ethics and Sustainability</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/23a-chapter-xiii-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">23a</div>
+            <div class="file-title">Chapter XIII Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Part IV -->
+      <div class="section" data-type="chapter">
+        <h2 class="section-title">🌟 Part IV: Future-Focused Growth</h2>
+        <div class="file-grid">
+          <a href="xhtml/24-Part-IV-Future-Focused-Growth.xhtml" target="_blank" class="file-card">
+            <div class="file-number">24</div>
+            <div class="file-title">Part IV Divider</div>
+            <span class="file-type part">Part Divider</span>
+          </a>
+          <a href="xhtml/25-chapter-xiv-the-impact-of-ai-on-the-beauty-industry.xhtml" target="_blank" class="file-card">
+            <div class="file-number">25</div>
+            <div class="file-title">Chapter XIV: Impact of AI on Beauty</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/25a-chapter-xiv-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">25a</div>
+            <div class="file-title">Chapter XIV Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/26-chapter-xv-cultivating-resilience-and-well-being-in-hairstyling.xhtml" target="_blank" class="file-card">
+            <div class="file-number">26</div>
+            <div class="file-title">Chapter XV: Resilience and Well-Being</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/26a-chapter-xv-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">26a</div>
+            <div class="file-title">Chapter XV Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+          <a href="xhtml/27-chapter-xvi-tresses-and-textures-embracing-diversity-in-hairstyling.xhtml" target="_blank" class="file-card">
+            <div class="file-number">27</div>
+            <div class="file-title">Chapter XVI: Embracing Diversity</div>
+            <span class="file-type chapter">Chapter</span>
+          </a>
+          <a href="xhtml/27a-chapter-xvi-quote.xhtml" target="_blank" class="file-card">
+            <div class="file-number">27a</div>
+            <div class="file-title">Chapter XVI Quote</div>
+            <span class="file-type quote">Quote</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Backmatter -->
+      <div class="section" data-type="backmatter">
+        <h2 class="section-title">📝 Backmatter &amp; Journals</h2>
+        <div class="file-grid">
+          <a href="xhtml/28-Conclusion.xhtml" target="_blank" class="file-card">
+            <div class="file-number">28</div>
+            <div class="file-title">Conclusion</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/29-QuizKey.xhtml" target="_blank" class="file-card">
+            <div class="file-number">29</div>
+            <div class="file-title">Quiz Key</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/30-SelfAssessment.xhtml" target="_blank" class="file-card">
+            <div class="file-number">30</div>
+            <div class="file-title">Self Assessment 2</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/31-affirmations-close.xhtml" target="_blank" class="file-card">
+            <div class="file-number">31</div>
+            <div class="file-title">Affirmations Close</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/32-continued-learning-commitment.xhtml" target="_blank" class="file-card">
+            <div class="file-number">32</div>
+            <div class="file-title">Continued Learning</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/33-Acknowledgments.xhtml" target="_blank" class="file-card">
+            <div class="file-number">33</div>
+            <div class="file-title">Acknowledgments</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/34-AbouttheAuthor.xhtml" target="_blank" class="file-card">
+            <div class="file-number">34</div>
+            <div class="file-title">About the Author</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/35-CurlsContempCollective.xhtml" target="_blank" class="file-card">
+            <div class="file-number">35</div>
+            <div class="file-title">Curls Contemp Collective</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+          <a href="xhtml/36-JournalingStart.xhtml" target="_blank" class="file-card">
+            <div class="file-number">36</div>
+            <div class="file-title">Journaling Start</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/37-ManifestingJournal.xhtml" target="_blank" class="file-card">
+            <div class="file-number">37</div>
+            <div class="file-title">Manifesting Journal</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/38-journal-page.xhtml" target="_blank" class="file-card">
+            <div class="file-number">38</div>
+            <div class="file-title">Journal Page</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/39-professional-development.xhtml" target="_blank" class="file-card">
+            <div class="file-number">39</div>
+            <div class="file-title">Professional Development</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/40-SMARTGoals.xhtml" target="_blank" class="file-card">
+            <div class="file-number">40</div>
+            <div class="file-title">SMART Goals</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/41-self-care-journal.xhtml" target="_blank" class="file-card">
+            <div class="file-number">41</div>
+            <div class="file-title">Self-Care Journal</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/42-VisionJournal.xhtml" target="_blank" class="file-card">
+            <div class="file-number">42</div>
+            <div class="file-title">Vision Journal</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/43-DoodlePage.xhtml" target="_blank" class="file-card">
+            <div class="file-number">43</div>
+            <div class="file-title">Doodle Page</div>
+            <span class="file-type backmatter">Journal</span>
+          </a>
+          <a href="xhtml/44-bibliography.xhtml" target="_blank" class="file-card">
+            <div class="file-number">44</div>
+            <div class="file-title">Bibliography</div>
+            <span class="file-type backmatter">Backmatter</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Search functionality
+    const searchBox = document.getElementById('searchBox');
+    const fileCards = document.querySelectorAll('.file-card');
+
+    searchBox.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      fileCards.forEach(card => {
+        const title = card.querySelector('.file-title').textContent.toLowerCase();
+        const number = card.querySelector('.file-number').textContent.toLowerCase();
+        if (title.includes(searchTerm) || number.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sections = document.querySelectorAll('.section');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        if (filter === 'all') {
+          sections.forEach(section => section.style.display = 'block');
+        } else if (filter === 'frontmatter') {
+          sections.forEach(section => {
+            section.style.display = section.dataset.type === 'frontmatter' ? 'block' : 'none';
+          });
+        } else if (filter === 'chapter') {
+          sections.forEach(section => {
+            section.style.display = section.dataset.type === 'chapter' ? 'block' : 'none';
+          });
+        } else if (filter === 'quote') {
+          sections.forEach(section => {
+            const hasQuotes = section.querySelector('.file-type.quote');
+            section.style.display = hasQuotes ? 'block' : 'none';
+          });
+        } else if (filter === 'backmatter') {
+          sections.forEach(section => {
+            section.style.display = section.dataset.type === 'backmatter' ? 'block' : 'none';
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
