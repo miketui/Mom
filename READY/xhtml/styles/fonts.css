@@ -6,21 +6,21 @@
 
 @font-face {
   font-family: 'Libre Baskerville';
-  src: url('../../fonts/librebaskerville-regular.woff2') format('woff2');
+  src: url('../fonts/librebaskerville-regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Libre Baskerville';
-  src: url('../../fonts/librebaskerville-italic.woff2') format('woff2');
+  src: url('../fonts/librebaskerville-italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Libre Baskerville';
-  src: url('../../fonts/librebaskerville-bold.woff2') format('woff2');
+  src: url('../fonts/librebaskerville-bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Cinzel Decorative';
-  src: url('../../fonts/CinzelDecorative.woff2') format('woff2');
+  src: url('../fonts/CinzelDecorative.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -36,18 +36,38 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../../fonts/Montserrat-Regular.woff2') format('woff2');
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('../../fonts/Montserrat-Bold.woff2') format('woff2');
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
+
+/*
+ * FONT LICENSE INFORMATION:
+ * =========================
+ * All fonts used in this publication are open-source and licensed for embedding:
+ *
+ * 1. Libre Baskerville - SIL Open Font License (OFL)
+ *    Source: Google Fonts - https://fonts.google.com/specimen/Libre+Baskerville
+ *    License: Free for commercial and personal use, embedding permitted
+ *
+ * 2. Montserrat - SIL Open Font License (OFL)
+ *    Source: Google Fonts - https://fonts.google.com/specimen/Montserrat
+ *    License: Free for commercial and personal use, embedding permitted
+ *
+ * 3. Cinzel Decorative - SIL Open Font License (OFL)
+ *    Source: Google Fonts - https://fonts.google.com/specimen/Cinzel+Decorative
+ *    License: Free for commercial and personal use, embedding permitted
+ *
+ * All three fonts permit embedding in PDF and EPUB publications.
+ */
 
 /* Assignments for specific usage contexts */
 body, p {

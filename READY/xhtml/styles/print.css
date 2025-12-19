@@ -11,12 +11,39 @@
    PAGE SETUP - 6x9" Print-on-Demand
    ============================================================ */
 
+@page {
+  size: 6in 9in;
+  margin-top: 0.75in;
+  margin-bottom: 0.75in;
+  margin-inside: 0.875in;  /* Gutter margin for binding */
+  margin-outside: 0.625in;
+}
 
 /* First page of chapter - no header */
+@page chapter-first {
+  margin-top: 1in;
+  @top-center { content: none; }
+}
 
 /* Left (verso) pages */
+@page :left {
+  margin-left: 0.875in;   /* Gutter side */
+  margin-right: 0.625in;
+  @top-left { content: string(book-title); font-size: 9pt; }
+}
 
 /* Right (recto) pages */
+@page :right {
+  margin-left: 0.625in;
+  margin-right: 0.875in;  /* Gutter side */
+  @top-right { content: string(chapter-title); font-size: 9pt; }
+}
+
+/* Blank pages */
+@page :blank {
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
 
 /* ============================================================
    FONT EMBEDDING
@@ -24,42 +51,42 @@
 
 @font-face {
   font-family: 'Libre Baskerville';
-  src: url('../../fonts/librebaskerville-regular.woff2') format('woff2');
+  src: url('../fonts/librebaskerville-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Libre Baskerville';
-  src: url('../../fonts/librebaskerville-bold.woff2') format('woff2');
+  src: url('../fonts/librebaskerville-bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Libre Baskerville';
-  src: url('../../fonts/librebaskerville-italic.woff2') format('woff2');
+  src: url('../fonts/librebaskerville-italic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../../fonts/Montserrat-Regular.woff2') format('woff2');
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../../fonts/Montserrat-Bold.woff2') format('woff2');
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cinzel Decorative';
-  src: url('../../fonts/CinzelDecorative.woff2') format('woff2');
+  src: url('../fonts/CinzelDecorative.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
