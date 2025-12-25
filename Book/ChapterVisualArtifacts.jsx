@@ -76,147 +76,179 @@ const tokens = {
 const chapters = [
   {
     number: 'I',
+    numberLower: 'i',
     title: ['UNVEILING', 'YOUR', 'CREATIVE', 'ODYSSEY'],
     quote: 'For we are God\'s handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.',
     reference: 'Ephesians 2:10',
     intro: 'Picture celebrity stylist Ursula Stephen, who transformed Rihanna\'s look early in her career, catapulting both the singer\'s and her own careers to new heights.',
     part: 'Part I: Foundations of Creative Hairstyling',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-i-quote.jpeg',
   },
   {
     number: 'II',
+    numberLower: 'ii',
     title: ['REFINING', 'YOUR', 'CREATIVE', 'TOOLKIT'],
     quote: 'Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.',
     reference: 'Colossians 3:23',
     intro: 'Every master craftsperson knows that the quality of their work depends not only on their skills but also on the tools they wield.',
     part: 'Part I: Foundations of Creative Hairstyling',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-ii-quote.jpeg',
   },
   {
     number: 'III',
+    numberLower: 'iii',
     title: ['REIGNITING', 'YOUR', 'CREATIVE', 'FIRE'],
     quote: 'Do not conform to the pattern of this world, but be transformed by the renewing of your mind.',
     reference: 'Romans 12:2',
     intro: 'Creativity is the lifeblood of the hairstyling profession—the spark that transforms routine cuts into works of art.',
     part: 'Part I: Foundations of Creative Hairstyling',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-iii-quote.jpeg',
   },
   {
     number: 'IV',
+    numberLower: 'iv',
     title: ['THE ART OF', 'NETWORKING IN', 'FREELANCE', 'HAIRSTYLING'],
     quote: 'Two are better than one, because they have a good return for their labor.',
     reference: 'Ecclesiastes 4:9',
     intro: 'In the freelance world, your network is your net worth. Building genuine connections opens doors to opportunities.',
     part: 'Part II: Building Your Professional Practice',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-iv-quote.jpeg',
   },
   {
     number: 'V',
+    numberLower: 'v',
     title: ['CULTIVATING', 'CREATIVE', 'EXCELLENCE', 'THROUGH', 'MENTORSHIP'],
     quote: 'Iron sharpens iron, and one person sharpens another.',
     reference: 'Proverbs 27:17',
     intro: 'The path to mastery is rarely walked alone. Throughout history, the greatest artists have learned from those who came before.',
     part: 'Part II: Building Your Professional Practice',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-v-quote.jpeg',
   },
   {
     number: 'VI',
+    numberLower: 'vi',
     title: ['MASTERING', 'THE BUSINESS', 'OF', 'HAIRSTYLING'],
     quote: 'The plans of the diligent lead surely to abundance.',
     reference: 'Proverbs 21:5',
     intro: 'Beyond the artistry lies the foundation of a sustainable career—understanding the business side of hairstyling.',
     part: 'Part II: Building Your Professional Practice',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-vi-quote.jpeg',
   },
   {
     number: 'VII',
+    numberLower: 'vii',
     title: ['EMBRACING', 'WELLNESS', 'AND', 'SELF-CARE'],
     quote: 'Come to me, all you who are weary and burdened, and I will give you rest.',
     reference: 'Matthew 11:28',
     intro: 'As hairstylists, we dedicate ourselves to enhancing others\' well-being, yet often neglect our own.',
     part: 'Part II: Building Your Professional Practice',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-vii-quote.jpeg',
   },
   {
     number: 'VIII',
+    numberLower: 'viii',
     title: ['ADVANCING', 'SKILLS', 'THROUGH', 'CONTINUOUS', 'EDUCATION'],
     quote: 'The heart of the discerning acquires knowledge, for the ears of the wise seek it out.',
     reference: 'Proverbs 18:15',
     intro: 'The beauty industry evolves rapidly, with new techniques, tools, and trends emerging constantly.',
     part: 'Part II: Building Your Professional Practice',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-viii-quote.jpeg',
   },
   {
     number: 'IX',
+    numberLower: 'ix',
     title: ['STEPPING', 'INTO', 'LEADERSHIP'],
     quote: 'Whoever wants to become great among you must be your servant.',
     reference: 'Matthew 20:26',
     intro: 'Leadership in hairstyling extends beyond technical mastery—it\'s about inspiring and guiding others.',
     part: 'Part III: Advanced Business Strategies',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-ix-quote.jpeg',
   },
   {
     number: 'X',
+    numberLower: 'x',
     title: ['CRAFTING', 'ENDURING', 'LEGACIES'],
     quote: 'A good name is more desirable than great riches; to be esteemed is better than silver or gold.',
     reference: 'Proverbs 22:1',
     intro: 'Your legacy is not just what you create, but what you leave behind for others to build upon.',
     part: 'Part III: Advanced Business Strategies',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-x-quote.jpeg',
   },
   {
     number: 'XI',
+    numberLower: 'xi',
     title: ['ADVANCED', 'DIGITAL', 'STRATEGIES FOR', 'FREELANCE', 'HAIRSTYLISTS'],
     quote: 'Let your light shine before others, that they may see your good deeds.',
     reference: 'Matthew 5:16',
     intro: 'In today\'s digital age, your online presence can be as powerful as your physical portfolio.',
     part: 'Part III: Advanced Business Strategies',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-xi-quote.jpeg',
   },
   {
     number: 'XII',
+    numberLower: 'xii',
     title: ['FINANCIAL', 'WISDOM', 'BUILDING', 'SUSTAINABLE', 'VENTURES'],
     quote: 'The wise store up choice food and olive oil, but fools gulp theirs down.',
     reference: 'Proverbs 21:20',
     intro: 'Financial literacy is the cornerstone of a thriving freelance career in hairstyling.',
     part: 'Part III: Advanced Business Strategies',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-xii-quote.jpeg',
   },
   {
     number: 'XIII',
+    numberLower: 'xiii',
     title: ['EMBRACING', 'ETHICS AND', 'SUSTAINABILITY', 'IN', 'HAIRSTYLING'],
     quote: 'The earth is the Lord\'s, and everything in it.',
     reference: 'Psalm 24:1',
     intro: 'As conscious hairstylists, we have the responsibility to consider the environmental impact of our craft.',
     part: 'Part III: Advanced Business Strategies',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-xiii-quote.jpeg',
   },
   {
     number: 'XIV',
+    numberLower: 'xiv',
     title: ['THE IMPACT', 'OF AI ON', 'THE BEAUTY', 'INDUSTRY'],
     quote: 'See, I am doing a new thing! Now it springs up; do you not perceive it?',
     reference: 'Isaiah 43:19',
     intro: 'Artificial intelligence is reshaping every industry, and beauty is no exception.',
     part: 'Part IV: Future-Focused Growth',
+    quoteImage: '../OEBPS/ebook/images/chapter-xiv-quote.jpeg',
     darkTheme: true,
   },
   {
     number: 'XV',
+    numberLower: 'xv',
     title: ['CULTIVATING', 'RESILIENCE', 'AND', 'WELL-BEING', 'IN', 'HAIRSTYLING'],
     quote: 'Consider it pure joy whenever you face trials of many kinds.',
     reference: 'James 1:2',
     intro: 'The path of a hairstylist is filled with challenges that test our resolve and resilience.',
     part: 'Part IV: Future-Focused Growth',
     darkTheme: false,
+    quoteImage: '../OEBPS/ebook/images/chapter-xv-quote.jpeg',
   },
   {
     number: 'XVI',
+    numberLower: 'xvi',
     title: ['TRESSES AND', 'TEXTURES', 'EMBRACING', 'DIVERSITY IN', 'HAIRSTYLING'],
     quote: 'There is neither Jew nor Gentile... for you are all one in Christ Jesus.',
     reference: 'Galatians 3:28',
     intro: 'Celebrating diversity in hair textures honors the rich tapestry of human beauty across cultures.',
     part: 'Part IV: Future-Focused Growth',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-xvi-quote.jpeg',
   },
 ];
 
@@ -878,6 +910,30 @@ const QuizPage = ({ chapter }) => (
           <li style={styles.option}>Social media presence only</li>
         </ol>
       </li>
+
+      <li style={styles.mcqItem}>
+        <p style={styles.questionText}>
+          4. Which approach best reflects the chapter's philosophy on professional growth?
+        </p>
+        <ol style={styles.mcqOptions}>
+          <li style={styles.option}>Focus solely on technical skills</li>
+          <li style={styles.option}>Prioritize speed over quality</li>
+          <li style={styles.option}>Continuous learning and self-reflection</li>
+          <li style={styles.option}>Avoid taking risks in your career</li>
+        </ol>
+      </li>
+
+      <li style={styles.mcqItem}>
+        <p style={styles.questionText}>
+          5. How does the chapter describe the relationship between creativity and hairstyling?
+        </p>
+        <ol style={styles.mcqOptions}>
+          <li style={styles.option}>Creativity is secondary to technical execution</li>
+          <li style={styles.option}>Creativity should be reserved for special occasions only</li>
+          <li style={styles.option}>Creativity is essential to transforming routine work into meaningful art</li>
+          <li style={styles.option}>Creativity is unnecessary for client satisfaction</li>
+        </ol>
+      </li>
     </ol>
 
     <div style={styles.footer}>
@@ -945,49 +1001,79 @@ const WorksheetPage = ({ chapter }) => (
 // ============================================================================
 // QUOTE PAGE COMPONENT
 // ============================================================================
-const QuotePage = ({ chapter }) => (
-  <section style={styles.imageQuote}>
-    <figure style={styles.quoteFigure}>
-      <div style={styles.quoteImagePlaceholder}>
-        <div style={{
-          fontFamily: tokens.fonts.display,
-          fontSize: '6rem',
-          color: tokens.colors.tealPrimary,
-          marginBottom: tokens.spacing[4],
-        }}>
-          "
-        </div>
-        <p style={{
-          fontFamily: tokens.fonts.body,
-          fontSize: '1.25rem',
-          fontStyle: 'italic',
-          lineHeight: 1.8,
-          color: tokens.colors.inkMedium,
-          maxWidth: '350px',
-          marginBottom: tokens.spacing[4],
-        }}>
-          {chapter.quote}
-        </p>
-        <cite style={{
-          fontFamily: tokens.fonts.meta,
-          fontSize: '1rem',
-          color: tokens.colors.goldDark,
-          fontWeight: 600,
-        }}>
-          — {chapter.reference}
-        </cite>
-        <div style={{
-          marginTop: tokens.spacing[6],
-          fontFamily: tokens.fonts.meta,
-          fontSize: '0.875rem',
-          color: tokens.colors.muted,
-        }}>
-          Chapter {chapter.number} Inspirational Quote
-        </div>
-      </div>
-    </figure>
-  </section>
-);
+const QuotePage = ({ chapter }) => {
+  const [imageError, setImageError] = React.useState(false);
+
+  return (
+    <section style={styles.imageQuote}>
+      <figure style={{
+        ...styles.quoteFigure,
+        padding: imageError ? tokens.spacing[8] : 0,
+        background: imageError ? tokens.colors.cream : 'transparent',
+      }}>
+        {!imageError ? (
+          <img
+            src={chapter.quoteImage}
+            alt={`Inspirational quote for Chapter ${chapter.number}: ${chapter.title.join(' ')}`}
+            style={{
+              maxWidth: '100%',
+              maxHeight: '85vh',
+              objectFit: 'contain',
+              borderRadius: tokens.radius.lg,
+              boxShadow: tokens.shadows.lg,
+            }}
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div style={styles.quoteImagePlaceholder}>
+            <div style={{
+              fontFamily: tokens.fonts.display,
+              fontSize: '6rem',
+              color: tokens.colors.tealPrimary,
+              marginBottom: tokens.spacing[4],
+            }}>
+              "
+            </div>
+            <p style={{
+              fontFamily: tokens.fonts.body,
+              fontSize: '1.25rem',
+              fontStyle: 'italic',
+              lineHeight: 1.8,
+              color: tokens.colors.inkMedium,
+              maxWidth: '350px',
+              marginBottom: tokens.spacing[4],
+            }}>
+              {chapter.quote}
+            </p>
+            <cite style={{
+              fontFamily: tokens.fonts.meta,
+              fontSize: '1rem',
+              color: tokens.colors.goldDark,
+              fontWeight: 600,
+            }}>
+              — {chapter.reference}
+            </cite>
+            <div style={{
+              marginTop: tokens.spacing[6],
+              fontFamily: tokens.fonts.meta,
+              fontSize: '0.875rem',
+              color: tokens.colors.muted,
+            }}>
+              Chapter {chapter.number} Inspirational Quote
+            </div>
+            <p style={{
+              marginTop: tokens.spacing[4],
+              fontSize: '0.75rem',
+              color: tokens.colors.muted,
+            }}>
+              Image: chapter-{chapter.numberLower}-quote.jpeg
+            </p>
+          </div>
+        )}
+      </figure>
+    </section>
+  );
+};
 
 // ============================================================================
 // MAIN ARTIFACTS COMPONENT
