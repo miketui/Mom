@@ -1,5 +1,5 @@
 /*
-  fonts.css — Font definitions for Curls &amp; Contemplation EPUB
+  fonts.css — Font definitions for Curls & Contemplation EPUB
   The font files referenced here reside in the OEBPS/fonts directory. Use
   `font-display: swap` for better performance and fallback behaviour.
 */
@@ -50,62 +50,42 @@
 }
 
 /*
- * FONT LICENSE INFORMATION:
- * =========================
- * All fonts used in this publication are open-source and licensed for embedding:
- *
- * 1. Libre Baskerville - SIL Open Font License (OFL)
- *    Source: Google Fonts - https://fonts.google.com/specimen/Libre+Baskerville
- *    License: Free for commercial and personal use, embedding permitted
- *
- * 2. Montserrat - SIL Open Font License (OFL)
- *    Source: Google Fonts - https://fonts.google.com/specimen/Montserrat
- *    License: Free for commercial and personal use, embedding permitted
- *
- * 3. Cinzel Decorative - SIL Open Font License (OFL)
- *    Source: Google Fonts - https://fonts.google.com/specimen/Cinzel+Decorative
- *    License: Free for commercial and personal use, embedding permitted
- *
- * All three fonts permit embedding in PDF and EPUB publications.
+ * GLOBAL TYPOGRAPHY ASSIGNMENTS
+ * Maps generic HTML elements to your specific font stack.
  */
 
-/* Assignments for specific usage contexts */
-body, p {
+body, p, li, dd, dt {
   font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
   font-weight: 400;
 }
 
-.bible-quote-text, .bible-quote-container blockquote {
-  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+/* Headings & Display Text */
+h1, .frontmatter-title, .main-title, .key-title, .bib-title, .dedication-heading {
+  font-family: 'Cinzel Decorative', Georgia, serif;
+  font-weight: 400;
+}
+
+h2, h3, h4, h5, h6, .subtitle, .section-heading {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Special Contexts */
+.bible-quote-text, .bible-quote-container blockquote, .dedication-text, .quote-figure blockquote {
+  font-family: 'Libre Baskerville', serif;
   font-style: italic;
-  font-weight: 400;
 }
 
+.author, .publisher-info, .copyright-notice, .isbn-info, .toc-page-number, .footer-text, .print-instruction {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Dropcaps */
 .dropcap-first-letter p:first-child::first-letter,
-.dropcap-first-letter p:first-child strong:first-child,
-.backmatter-dropcap {
-  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+.dropcap-paragraph::first-letter {
+  font-family: 'Cinzel Decorative', serif;
   font-weight: 700;
 }
 
-.title-line, .chapter-title-word, .part-title {
-  font-family: 'Cinzel Decorative', Georgia, 'Times New Roman', serif;
-  font-weight: 400;
-}
-
-.author, .publisher-info, .copyright, .metadata, .toc-page-number {
-  font-family: 'Montserrat', Arial, 'Helvetica Neue', sans-serif;
-}
-
-@media print {
-  body {
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .chapter-title-word, .chapter-number-text {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-  }
-  .author, .publisher-info {
-    font-family: Arial, sans-serif;
-  }
-}
