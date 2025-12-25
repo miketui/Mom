@@ -1,259 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Self-Care Journal</title>
+  <title>Self-Care Journal - The Artisan's Path</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
   <style>
-    .selfcare-page {
-      min-height: 100vh;
-      max-height: 100vh;
-      padding: 1.75rem 2.25rem;
-      display: flex;
-      flex-direction: column;
-      page-break-before: always;
-      page-break-after: always;
-      page-break-inside: avoid;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.03) 100%);
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap');
+
+    :root { --teal: #2B9999; --gold: #C9A961; }
+    body { background: #fdfdfd; font-family: 'Lato', sans-serif; margin: 0; }
+
+    .worksheet-page {
+      max-width: 850px; min-height: 1100px; margin: 2rem auto; background: white;
+      padding: 4rem; position: relative; border: 1px solid #f0f0f0;
     }
-    .header-section {
-      text-align: center;
-      margin-bottom: 0.9rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 3px solid #2B9999;
-    }
-    .worksheet-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #2B9999 0%, #3DB3B3 100%);
-      color: white;
-      padding: 0.25rem 1rem;
-      border-radius: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }
-    .main-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 1.5rem;
-      color: #2B9999;
-      margin-bottom: 0.2rem;
-      letter-spacing: 0.05em;
-    }
-    .subtitle {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.85rem;
-      color: #C9A961;
-      font-style: italic;
-    }
-    .content-area {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .prompt-card {
-      background: white;
-      border-radius: 8px;
-      padding: 0.65rem 0.9rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .prompt-card.teal-accent {
-      border-left: 4px solid #2B9999;
-    }
-    .prompt-card.gold-accent {
-      border-left: 4px solid #C9A961;
-    }
-    .prompt-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.3rem;
-    }
-    .prompt-badge {
-      padding: 0.12rem 0.4rem;
-      border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.55rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-    .prompt-badge.teal {
-      background: #2B9999;
-      color: white;
-    }
-    .prompt-badge.gold {
-      background: #C9A961;
-      color: white;
-    }
-    .prompt-text {
-      font-size: 0.7rem;
-      color: #666;
-      line-height: 1.35;
-      margin-bottom: 0.3rem;
-    }
-    .writing-lines {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-    .writing-line {
-      border-bottom: 1px solid #ddd;
-      min-height: 1rem;
-    }
-    .tracker-section {
-      background: linear-gradient(135deg, rgba(43,153,153,0.06) 0%, rgba(201,169,97,0.06) 100%);
-      border-radius: 8px;
-      padding: 0.6rem 0.9rem;
-    }
-    .tracker-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #2B9999;
-      margin-bottom: 0.4rem;
-    }
-    .tracker-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.65rem;
-    }
-    .tracker-table th {
-      background: #2B9999;
-      color: white;
-      padding: 0.3rem;
-      text-align: center;
-      font-weight: 600;
-    }
-    .tracker-table td {
-      border: 1px solid #ddd;
-      padding: 0.25rem;
-      text-align: center;
-    }
-    .tracker-table td:first-child {
-      text-align: left;
-      color: #444;
-      font-size: 0.6rem;
-    }
-    .footer-section {
-      margin-top: auto;
-      padding-top: 0.5rem;
-      text-align: center;
-      border-top: 2px solid rgba(201,169,97,0.3);
-    }
-    .footer-quote {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.65rem;
-      color: #666;
-      font-style: italic;
-      margin-bottom: 0.3rem;
-    }
-    .footer-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.6rem;
-      color: #999;
-      letter-spacing: 0.1em;
-    }
+
+    .header { text-align: center; margin-bottom: 3rem; }
+    h1 { font-family: 'Playfair Display'; color: var(--teal); font-size: 2.5rem; margin: 0; }
+    h2 { font-size: 0.8rem; letter-spacing: 0.15em; color: #aaa; text-transform: uppercase; margin-top: 0.5rem; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+    .prompt h3 { font-size: 0.7rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .prompt p { font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0; }
+    .box { width: 100%; height: 100px; background: #fdfdfd; border: 1px solid #eee; border-radius: 4px; padding: 1rem; resize: none; font-family: 'Playfair Display'; font-size: 1rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    th { text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); border-bottom: 2px solid var(--teal); padding: 0.5rem; }
+    td { padding: 0.75rem 0.5rem; border-bottom: 1px solid #f0f0f0; }
+    .habit-col { font-family: 'Playfair Display'; font-style: italic; color: #555; }
+    .day-col { text-align: center; width: 40px; border-left: 1px solid #fafafa; }
+    .checkbox { width: 16px; height: 16px; border: 1px solid #ddd; border-radius: 3px; display: inline-block; }
+
+    .gratitude { border-top: 1px solid #eee; padding-top: 2rem; }
+    .lines .line { border-bottom: 1px solid #eee; height: 2rem; width: 100%; }
+
+    @media print { .worksheet-page { margin: 0; border: none; } }
   </style>
 </head>
-<body class="backmatter-page">
-<main epub:type="backmatter" role="main">
-<section class="selfcare-page" aria-label="Self-Care Journal">
-
-<div class="header-section">
-  <div class="worksheet-badge">Wellness Worksheet</div>
-  <h1 class="main-title">Self-Care Journal</h1>
-  <p class="subtitle">Embracing Wellness &amp; Resilience</p>
-</div>
-
-<div class="content-area">
-
-  <div class="prompt-card teal-accent">
-    <div class="prompt-header">
-      <span class="prompt-badge teal">BODY SCAN</span>
+<body>
+  <div class="worksheet-page">
+    <div class="header">
+      <h1>Self-Care Journal</h1>
+      <h2>Embracing Wellness &amp; Resilience</h2>
     </div>
-    <p class="prompt-text">Where are you holding tension today (hands, shoulders, lower back)? What one stretch can you do between clients to release it?</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
 
-  <div class="tracker-section">
-    <div class="tracker-title">MINIMUM VIABLE SELF-CARE TRACKER</div>
-    <table class="tracker-table">
+    <div class="grid-2">
+      <div class="prompt">
+        <h3>Body Scan</h3>
+        <p>Where are you holding tension?</p>
+        <textarea class="box"></textarea>
+      </div>
+      <div class="prompt">
+        <h3>Boundaries</h3>
+        <p>What did you say "No" to this week?</p>
+        <textarea class="box"></textarea>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:#555; margin-bottom:1rem;">Minimum Viable Self-Care Tracker</h3>
+    <table>
       <thead>
         <tr>
-          <th style="width:35%;">Practice</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
+          <th>Practice</th>
+          <th style="text-align:center;">M</th><th style="text-align:center;">T</th><th style="text-align:center;">W</th><th style="text-align:center;">T</th><th style="text-align:center;">F</th><th style="text-align:center;">S</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Hydration (Glass before client)</td>
-          <td></td><td></td><td></td><td></td><td></td><td></td>
+          <td class="habit-col">Hydration</td>
+          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
         </tr>
         <tr>
-          <td>Micro-Stretches</td>
-          <td></td><td></td><td></td><td></td><td></td><td></td>
+          <td class="habit-col">Micro-Stretches</td>
+          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
         </tr>
         <tr>
-          <td>Mindful Breathing</td>
-          <td></td><td></td><td></td><td></td><td></td><td></td>
+          <td class="habit-col">Mindful Breathing</td>
+          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
         </tr>
         <tr>
-          <td>Lunch Break Taken</td>
-          <td></td><td></td><td></td><td></td><td></td><td></td>
+          <td class="habit-col">Lunch Break Taken</td>
+          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
         </tr>
       </tbody>
     </table>
-  </div>
 
-  <div class="prompt-card gold-accent">
-    <div class="prompt-header">
-      <span class="prompt-badge gold">BOUNDARIES</span>
-    </div>
-    <p class="prompt-text">One thing I said "No" to this week to protect my energy:</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
+    <div class="gratitude">
+      <h3 style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--teal);">Gratitude for Self</h3>
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </div>
   </div>
-
-  <div class="prompt-card teal-accent">
-    <div class="prompt-header">
-      <span class="prompt-badge teal">SELF-CARE ACTION</span>
-    </div>
-    <p class="prompt-text">Based on your reflections, identify 2-3 specific self-care actions you will take this week. Be realistic about when and how.</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
-
-</div>
-
-<div class="footer-section">
-  <p class="footer-quote">"Self-care is not selfish—it's essential. You cannot pour from an empty cup."</p>
-  <p class="footer-text">The Artisan's Path | Self-Care Journal</p>
-</div>
-
-</section>
-</main>
 </body>
 </html>

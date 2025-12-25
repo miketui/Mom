@@ -1,200 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vision Journal</title>
+  <title>Vision Journal - The Artisan's Path</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
   <style>
-    .vision-page {
-      min-height: 100vh;
-      max-height: 100vh;
-      padding: 1.75rem 2.25rem;
-      display: flex;
-      flex-direction: column;
-      page-break-before: always;
-      page-break-after: always;
-      page-break-inside: avoid;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201,169,97,0.04) 100%);
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap');
+
+    :root { --teal: #2B9999; --gold: #C9A961; }
+    body { background: #f5f5f4; font-family: 'Lato', sans-serif; margin: 0; }
+
+    .worksheet-page {
+      max-width: 850px; min-height: 1100px; margin: 2rem auto; background: white;
+      padding: 4rem; position: relative; border-top: 4px solid var(--gold);
     }
-    .header-section {
-      text-align: center;
-      margin-bottom: 0.9rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 3px solid #C9A961;
+
+    .header { margin-bottom: 4rem; text-align: center; }
+    h1 { font-family: 'Playfair Display'; font-size: 2.5rem; color: #333; margin: 0; }
+    h2 { font-size: 0.8rem; letter-spacing: 0.2em; color: var(--teal); text-transform: uppercase; margin-top: 0.5rem; }
+
+    .section-title { font-size: 0.7rem; font-weight: 700; color: #999; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .value-card { background: #fafafa; padding: 1.5rem; border-top: 2px solid var(--teal); }
+    .value-input { width: 100%; background: transparent; border: none; font-weight: bold; color: var(--teal); margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+    .value-desc { width: 100%; background: transparent; border: none; resize: none; font-size: 0.8rem; color: #666; font-style: italic; }
+
+    .legacy-box {
+      background: rgba(201, 169, 97, 0.05); padding: 2rem;
+      border-radius: 0 40px 0 40px;
     }
-    .worksheet-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
-      color: white;
-      padding: 0.25rem 1rem;
-      border-radius: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }
-    .main-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 1.5rem;
-      color: #2B9999;
-      margin-bottom: 0.2rem;
-      letter-spacing: 0.05em;
-    }
-    .subtitle {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.85rem;
-      color: #C9A961;
-      font-style: italic;
-    }
-    .content-area {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-    .prompt-card {
-      background: white;
-      border-radius: 8px;
-      padding: 0.7rem 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .prompt-card.featured {
-      flex: 2;
-      border-left: 4px solid #C9A961;
-    }
-    .prompt-card.secondary {
-      flex: 1;
-      border-left: 4px solid #2B9999;
-    }
-    .prompt-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.35rem;
-    }
-    .prompt-badge {
-      padding: 0.12rem 0.45rem;
-      border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.55rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-    .prompt-badge.gold {
-      background: #C9A961;
-      color: white;
-    }
-    .prompt-badge.teal {
-      background: #2B9999;
-      color: white;
-    }
-    .prompt-text {
-      font-size: 0.7rem;
-      color: #666;
-      line-height: 1.4;
-      margin-bottom: 0.35rem;
-    }
-    .writing-lines {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-    .writing-line {
-      border-bottom: 1px solid #ddd;
-      min-height: 1.1rem;
-    }
-    .two-col-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-    .footer-section {
-      margin-top: auto;
-      padding-top: 0.6rem;
-      text-align: center;
-      border-top: 2px solid rgba(43,153,153,0.2);
-    }
-    .footer-quote {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.65rem;
-      color: #666;
-      font-style: italic;
-      margin-bottom: 0.3rem;
-    }
-    .footer-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.6rem;
-      color: #999;
-      letter-spacing: 0.1em;
-    }
+    .line { border-bottom: 1px solid rgba(201, 169, 97, 0.2); height: 2rem; width: 100%; }
+
+    @media print { .worksheet-page { margin: 0; } }
   </style>
 </head>
-<body class="backmatter-page">
-<main epub:type="backmatter" role="main">
-<section class="vision-page" aria-label="Vision Journal">
-
-<div class="header-section">
-  <div class="worksheet-badge">Vision Worksheet</div>
-  <h1 class="main-title">Vision Journal</h1>
-  <p class="subtitle">Crafting Your Legacy</p>
-</div>
-
-<div class="content-area">
-
-  <div class="prompt-card featured">
-    <div class="prompt-header">
-      <span class="prompt-badge gold">CORE VALUES</span>
+<body>
+  <div class="worksheet-page">
+    <div class="header">
+      <h1>Vision Journal</h1>
+      <h2>Crafting Your Legacy</h2>
     </div>
-    <p class="prompt-text">Identify your top 3 core values (e.g., Creativity, Integrity, Community). How do they show up in your salon today?</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
 
-  <div class="prompt-card featured">
-    <div class="prompt-header">
-      <span class="prompt-badge teal">THE VISION STATEMENT</span>
+    <div class="section-title">01 Core Values</div>
+    <div class="values-grid">
+      <div class="value-card">
+        <input class="value-input" placeholder="VALUE 1" />
+        <textarea class="value-desc" placeholder="How it shows up..."></textarea>
+      </div>
+      <div class="value-card">
+        <input class="value-input" placeholder="VALUE 2" />
+        <textarea class="value-desc" placeholder="How it shows up..."></textarea>
+      </div>
+      <div class="value-card">
+        <input class="value-input" placeholder="VALUE 3" />
+        <textarea class="value-desc" placeholder="How it shows up..."></textarea>
+      </div>
     </div>
-    <p class="prompt-text">Draft a succinct statement that captures your purpose. (e.g., "To empower clients to embrace their unique beauty...")</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
+
+    <div class="section-title">02 Legacy Statement</div>
+    <p style="font-size:0.9rem; color:#666; margin-bottom:1.5rem;">Ten years from now, what do you want your clients and peers to say about the impact you had on them?</p>
+    <div class="legacy-box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
   </div>
-
-  <div class="prompt-card featured">
-    <div class="prompt-header">
-      <span class="prompt-badge gold">LEGACY</span>
-    </div>
-    <p class="prompt-text">Ten years from now, what do you want your clients and peers to say about the impact you had on them?</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
-
-</div>
-
-<div class="footer-section">
-  <p class="footer-quote">"Your vision is not a distant fantasy—it's a destination you're actively creating."</p>
-  <p class="footer-text">The Artisan's Path | Vision Journal</p>
-</div>
-
-</section>
-</main>
 </body>
 </html>
