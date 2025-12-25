@@ -4,108 +4,225 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curls &amp; Contemplation - Affirmation Odyssey Worksheet</title>
+  <title>Affirmations: The Artist's Mindset</title>
+  <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .affirmation-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201,169,97,0.05) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.6rem;
+      color: #2B9999;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.95rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .intro-text {
+      font-size: 0.8rem;
+      color: #666;
+      text-align: center;
+      max-width: 550px;
+      margin: 0.75rem auto 1rem;
+      line-height: 1.5;
+    }
+    .affirmations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .affirmation-card {
+      background: white;
+      border: 2px dashed #C9A961;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 120px;
+      box-shadow: 0 2px 8px rgba(201,169,97,0.15);
+    }
+    .affirmation-text {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.95rem;
+      color: #2B9999;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .affirmation-sub {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.75rem;
+      color: #666;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .writing-section {
+      background: linear-gradient(135deg, rgba(43,153,153,0.06) 0%, rgba(201,169,97,0.06) 100%);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .writing-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .writing-badge {
+      background: #2B9999;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    .writing-prompt {
+      font-size: 0.8rem;
+      color: #444;
+      line-height: 1.4;
+    }
+    .writing-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 0.5rem;
+    }
+    .writing-line {
+      border-bottom: 1px solid #ccc;
+      min-height: 1.5rem;
+    }
+    .inspiration-section {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.8);
+      border-radius: 8px;
+      border-left: 3px solid #C9A961;
+    }
+    .inspiration-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #C9A961;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.08em;
+    }
+    .inspiration-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 1rem;
+      font-size: 0.7rem;
+      color: #555;
+      font-style: italic;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      text-align: center;
+      border-top: 2px solid rgba(201,169,97,0.3);
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="frontmatter-page">
 <main role="main" epub:type="frontmatter">
-<section class="frontmatter-shell worksheet" aria-label="Affirmation Odyssey Worksheet">
+<section class="affirmation-page" aria-label="Affirmations: The Artist's Mindset">
 
-<!-- Title and subtitle -->
-<h1 class="affirmation-title" epub:type="title">AFFIRMATION ODYSSEY</h1>
-<h2 class="affirmation-subtitle" epub:type="subtitle">Building Your Creative Confidence</h2>
-<div class="decorative-line" aria-hidden="true"></div>
-
-<!-- Introduction paragraph -->
-<p class="introduction">This is more than an activity; it's a step toward personal growth. As you dive into this eBook, you'll gradually build your own affirmation, reflecting and finding your inner voice along the way. By the end, you'll have crafted a 12-line testament to your creativity and self-awareness. Start with your first three lines now and watch your affirmation take shape.</p>
-
-<!-- Your Affirmation section -->
-<div class="section" role="region" aria-label="Your Affirmation">
-<div class="section-header">
-<div class="section-line" aria-hidden="true"></div>
-<div class="section-title">Your Affirmation</div>
-<div class="section-line" aria-hidden="true"></div>
-</div>
-<div class="affirmation-lines">
-<div class="affirmation-line">
-<div class="line-number">1</div>
-<div class="line-container" aria-label="Affirmation line 1"></div>
-</div>
-<div class="affirmation-line">
-<div class="line-number">2</div>
-<div class="line-container" aria-label="Affirmation line 2"></div>
-</div>
-<div class="affirmation-line">
-<div class="line-number">3</div>
-<div class="line-container" aria-label="Affirmation line 3"></div>
-</div>
-</div>
+<div class="header-section">
+  <div class="worksheet-badge">Affirmation Worksheet</div>
+  <h1 class="main-title">The Artist's Mindset</h1>
+  <p class="subtitle">Speak Life into Your Craft</p>
 </div>
 
-<!-- Inspiration section -->
-<div class="section" role="region" aria-label="Inspiration">
-<div class="section-header">
-<div class="section-line" aria-hidden="true"></div>
-<div class="section-title">Inspiration</div>
-<div class="section-line" aria-hidden="true"></div>
-</div>
-<div class="inspiration-container">
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">I am capable and strong, with endless potential.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">Today, I move closer to my dreams.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">My mind is focused; my heart and spirit are ready.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">Challenges are opportunities for growth.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">I deserve success, happiness, and fulfillment.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">I learn, evolve, and improve daily.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">My actions spread positivity.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">I am thankful for every experience.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">I believe in my vision and trust my journey.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">I radiate positivity and resilience.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">Every step is toward my true potential.</div>
-</div>
-<div class="inspiration-item">
-<div class="inspiration-bullet" aria-hidden="true">•</div>
-<div class="inspiration-text">Daily, I grow stronger in my purpose.</div>
-</div>
-</div>
+<p class="intro-text">Read these aloud before your workday begins, or cut them out and place them near your station. Let these words anchor your creative spirit.</p>
+
+<div class="affirmations-grid">
+  <div class="affirmation-card">
+    <p class="affirmation-text">"My hands are extensions of my heart."</p>
+    <p class="affirmation-sub">I pour intention and care into every strand I touch.</p>
+  </div>
+  <div class="affirmation-card">
+    <p class="affirmation-text">"I trust my creative intuition."</p>
+    <p class="affirmation-sub">I am not afraid to experiment or suggest bold changes.</p>
+  </div>
+  <div class="affirmation-card">
+    <p class="affirmation-text">"I am a value multiplier."</p>
+    <p class="affirmation-sub">My work transforms not just hair, but confidence and identity.</p>
+  </div>
 </div>
 
-<!-- Closing text -->
-<p class="closing-text">Repeat these affirmations daily to remind yourself of your strength and potential.</p>
+<div class="writing-section">
+  <div class="writing-header">
+    <span class="writing-badge">WRITE YOUR OWN</span>
+  </div>
+  <p class="writing-prompt">Draft a personal affirmation that addresses your biggest current creative block. What truth do you need to speak over yourself today?</p>
+  <div class="writing-lines">
+    <div class="writing-line"></div>
+    <div class="writing-line"></div>
+    <div class="writing-line"></div>
+  </div>
+</div>
 
-<!-- Decorative closing -->
-<div class="section-separator" aria-hidden="true"></div>
+<div class="inspiration-section">
+  <div class="inspiration-title">MORE AFFIRMATION STARTERS</div>
+  <div class="inspiration-list">
+    <span>I am capable and strong, with endless potential.</span>
+    <span>Today, I move closer to my dreams.</span>
+    <span>Challenges are opportunities for growth.</span>
+    <span>I deserve success, happiness, and fulfillment.</span>
+    <span>I learn, evolve, and improve daily.</span>
+    <span>I believe in my vision and trust my journey.</span>
+  </div>
+</div>
+
+<div class="footer-section">
+  <p class="footer-text">The Artisan's Path | Affirmations Close</p>
+</div>
 
 </section>
 </main>

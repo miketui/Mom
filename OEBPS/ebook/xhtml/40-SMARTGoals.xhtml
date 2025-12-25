@@ -4,143 +4,268 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SMART Goal Setting Worksheet - Unveiling Your Creative Odyssey</title>
+  <title>SMART Goals Worksheet</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .smart-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 1.75rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201,169,97,0.04) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid #C9A961;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.85rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .goal-focus {
+      background: rgba(43,153,153,0.06);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .goal-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2B9999;
+    }
+    .goal-line {
+      flex: 1;
+      border-bottom: 1px solid #999;
+      min-height: 1.1rem;
+    }
+    .smart-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .smart-row {
+      display: flex;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    .smart-letter-box {
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 0.4rem;
+    }
+    .smart-letter {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .smart-content {
+      flex: 1;
+      background: white;
+      border-radius: 8px;
+      padding: 0.6rem 0.9rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+    }
+    .smart-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #C9A961;
+      margin-bottom: 0.2rem;
+    }
+    .smart-prompt {
+      font-size: 0.7rem;
+      color: #666;
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+    .writing-line {
+      border-bottom: 1px solid #ddd;
+      min-height: 1rem;
+      flex: 1;
+    }
+    .commitment-section {
+      background: linear-gradient(135deg, rgba(201,169,97,0.1) 0%, rgba(43,153,153,0.1) 100%);
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      margin-top: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .commitment-icon {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(135deg, #C9A961 0%, #B08F4A 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1rem;
+    }
+    .commitment-content {
+      flex: 1;
+    }
+    .commitment-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+    }
+    .commitment-line {
+      border-bottom: 1px solid #999;
+      min-height: 1rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      text-align: center;
+      border-top: 2px solid rgba(43,153,153,0.2);
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card worksheet" aria-label="SMART Goal Setting Worksheet">
+<main epub:type="backmatter" role="main">
+<section class="smart-page" aria-label="SMART Goals Worksheet">
 
-      <h1 class="section-heading">SMART GOAL SETTING WORKSHEET</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Goal Setting Worksheet</div>
+  <h1 class="main-title">SMART Goals Worksheet</h1>
+  <p class="subtitle">Turning Vision into Action</p>
+</div>
 
-      <div class="introduction">
-        <p>Setting clear, well-defined goals is the foundation of all professional achievement. The SMART framework transforms vague aspirations into powerful, actionable objectives that dramatically increase your likelihood of success. Each letter in SMART represents a critical quality that your goal must possess: <strong>Specific</strong>, <strong>Measurable</strong>, <strong>Achievable</strong>, <strong>Relevant</strong>, and <strong>Time-bound</strong>.</p>
-      </div>
+<div class="goal-focus">
+  <span class="goal-label">Goal Focus:</span>
+  <div class="goal-line"></div>
+</div>
 
-      <h2 class="section-heading">The SMART Goal Framework</h2>
+<div class="smart-container">
 
-      <div class="smart-criteria">
-        <div class="smart-item">
-          <h3>S - Specific</h3>
-          <p>Define what exactly will be accomplished, who's involved, where it will happen, and why it's important.</p>
-          <div class="example">
-            <p><strong>Vague:</strong> "I want to improve my coloring skills."</p>
-            <p><strong>Specific:</strong> "I will master balayage techniques for creating natural-looking dimension on dark hair."</p>
-          </div>
-        </div>
+  <div class="smart-row">
+    <div class="smart-letter-box">
+      <div class="smart-letter">S</div>
+    </div>
+    <div class="smart-content">
+      <div class="smart-title">Specific</div>
+      <div class="smart-prompt">What exactly do you want to achieve?</div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-        <div class="smart-item">
-          <h3>M - Measurable</h3>
-          <p>Include concrete criteria for tracking progress and determining goal achievement.</p>
-          <div class="example">
-            <p><strong>Vague:</strong> "I want to grow my social media presence."</p>
-            <p><strong>Measurable:</strong> "I will increase my Instagram followers from 500 to 2,000 and maintain a 5% engagement rate."</p>
-          </div>
-        </div>
+  <div class="smart-row">
+    <div class="smart-letter-box">
+      <div class="smart-letter">M</div>
+    </div>
+    <div class="smart-content">
+      <div class="smart-title">Measurable</div>
+      <div class="smart-prompt">How will you track progress? (Numbers, percentages)</div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-        <div class="smart-item">
-          <h3>A - Achievable</h3>
-          <p>Ensure the goal is possible with current resources and constraints while still stretching abilities.</p>
-          <div class="example">
-            <p><strong>Unrealistic:</strong> "I will double my client base in one month without marketing."</p>
-            <p><strong>Achievable:</strong> "I will add 2 new clients per week through referrals and optimizing my online presence."</p>
-          </div>
-        </div>
+  <div class="smart-row">
+    <div class="smart-letter-box">
+      <div class="smart-letter">A</div>
+    </div>
+    <div class="smart-content">
+      <div class="smart-title">Achievable</div>
+      <div class="smart-prompt">Is this realistic given your current resources?</div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-        <div class="smart-item">
-          <h3>R - Relevant</h3>
-          <p>Align the goal with broader professional vision and core values to ensure it's worthwhile.</p>
-          <div class="example">
-            <p><strong>Irrelevant:</strong> "I'll learn nail art" (for a hairstylist building a hair-only salon)</p>
-            <p><strong>Relevant:</strong> "I'll develop expertise in creative updos to expand bridal services."</p>
-          </div>
-        </div>
+  <div class="smart-row">
+    <div class="smart-letter-box">
+      <div class="smart-letter">R</div>
+    </div>
+    <div class="smart-content">
+      <div class="smart-title">Relevant</div>
+      <div class="smart-prompt">Does this align with your core values and long-term vision?</div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-        <div class="smart-item">
-          <h3>T - Time-bound</h3>
-          <p>Set a clear deadline to create urgency and support prioritization.</p>
-          <div class="example">
-            <p><strong>Open-ended:</strong> "I'll eventually take a business course."</p>
-            <p><strong>Time-bound:</strong> "I will complete a salon business certification by December 31st."</p>
-          </div>
-        </div>
-      </div>
+  <div class="smart-row">
+    <div class="smart-letter-box">
+      <div class="smart-letter">T</div>
+    </div>
+    <div class="smart-content">
+      <div class="smart-title">Time-Bound</div>
+      <div class="smart-prompt">When is the deadline?</div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-      <h2 class="section-heading">SMART Goal Worksheet</h2>
+</div>
 
-      <div class="activity-section">
-        <h3>Goal Description</h3>
-        <p>Write a brief description of what you want to achieve. Don't worry about making it SMART yet.</p>
-        <div class="writing-area ruled-paper-bg"></div>
-      </div>
+<div class="commitment-section">
+  <div class="commitment-icon">&#10003;</div>
+  <div class="commitment-content">
+    <div class="commitment-label">COMMITMENT: I commit to taking the first step by (Date):</div>
+    <div class="commitment-line"></div>
+  </div>
+</div>
 
-      <div class="activity-section">
-        <h3>SMART Components</h3>
+<div class="footer-section">
+  <p class="footer-text">The Artisan's Path | SMART Goals</p>
+</div>
 
-        <h4>S - Specific: What exactly will you accomplish? What specific skills, knowledge, or outcomes are you targeting?</h4>
-        <div class="writing-area ruled-paper-bg"></div>
-
-        <h4>M - Measurable: How will you measure progress and know when you've achieved your goal?</h4>
-        <div class="writing-area ruled-paper-bg"></div>
-
-        <h4>A - Achievable: Do you have the resources and abilities needed? What makes this goal realistic?</h4>
-        <div class="writing-area ruled-paper-bg"></div>
-
-        <h4>R - Relevant: How does this goal align with your broader professional vision and values?</h4>
-        <div class="writing-area ruled-paper-bg"></div>
-
-        <h4>T - Time-bound: What is your specific deadline or timeframe for achieving this goal?</h4>
-        <div class="writing-area ruled-paper-bg"></div>
-      </div>
-
-      <div class="activity-section">
-        <h3>Refined SMART Goal Statement</h3>
-        <p>Rewrite your goal in a complete SMART format.</p>
-        <div class="writing-area ruled-paper-bg" style="min-height: 150px;"></div>
-      </div>
-
-      <div class="action-plan">
-        <h3>Action Plan</h3>
-        <p>List the key steps you'll take to achieve this goal.</p>
-        <ol>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-        </ol>
-      </div>
-
-      <div class="accountability-section">
-        <h3>Accountability &amp; Resources</h3>
-
-        <p><strong>Who will support you?</strong></p>
-        <div class="writing-area"></div>
-
-        <p><strong>What resources do you need?</strong></p>
-        <div class="writing-area"></div>
-
-        <p><strong>How will you track progress?</strong></p>
-        <div class="writing-area"></div>
-      </div>
-
-      <div class="review-section">
-        <h3>Review and Reflection</h3>
-
-        <p><strong>Potential obstacles:</strong></p>
-        <div class="writing-area ruled-paper-bg"></div>
-
-        <p><strong>How you'll overcome them:</strong></p>
-        <div class="writing-area ruled-paper-bg"></div>
-      </div>
-
-      <div class="cta-section">
-        <h4>Transform Dreams Into Achievable Goals</h4>
-        <p>Use the SMART framework to create clear, actionable objectives that will accelerate your hairstyling career success.</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>

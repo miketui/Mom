@@ -4,51 +4,223 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Journal Page - Unveiling Your Creative Odyssey</title>
+  <title>Journal Page</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .journal-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.03) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid #2B9999;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #2B9999 0%, #3DB3B3 100%);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.6rem;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.9rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .date-topic-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      background: rgba(201,169,97,0.08);
+      border-radius: 8px;
+    }
+    .date-field, .topic-field {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      color: #666;
+    }
+    .field-line {
+      border-bottom: 1px solid #999;
+      min-width: 120px;
+      height: 1.2rem;
+    }
+    .topic-field .field-line {
+      min-width: 200px;
+    }
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .writing-section {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .writing-section.main {
+      flex: 3;
+      border-left: 4px solid #2B9999;
+    }
+    .writing-section.secondary {
+      flex: 1;
+      border-left: 4px solid #C9A961;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .section-badge {
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .section-badge.teal {
+      background: #2B9999;
+      color: white;
+    }
+    .section-badge.gold {
+      background: #C9A961;
+      color: white;
+    }
+    .section-prompt {
+      font-size: 0.75rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .writing-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .writing-line {
+      border-bottom: 1px solid #ddd;
+      min-height: 1.4rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      text-align: center;
+      border-top: 2px solid rgba(201,169,97,0.3);
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+    .footer-quote {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card journal" aria-label="Free-Form Journal Page">
+<main epub:type="backmatter" role="main">
+<section class="journal-page" aria-label="Journal Page">
 
-      <h1 class="section-heading">JOURNAL PAGE</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Journal Worksheet</div>
+  <h1 class="main-title">Journal Page</h1>
+  <p class="subtitle">Reflections, Ideas, &amp; Breakthroughs</p>
+</div>
 
-      <h2 class="section-heading">Your Creative Space</h2>
+<div class="date-topic-row">
+  <div class="date-field">
+    <span>Date:</span>
+    <div class="field-line"></div>
+  </div>
+  <div class="topic-field">
+    <span>Topic:</span>
+    <div class="field-line"></div>
+  </div>
+</div>
 
-      <div class="introduction">
-        <p>This page is yours to fill however serves you best. Use it for daily reflections, client success stories, technical notes, creative breakthroughs, challenges you're working through, or simply to process your thoughts and feelings about your hairstyling journey.</p>
-      </div>
+<div class="content-area">
 
-      <div class="date-field">
-        <label>Date:</label>
-        <div class="fill-line"></div>
-      </div>
+  <div class="writing-section main">
+    <div class="section-header">
+      <span class="section-badge teal">TODAY'S FOCUS</span>
+    </div>
+    <p class="section-prompt">What's on your mind today? What do you want to explore, process, or remember?</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-      <div class="journal-entry">
-        <h3>Today's Focus:</h3>
-        <p class="journal-prompt">What's on your mind today? What do you want to explore, process, or remember?</p>
-        <div class="writing-area ruled-paper-bg" style="min-height: 12rem;"></div>
-      </div>
+  <div class="writing-section secondary">
+    <div class="section-header">
+      <span class="section-badge gold">GRATITUDE &amp; WINS</span>
+    </div>
+    <p class="section-prompt">What went well today? What are you grateful for?</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-      <div class="journal-entry">
-        <h3>Insights &amp; Reflections:</h3>
-        <div class="writing-area ruled-paper-bg" style="min-height: 14rem;"></div>
-      </div>
+</div>
 
-      <div class="journal-entry">
-        <h3>Gratitude &amp; Wins:</h3>
-        <p class="journal-prompt">What went well today? What are you grateful for?</p>
-        <div class="writing-area ruled-paper-bg" style="min-height: 8rem;"></div>
-      </div>
+<div class="footer-section">
+  <p class="footer-quote">"Your voice matters. Your story matters. Your journey matters."</p>
+  <p class="footer-text">The Artisan's Path | Journal Page</p>
+</div>
 
-      <div class="closing-message">
-        <p style="text-align: center; font-style: italic; margin-top: 2rem;">Your voice matters. Your story matters. Your journey matters.</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>

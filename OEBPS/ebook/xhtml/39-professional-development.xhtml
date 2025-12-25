@@ -4,197 +4,246 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Professional Development Worksheet</title>
+  <title>Professional Development Plan</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .pd-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 1.75rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.03) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid #2B9999;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #2B9999 0%, #3DB3B3 100%);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.85rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .content-area {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+    }
+    .section-card {
+      background: white;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+    }
+    .section-card.span-2 {
+      grid-column: span 2;
+    }
+    .section-card.teal-accent {
+      border-left: 4px solid #2B9999;
+    }
+    .section-card.gold-accent {
+      border-left: 4px solid #C9A961;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .section-number {
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+    }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2B9999;
+    }
+    .section-prompt {
+      font-size: 0.7rem;
+      color: #666;
+      line-height: 1.4;
+      margin-bottom: 0.4rem;
+    }
+    .writing-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .writing-line {
+      border-bottom: 1px solid #ddd;
+      min-height: 1.1rem;
+    }
+    .mentors-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .mentor-field {
+      background: rgba(43,153,153,0.05);
+      border-radius: 6px;
+      padding: 0.4rem 0.6rem;
+      text-align: center;
+    }
+    .mentor-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      color: #2B9999;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .mentor-line {
+      border-bottom: 1px solid #ccc;
+      min-height: 0.9rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      text-align: center;
+      border-top: 2px solid rgba(201,169,97,0.3);
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <div class="assessment-page single-page">
-      <!-- Decorative top -->
-      <div class="elegant-divider"></div>
+<main epub:type="backmatter" role="main">
+<section class="pd-page" aria-label="Professional Development Plan">
 
-      <!-- Title -->
-      <h1 class="assessment-title">Professional Development Worksheet</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Development Worksheet</div>
+  <h1 class="main-title">Professional Development Plan</h1>
+  <p class="subtitle">Cultivating Creative Excellence</p>
+</div>
 
-      <!-- Introduction -->
-      <p class="introduction">
-        In the dynamic world of hairstyling, your commitment to continuous learning and growth is what separates extraordinary stylists from the ordinary. This worksheet helps you map your professional development journey and create an actionable plan to elevate your expertise.
-      </p>
+<div class="content-area">
 
-      <!-- Current Professional Assessment -->
-      <div class="section">
-        <div class="section-header">
-          <div class="section-line"></div>
-          <div class="section-title">Current Professional Assessment</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-number">1</div>
-          <div class="question-text"><strong>Career Vision (3–5 Years):</strong></div>
-          <div class="answer-space"></div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-number">2</div>
-          <div class="question-text"><strong>Core Strengths Assessment:</strong></div>
-          <div class="answer-space"></div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-number">3</div>
-          <div class="question-text"><strong>Growth Opportunities:</strong></div>
-          <div class="answer-space"></div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-number">4</div>
-          <div class="question-text"><strong>Recent Learning Experiences:</strong></div>
-          <div class="answer-space"></div>
-        </div>
-      </div>
-
-      <!-- Strategic Development Plan -->
-      <div class="section">
-        <div class="section-header">
-          <div class="section-line"></div>
-          <div class="section-title">Strategic Development Plan</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="columns-container">
-          <div class="column">
-            <div class="question-container">
-              <div class="question-text"><strong>Priority Area:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Goal:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Resources:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Timeline:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Success Metrics:</strong></div>
-              <div class="answer-space"></div>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="question-container">
-              <div class="question-text"><strong>Priority Area:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Goal:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Resources:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Timeline:</strong></div>
-              <div class="answer-space"></div>
-              <div class="question-text"><strong>Success Metrics:</strong></div>
-              <div class="answer-space"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Resource Investment Strategy -->
-      <div class="section">
-        <div class="section-header">
-          <div class="section-line"></div>
-          <div class="section-title">Resource Investment Strategy</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-text"><strong>Annual Budget:</strong> <span class="line-container"></span></div>
-          <div class="inspiration-container">
-            <div class="inspiration-item">
-              <div class="inspiration-text">Education/Training: <span class="line-container"></span></div>
-            </div>
-            <div class="inspiration-item">
-              <div class="inspiration-text">Tools/Equipment: <span class="line-container"></span></div>
-            </div>
-            <div class="inspiration-item">
-              <div class="inspiration-text">Professional Events: <span class="line-container"></span></div>
-            </div>
-            <div class="inspiration-item">
-              <div class="inspiration-text">Books/Digital Resources: <span class="line-container"></span></div>
-            </div>
-            <div class="inspiration-item">
-              <div class="inspiration-text">Other: <span class="line-container"></span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-text"><strong>Weekly Commitment:</strong> <span class="line-container"></span></div>
-          <div class="question-text"><strong>Best Days/Times:</strong> <span class="line-container"></span></div>
-        </div>
-      </div>
-
-      <!-- Professional Network Development -->
-      <div class="section">
-        <div class="section-header">
-          <div class="section-line"></div>
-          <div class="section-title">Professional Network Development</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="inspiration-container">
-          <div class="inspiration-item">
-            <div class="inspiration-text"><strong>Mentors:</strong> <span class="line-container"></span></div>
-          </div>
-          <div class="inspiration-item">
-            <div class="inspiration-text"><strong>Communities:</strong> <span class="line-container"></span></div>
-          </div>
-          <div class="inspiration-item">
-            <div class="inspiration-text"><strong>Collaboration:</strong> <span class="line-container"></span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Progress Tracking -->
-      <div class="section">
-        <div class="section-header">
-          <div class="section-line"></div>
-          <div class="section-title">Progress Tracking</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-text"><strong>Documentation Method:</strong> <span class="line-container"></span></div>
-          <div class="question-text"><strong>Quarterly Review Dates:</strong> Q1: <span class="line-container"></span> | Q2: <span class="line-container"></span> | Q3: <span class="line-container"></span> | Q4: <span class="line-container"></span></div>
-          <div class="question-text"><strong>Accountability:</strong> <span class="line-container"></span></div>
-        </div>
-      </div>
-
-      <!-- Professional Development Commitment -->
-      <div class="section">
-        <div class="section-header">
-          <div class="section-line"></div>
-          <div class="section-title">Professional Development Commitment</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="question-container">
-          <div class="question-text">Write a personal commitment statement for ongoing excellence:</div>
-          <div class="answer-space"></div>
-        </div>
-
-        <!-- Signature -->
-        <div class="signature-section">
-          <div class="signature-line"></div>
-          <p class="signature-text">Signature: ________________________________ Date: _______________</p>
-        </div>
-      </div>
-
-      <p class="closing-text">
-        Remember: The most successful hairstylists approach professional development as an ongoing investment. Revisit and refine this plan regularly to stay on the path to mastery.
-      </p>
-
-      <div class="section-separator"></div>
+  <div class="section-card teal-accent">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <div class="section-title">Mentorship Mapping</div>
     </div>
-  </main>
+    <p class="section-prompt">Identify 2-3 potential mentors (local or digital) who align with your values. What specific skill or insight do you hope to learn from them?</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
+
+  <div class="section-card gold-accent">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <div class="section-title">Education Gap Analysis</div>
+    </div>
+    <p class="section-prompt">What is one technique or business skill that terrifies you? List 3 resources (workshops, online courses, books) to conquer it.</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
+
+  <div class="section-card teal-accent">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <div class="section-title">Micro-Leadership</div>
+    </div>
+    <p class="section-prompt">How will you share your knowledge this month? (e.g., Mentoring an assistant, posting an educational reel, sharing a tip with a peer)</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
+
+  <div class="section-card gold-accent">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <div class="section-title">Resource Investment</div>
+    </div>
+    <p class="section-prompt">Annual budget allocation for growth:</p>
+    <div class="mentors-row">
+      <div class="mentor-field">
+        <div class="mentor-label">Education</div>
+        <div class="mentor-line"></div>
+      </div>
+      <div class="mentor-field">
+        <div class="mentor-label">Tools</div>
+        <div class="mentor-line"></div>
+      </div>
+      <div class="mentor-field">
+        <div class="mentor-label">Events</div>
+        <div class="mentor-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card span-2 teal-accent">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <div class="section-title">Commitment Statement</div>
+    </div>
+    <p class="section-prompt">Write a personal commitment statement for your ongoing professional excellence:</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-section">
+  <p class="footer-text">The Artisan's Path | Professional Development</p>
+</div>
+
+</section>
+</main>
 </body>
 </html>

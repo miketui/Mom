@@ -4,78 +4,256 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Self Care Journal - Unveiling Your Creative Odyssey</title>
+  <title>Self-Care Journal</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .selfcare-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 1.75rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.03) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid #2B9999;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #2B9999 0%, #3DB3B3 100%);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.85rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .prompt-card {
+      background: white;
+      border-radius: 8px;
+      padding: 0.65rem 0.9rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .prompt-card.teal-accent {
+      border-left: 4px solid #2B9999;
+    }
+    .prompt-card.gold-accent {
+      border-left: 4px solid #C9A961;
+    }
+    .prompt-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .prompt-badge {
+      padding: 0.12rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .prompt-badge.teal {
+      background: #2B9999;
+      color: white;
+    }
+    .prompt-badge.gold {
+      background: #C9A961;
+      color: white;
+    }
+    .prompt-text {
+      font-size: 0.7rem;
+      color: #666;
+      line-height: 1.35;
+      margin-bottom: 0.3rem;
+    }
+    .writing-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .writing-line {
+      border-bottom: 1px solid #ddd;
+      min-height: 1rem;
+    }
+    .tracker-section {
+      background: linear-gradient(135deg, rgba(43,153,153,0.06) 0%, rgba(201,169,97,0.06) 100%);
+      border-radius: 8px;
+      padding: 0.6rem 0.9rem;
+    }
+    .tracker-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #2B9999;
+      margin-bottom: 0.4rem;
+    }
+    .tracker-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.65rem;
+    }
+    .tracker-table th {
+      background: #2B9999;
+      color: white;
+      padding: 0.3rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    .tracker-table td {
+      border: 1px solid #ddd;
+      padding: 0.25rem;
+      text-align: center;
+    }
+    .tracker-table td:first-child {
+      text-align: left;
+      color: #444;
+      font-size: 0.6rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.5rem;
+      text-align: center;
+      border-top: 2px solid rgba(201,169,97,0.3);
+    }
+    .footer-quote {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.65rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card journal" aria-label="Self-Care Journal">
+<main epub:type="backmatter" role="main">
+<section class="selfcare-page" aria-label="Self-Care Journal">
 
-      <h1 class="section-heading">SELF-CARE JOURNAL</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Wellness Worksheet</div>
+  <h1 class="main-title">Self-Care Journal</h1>
+  <p class="subtitle">Embracing Wellness &amp; Resilience</p>
+</div>
 
-      <h2 class="section-heading">Nurturing Your Creative Spirit</h2>
+<div class="content-area">
 
-      <div class="introduction">
-        <p>As hairstylists, we dedicate ourselves to the well-being and transformation of others, yet often neglect our own needs. This journal is your sacred space to prioritize self-care, recognize burnout signals, and cultivate practices that sustain your passion and energy for the demanding yet rewarding work you do.</p>
-      </div>
+  <div class="prompt-card teal-accent">
+    <div class="prompt-header">
+      <span class="prompt-badge teal">BODY SCAN</span>
+    </div>
+    <p class="prompt-text">Where are you holding tension today (hands, shoulders, lower back)? What one stretch can you do between clients to release it?</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-      <div class="date-field">
-        <label>Date:</label>
-        <div class="fill-line"></div>
-      </div>
+  <div class="tracker-section">
+    <div class="tracker-title">MINIMUM VIABLE SELF-CARE TRACKER</div>
+    <table class="tracker-table">
+      <thead>
+        <tr>
+          <th style="width:35%;">Practice</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hydration (Glass before client)</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>Micro-Stretches</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>Mindful Breathing</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>Lunch Break Taken</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-      <div class="journal-sections">
-        <div class="journal-entry">
-          <h3>Physical Well-Being Check-In</h3>
-          <p class="journal-prompt">How is your body feeling today? Are there areas of tension, fatigue, or discomfort from standing, repetitive motions, or long hours? What does your body need right now?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+  <div class="prompt-card gold-accent">
+    <div class="prompt-header">
+      <span class="prompt-badge gold">BOUNDARIES</span>
+    </div>
+    <p class="prompt-text">One thing I said "No" to this week to protect my energy:</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-        <div class="journal-entry">
-          <h3>Emotional Temperature</h3>
-          <p class="journal-prompt">Rate your emotional state today (1-10). What emotions are you experiencing? Are you feeling energized, drained, inspired, overwhelmed, or something else entirely?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+  <div class="prompt-card teal-accent">
+    <div class="prompt-header">
+      <span class="prompt-badge teal">SELF-CARE ACTION</span>
+    </div>
+    <p class="prompt-text">Based on your reflections, identify 2-3 specific self-care actions you will take this week. Be realistic about when and how.</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-        <div class="journal-entry">
-          <h3>Boundaries and Balance</h3>
-          <p class="journal-prompt">Reflect on your work-life boundaries this week. Are you overextending yourself? What boundaries do you need to set or reinforce to protect your time and energy?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+</div>
 
-        <div class="journal-entry">
-          <h3>Restorative Activities</h3>
-          <p class="journal-prompt">List 3-5 activities that genuinely restore your energy and bring you joy. When was the last time you engaged in each? Schedule time for at least one this week.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+<div class="footer-section">
+  <p class="footer-quote">"Self-care is not selfish—it's essential. You cannot pour from an empty cup."</p>
+  <p class="footer-text">The Artisan's Path | Self-Care Journal</p>
+</div>
 
-        <div class="journal-entry">
-          <h3>Creative Burnout Assessment</h3>
-          <p class="journal-prompt">Are you experiencing any signs of creative burnout (lack of inspiration, emotional exhaustion, cynicism, reduced productivity)? What might be contributing to these feelings?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Self-Care Action Plan</h3>
-          <p class="journal-prompt">Based on your reflections above, identify 2-3 specific self-care actions you will take this week. Be realistic and specific about when and how you'll implement them.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Gratitude for Self</h3>
-          <p class="journal-prompt">Acknowledge something you appreciate about yourself today—a quality, an achievement, or simply your resilience in showing up. You deserve recognition too.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-      </div>
-
-      <div class="closing-message">
-        <p>Remember: Self-care is not selfish—it's essential. You cannot pour from an empty cup. By nurturing yourself, you ensure you have the energy, creativity, and compassion to serve your clients at the highest level.</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>
