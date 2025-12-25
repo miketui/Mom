@@ -712,7 +712,7 @@ const ChapterTitlePage = ({ chapter }) => {
 
       {/* Chapter Number Emblem */}
       <figure style={styles.chapterNumberFigure}>
-        <BrushstrokeSVG dark={isDark} />
+        <BrushstrokeSVG />
         <span style={{
           ...styles.chapterNumberRoman,
           ...(isDark ? styles.chapterNumberRomanDark : {}),
