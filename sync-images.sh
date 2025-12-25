@@ -33,15 +33,14 @@ if [ ! -d "$DEST_DIR" ]; then
 fi
 
 # Check if source directory has files
-SOURCE_FILES=("$SOURCE_DIR"/*)
-if [ ! -e "${SOURCE_FILES[0]}" ]; then
+if [ $(find "$SOURCE_DIR" -maxdepth 1 -type f | wc -l) -eq 0 ]; then
     echo -e "${YELLOW}Warning: No files found in $SOURCE_DIR${NC}"
     exit 0
 fi
 
-# Copy images
+# Copy images (files only, not directories)
 echo -e "${BLUE}Copying images from $SOURCE_DIR to $DEST_DIR...${NC}"
-cp -v "$SOURCE_DIR"/* "$DEST_DIR/"
+find "$SOURCE_DIR" -maxdepth 1 -type f -exec cp -fv {} "$DEST_DIR/" \;
 
 # Count files using find for reliability
 SOURCE_COUNT=$(find "$SOURCE_DIR" -maxdepth 1 -type f | wc -l)

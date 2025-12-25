@@ -55,8 +55,8 @@ Mom/
 ├── READY/                          # Source files (validated ✓)
 │   ├── xhtml/                      # 60 XHTML files
 │   │   ├── styles/                 # 3 CSS files
+│   │   ├── images/                 # Image files
 │   │   └── *.xhtml                 # All content files
-│   ├── images/                     # 33 images
 │   └── fonts/                      # 6 WOFF2 fonts
 │
 ├── build-epub.sh                   # EPUB builder script ⚡
@@ -65,7 +65,7 @@ Mom/
 ├── preview-index.html              # Visual navigation
 │
 ├── Book/                           # Alternative book structure
-│   └── images/                     # Synced images (32 files)
+│   └── images/                     # Synced images
 │
 └── output/                         # Generated files
     ├── *.epub                      # EPUB3 output
