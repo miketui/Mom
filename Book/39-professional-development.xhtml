@@ -1,249 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Professional Development Plan</title>
+  <title>Professional Development Plan - The Artisan's Path</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
   <style>
-    .pd-page {
-      min-height: 100vh;
-      max-height: 100vh;
-      padding: 1.75rem 2.25rem;
-      display: flex;
-      flex-direction: column;
-      page-break-before: always;
-      page-break-after: always;
-      page-break-inside: avoid;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.03) 100%);
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap');
+
+    :root { --teal: #2B9999; --gold: #C9A961; }
+    body { background: #f4f4f5; font-family: 'Lato', sans-serif; margin: 0; }
+
+    .worksheet-page {
+      max-width: 850px; min-height: 1100px; margin: 2rem auto; background: white;
+      padding: 0; position: relative;
     }
-    .header-section {
-      text-align: center;
-      margin-bottom: 1rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 3px solid #2B9999;
+
+    .top-bar { height: 8px; background: var(--teal); width: 100%; }
+    .content-wrap { padding: 4rem; }
+
+    h1 { font-family: 'Playfair Display'; font-size: 2.2rem; color: #222; margin: 0; }
+    h2 { font-size: 0.8rem; text-transform: uppercase; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 3rem; margin-top: 0.5rem;}
+
+    .module { margin-bottom: 2.5rem; }
+    .module-title {
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--teal); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-bottom: 1.5rem;
     }
-    .worksheet-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #2B9999 0%, #3DB3B3 100%);
-      color: white;
-      padding: 0.25rem 1rem;
-      border-radius: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }
-    .main-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 1.5rem;
-      color: #2B9999;
-      margin-bottom: 0.2rem;
-      letter-spacing: 0.05em;
-    }
-    .subtitle {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.85rem;
-      color: #C9A961;
-      font-style: italic;
-    }
-    .content-area {
-      flex: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.9rem;
-    }
-    .section-card {
-      background: white;
-      border-radius: 10px;
-      padding: 0.75rem 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-    }
-    .section-card.span-2 {
-      grid-column: span 2;
-    }
-    .section-card.teal-accent {
-      border-left: 4px solid #2B9999;
-    }
-    .section-card.gold-accent {
-      border-left: 4px solid #C9A961;
-    }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
-    }
-    .section-number {
-      width: 22px;
-      height: 22px;
-      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 700;
-    }
-    .section-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #2B9999;
-    }
-    .section-prompt {
-      font-size: 0.7rem;
-      color: #666;
-      line-height: 1.4;
-      margin-bottom: 0.4rem;
-    }
-    .writing-lines {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-    .writing-line {
-      border-bottom: 1px solid #ddd;
-      min-height: 1.1rem;
-    }
-    .mentors-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
-    }
-    .mentor-field {
-      background: rgba(43,153,153,0.05);
-      border-radius: 6px;
-      padding: 0.4rem 0.6rem;
-      text-align: center;
-    }
-    .mentor-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.6rem;
-      color: #2B9999;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-    .mentor-line {
-      border-bottom: 1px solid #ccc;
-      min-height: 0.9rem;
-    }
-    .footer-section {
-      margin-top: auto;
-      padding-top: 0.6rem;
-      text-align: center;
-      border-top: 2px solid rgba(201,169,97,0.3);
-    }
-    .footer-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      color: #999;
-      letter-spacing: 0.1em;
-    }
+
+    .table-row { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; margin-bottom: 1rem; }
+    .input-line { border: none; border-bottom: 1px solid #ddd; width: 100%; padding: 0.25rem; font-family: 'Playfair Display'; }
+
+    .gap-analysis { background: rgba(201, 169, 97, 0.1); padding: 2rem; border-radius: 8px; }
+    .resource-list { margin-top: 1rem; }
+    .resource-item { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .bullet { color: var(--gold); font-size: 1.5rem; line-height: 0; }
+
+    @media print { .worksheet-page { margin: 0; } body { background: white; } }
   </style>
 </head>
-<body class="backmatter-page">
-<main epub:type="backmatter" role="main">
-<section class="pd-page" aria-label="Professional Development Plan">
+<body>
+  <div class="worksheet-page">
+    <div class="top-bar"></div>
+    <div class="content-wrap">
+      <h1>Professional Growth</h1>
+      <h2>Cultivating Excellence</h2>
 
-<div class="header-section">
-  <div class="worksheet-badge">Development Worksheet</div>
-  <h1 class="main-title">Professional Development Plan</h1>
-  <p class="subtitle">Cultivating Creative Excellence</p>
-</div>
+      <div class="module">
+        <div class="module-title">01 Mentorship Mapping</div>
+        <p style="font-size:0.9rem; color:#666; margin-bottom:1rem;">Identify potential mentors and specific skills to learn.</p>
 
-<div class="content-area">
-
-  <div class="section-card teal-accent">
-    <div class="section-header">
-      <div class="section-number">1</div>
-      <div class="section-title">Mentorship Mapping</div>
-    </div>
-    <p class="section-prompt">Identify 2-3 potential mentors (local or digital) who align with your values. What specific skill or insight do you hope to learn from them?</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
-
-  <div class="section-card gold-accent">
-    <div class="section-header">
-      <div class="section-number">2</div>
-      <div class="section-title">Education Gap Analysis</div>
-    </div>
-    <p class="section-prompt">What is one technique or business skill that terrifies you? List 3 resources (workshops, online courses, books) to conquer it.</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
-
-  <div class="section-card teal-accent">
-    <div class="section-header">
-      <div class="section-number">3</div>
-      <div class="section-title">Micro-Leadership</div>
-    </div>
-    <p class="section-prompt">How will you share your knowledge this month? (e.g., Mentoring an assistant, posting an educational reel, sharing a tip with a peer)</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
-
-  <div class="section-card gold-accent">
-    <div class="section-header">
-      <div class="section-number">4</div>
-      <div class="section-title">Resource Investment</div>
-    </div>
-    <p class="section-prompt">Annual budget allocation for growth:</p>
-    <div class="mentors-row">
-      <div class="mentor-field">
-        <div class="mentor-label">Education</div>
-        <div class="mentor-line"></div>
+        <div class="table-row">
+          <span style="font-size:0.6rem; text-transform:uppercase; color:#aaa; font-weight:bold;">Mentor Name</span>
+          <span style="font-size:0.6rem; text-transform:uppercase; color:#aaa; font-weight:bold;">Desired Insight / Skill</span>
+        </div>
+        <div class="table-row">
+          <input class="input-line" />
+          <input class="input-line" />
+        </div>
+        <div class="table-row">
+          <input class="input-line" />
+          <input class="input-line" />
+        </div>
+        <div class="table-row">
+          <input class="input-line" />
+          <input class="input-line" />
+        </div>
       </div>
-      <div class="mentor-field">
-        <div class="mentor-label">Tools</div>
-        <div class="mentor-line"></div>
+
+      <div class="module">
+        <div class="module-title">02 Education Gap Analysis</div>
+        <div class="gap-analysis">
+          <strong style="color:#B08F4A; font-family:'Playfair Display';">The Skill That Terrifies Me:</strong>
+          <input class="input-line" style="background:transparent; border-color:#d4b976; margin-bottom:1.5rem; font-size:1.2rem;"/>
+
+          <strong style="color:#B08F4A; font-family:'Playfair Display';">3 Resources to Conquer It:</strong>
+          <div class="resource-list">
+            <div class="resource-item"><span class="bullet">•</span><input class="input-line" style="background:transparent; border-color:rgba(212,185,118,0.5);"/></div>
+            <div class="resource-item"><span class="bullet">•</span><input class="input-line" style="background:transparent; border-color:rgba(212,185,118,0.5);"/></div>
+            <div class="resource-item"><span class="bullet">•</span><input class="input-line" style="background:transparent; border-color:rgba(212,185,118,0.5);"/></div>
+          </div>
+        </div>
       </div>
-      <div class="mentor-field">
-        <div class="mentor-label">Events</div>
-        <div class="mentor-line"></div>
+
+      <div class="module">
+        <div class="module-title">03 Micro-Leadership Commitment</div>
+        <p style="font-size:0.9rem; color:#666;">How will you share your knowledge this month?</p>
+        <div style="border-bottom:1px solid #eee; height:2rem; margin-bottom:1rem;"></div>
+        <div style="border-bottom:1px solid #eee; height:2rem; margin-bottom:1rem;"></div>
       </div>
     </div>
   </div>
-
-  <div class="section-card span-2 teal-accent">
-    <div class="section-header">
-      <div class="section-number">5</div>
-      <div class="section-title">Commitment Statement</div>
-    </div>
-    <p class="section-prompt">Write a personal commitment statement for your ongoing professional excellence:</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
-
-</div>
-
-<div class="footer-section">
-  <p class="footer-text">The Artisan's Path | Professional Development</p>
-</div>
-
-</section>
-</main>
 </body>
 </html>

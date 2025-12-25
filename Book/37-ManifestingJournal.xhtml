@@ -1,257 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manifesting Journal</title>
+  <title>Manifesting Journal - The Artisan's Path</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
   <style>
-    .manifest-page {
-      min-height: 100vh;
-      max-height: 100vh;
-      padding: 1.75rem 2.25rem;
-      display: flex;
-      flex-direction: column;
-      page-break-before: always;
-      page-break-after: always;
-      page-break-inside: avoid;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201,169,97,0.04) 100%);
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap');
+
+    :root { --teal: #2B9999; --gold: #C9A961; }
+    body { margin: 0; font-family: 'Lato', sans-serif; background: #fff; }
+
+    .worksheet-page {
+      max-width: 850px; min-height: 1100px; margin: 2rem auto;
+      border: 1px solid #eee; padding: 4rem; box-sizing: border-box;
+      background-image: radial-gradient(#2B9999 0.5px, transparent 0.5px);
+      background-size: 20px 20px;
+      background-color: white;
     }
-    .header-section {
-      text-align: center;
-      margin-bottom: 1rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 3px solid #C9A961;
+
+    .paper-card {
+      background: white; padding: 2.5rem; border: 1px solid #eee;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 2rem;
     }
-    .worksheet-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
-      color: white;
-      padding: 0.25rem 1rem;
-      border-radius: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
+
+    h1 { font-family: 'Playfair Display'; color: var(--teal); font-size: 2.5rem; text-align: center; margin-bottom: 0.2rem; }
+    h2 { text-align: center; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 3rem; }
+
+    .prompt-label {
+      display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #999; margin-bottom: 0.5rem;
     }
-    .main-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 1.6rem;
-      color: #2B9999;
-      margin-bottom: 0.2rem;
-      letter-spacing: 0.05em;
+
+    .lined-area {
+      width: 100%; border-bottom: 1px solid #eee; height: 2rem;
+      margin-bottom: 0.5rem;
     }
-    .subtitle {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.9rem;
-      color: #C9A961;
-      font-style: italic;
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .box-area {
+      width: 100%; height: 100px; border: 1px solid var(--teal); border-radius: 4px;
+      background: rgba(43,153,153,0.02); resize: none; padding: 1rem;
+      font-family: 'Playfair Display'; font-size: 1.1rem;
     }
-    .content-area {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
+
+    .transform-row {
+      display: flex; align-items: center; gap: 1rem; margin-top: 1rem;
     }
-    .prompt-card {
-      background: white;
-      border-radius: 10px;
-      padding: 0.8rem 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .prompt-card.featured {
-      border-left: 4px solid #2B9999;
-    }
-    .prompt-card.secondary {
-      border-left: 4px solid #C9A961;
-    }
-    .prompt-card.tertiary {
-      border-left: 4px solid #3DB3B3;
-    }
-    .prompt-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
-    }
-    .prompt-badge {
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-    .prompt-badge.teal {
-      background: #2B9999;
-      color: white;
-    }
-    .prompt-badge.gold {
-      background: #C9A961;
-      color: white;
-    }
-    .prompt-badge.light {
-      background: #3DB3B3;
-      color: white;
-    }
-    .prompt-text {
-      font-size: 0.75rem;
-      color: #444;
-      line-height: 1.4;
-      margin-bottom: 0.4rem;
-    }
-    .prompt-text em {
-      color: #2B9999;
-      font-style: italic;
-    }
-    .writing-lines {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      min-height: 40px;
-    }
-    .writing-line {
-      border-bottom: 1px solid #ddd;
-      min-height: 1.1rem;
-    }
-    .three-col-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0.75rem;
-    }
-    .two-col-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-    .pillar-card {
-      background: linear-gradient(135deg, rgba(43,153,153,0.06) 0%, rgba(201,169,97,0.06) 100%);
-      border-radius: 8px;
-      padding: 0.6rem 0.8rem;
-      text-align: center;
-    }
-    .pillar-number {
-      width: 22px;
-      height: 22px;
-      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 0.3rem;
-      color: white;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 700;
-    }
-    .pillar-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #2B9999;
-      margin-bottom: 0.2rem;
-    }
-    .pillar-desc {
-      font-size: 0.65rem;
-      color: #666;
-      line-height: 1.3;
-    }
-    .footer-section {
-      margin-top: auto;
-      padding-top: 0.6rem;
-      text-align: center;
-      border-top: 2px solid rgba(201,169,97,0.3);
-    }
-    .footer-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      color: #999;
-      letter-spacing: 0.1em;
+    .arrow { color: var(--gold); font-size: 1.5rem; }
+
+    @media print {
+      .worksheet-page { margin: 0; border: none; background-size: 0; }
+      .paper-card { border: 1px solid #ddd; box-shadow: none; }
     }
   </style>
 </head>
-<body class="backmatter-page">
-<main epub:type="backmatter" role="main">
-<section class="manifest-page" aria-label="Manifesting Journal">
-
-<div class="header-section">
-  <div class="worksheet-badge">Journal Worksheet</div>
-  <h1 class="main-title">Manifesting Journal</h1>
-  <p class="subtitle">Dream Big, Then Bigger</p>
-</div>
-
-<div class="content-area">
-
-  <div class="three-col-grid">
-    <div class="pillar-card">
-      <div class="pillar-number">1</div>
-      <div class="pillar-title">Clarity</div>
-      <div class="pillar-desc">Define your desires with precision. Detailed visions create detailed outcomes.</div>
+<body>
+  <div class="worksheet-page">
+    <div style="background:white; padding:1rem; margin-bottom:2rem;">
+      <h1>Manifesting Journal</h1>
+      <h2>Dream Big, Then Bigger</h2>
     </div>
-    <div class="pillar-card">
-      <div class="pillar-number">2</div>
-      <div class="pillar-title">Belief</div>
-      <div class="pillar-desc">Cultivate unwavering faith in your vision and your worthiness.</div>
-    </div>
-    <div class="pillar-card">
-      <div class="pillar-number">3</div>
-      <div class="pillar-title">Aligned Action</div>
-      <div class="pillar-desc">Take consistent steps that harmonize with your intentions.</div>
-    </div>
-  </div>
 
-  <div class="prompt-card featured">
-    <div class="prompt-header">
-      <span class="prompt-badge teal">FUTURE SELF</span>
+    <div class="paper-card">
+      <span class="prompt-label" style="color:var(--teal);">Future Self Visualization</span>
+      <p style="font-size:0.9rem; font-style:italic; color:#666; margin-bottom:1.5rem;">Describe a "Day in the Life" 3 years from now. Where are you? Who are your clients?</p>
+      <div class="lined-area"></div>
+      <div class="lined-area"></div>
+      <div class="lined-area"></div>
+      <div class="lined-area"></div>
+      <div class="lined-area"></div>
     </div>
-    <p class="prompt-text">Describe a "Day in the Life" of your future self 3 years from now. Where are you working? Who are your clients? How do you feel when you wake up?</p>
-    <div class="writing-lines">
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-      <div class="writing-line"></div>
-    </div>
-  </div>
 
-  <div class="two-col-grid">
-    <div class="prompt-card secondary">
-      <div class="prompt-header">
-        <span class="prompt-badge gold">INTENTION</span>
+    <div class="grid-2">
+      <div class="paper-card">
+        <span class="prompt-label" style="color:var(--gold);">Core Intention</span>
+        <p style="font-size:0.8rem; color:#888; margin-bottom:0.5rem;">One feeling to manifest:</p>
+        <textarea class="box-area"></textarea>
       </div>
-      <p class="prompt-text">What is the one specific feeling you want to manifest in your career this year? (e.g., Ease, Abundance, Recognition)</p>
-      <div class="writing-lines">
-        <div class="writing-line"></div>
-        <div class="writing-line"></div>
+      <div class="paper-card">
+        <span class="prompt-label">The Bridge</span>
+        <p style="font-size:0.8rem; color:#888; margin-bottom:0.5rem;">One step to take today:</p>
+        <textarea class="box-area" style="border-color:#ccc; background:#fafafa;"></textarea>
       </div>
     </div>
-    <div class="prompt-card tertiary">
-      <div class="prompt-header">
-        <span class="prompt-badge light">THE BRIDGE</span>
-      </div>
-      <p class="prompt-text">What is one tangible step you can take <em>today</em> to bridge the gap between where you are and that future vision?</p>
-      <div class="writing-lines">
-        <div class="writing-line"></div>
-        <div class="writing-line"></div>
+
+    <div class="paper-card">
+      <span class="prompt-label">Releasing Limiting Beliefs</span>
+      <div class="transform-row">
+        <div style="flex:1;">
+          <input type="text" placeholder="Old Belief..." style="width:100%; border:none; border-bottom:1px solid #ccc; font-family:'Playfair Display'; font-style:italic; padding:0.5rem;"/>
+        </div>
+        <span class="arrow">→</span>
+        <div style="flex:1;">
+          <input type="text" placeholder="New Truth..." style="width:100%; border:none; border-bottom:1px solid var(--teal); font-family:'Playfair Display'; font-weight:bold; color:var(--teal); padding:0.5rem;"/>
+        </div>
       </div>
     </div>
   </div>
-
-</div>
-
-<div class="footer-section">
-  <p class="footer-text">The Artisan's Path | Manifesting Journal</p>
-</div>
-
-</section>
-</main>
 </body>
 </html>

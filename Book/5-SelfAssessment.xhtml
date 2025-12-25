@@ -1,228 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Self-Assessment: Creative Identity Audit</title>
+  <title>Creative Identity Audit - The Artisan's Path</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
   <style>
-    .assessment-page {
-      min-height: 100vh;
-      max-height: 100vh;
-      padding: 2rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      page-break-before: always;
-      page-break-after: always;
-      page-break-inside: avoid;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.03) 100%);
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap');
+
+    :root {
+      --teal-primary: #2B9999;
+      --teal-dark: #1F7272;
+      --gold-accent: #C9A961;
+      --gold-faint: rgba(201, 169, 97, 0.08);
+      --paper-white: #ffffff;
+      --text-main: #44403C;
     }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f5f4;
+      font-family: 'Lato', sans-serif;
+      color: var(--text-main);
+      -webkit-print-color-adjust: exact;
+    }
+
+    .worksheet-page {
+      width: 100%;
+      max-width: 850px;
+      min-height: 1100px;
+      margin: 2rem auto;
+      background: var(--paper-white);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      padding: 3.5rem;
+      box-sizing: border-box;
+      border-top: 8px solid var(--teal-primary);
+    }
+
     .header-section {
       text-align: center;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 3px solid #C9A961;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+      padding-bottom: 2rem;
     }
-    .worksheet-badge {
+
+    .badge {
       display: inline-block;
-      background: linear-gradient(135deg, #2B9999 0%, #3DB3B3 100%);
+      padding: 0.25rem 0.75rem;
+      background: var(--gold-accent);
       color: white;
-      padding: 0.3rem 1.2rem;
-      border-radius: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+      font-size: 0.65rem;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.2em;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      font-weight: 700;
     }
-    .main-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 1.8rem;
-      color: #2B9999;
-      margin-bottom: 0.3rem;
-      letter-spacing: 0.05em;
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--teal-dark);
+      margin: 0 0 0.5rem 0;
+      font-weight: 600;
     }
-    .subtitle {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1rem;
-      color: #C9A961;
-      font-style: italic;
-    }
-    .intro-text {
+
+    h2 {
+      font-family: 'Lato', sans-serif;
       font-size: 0.85rem;
-      color: #666;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-      line-height: 1.5;
+      color: var(--gold-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin: 0;
     }
-    .questions-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      flex: 1;
+
+    .section {
+      margin-bottom: 2.5rem;
     }
-    .question-card {
-      background: white;
-      border: 1px solid rgba(43,153,153,0.2);
-      border-radius: 8px;
-      padding: 0.9rem;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-    }
-    .question-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      margin-bottom: 0.5rem;
-    }
-    .question-number {
-      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', sans-serif;
+
+    .section-title {
       font-size: 0.75rem;
       font-weight: 700;
-      flex-shrink: 0;
-    }
-    .question-text {
-      font-size: 0.8rem;
-      color: #333;
-      line-height: 1.4;
-      flex: 1;
-    }
-    .question-text strong {
-      color: #2B9999;
-      font-weight: 600;
-    }
-    .answer-lines {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      min-height: 50px;
-    }
-    .answer-line {
-      border-bottom: 1px solid #ddd;
-      height: 1.4rem;
-    }
-    .footer-section {
-      margin-top: auto;
-      padding-top: 1rem;
-      text-align: center;
-      border-top: 2px solid rgba(201,169,97,0.3);
-    }
-    .footer-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      color: #999;
+      text-transform: uppercase;
       letter-spacing: 0.1em;
+      color: var(--teal-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--teal-primary);
+      border-radius: 50%;
+      margin-right: 0.75rem;
+      font-size: 0.7rem;
+    }
+
+    .prompt-text {
+      font-style: italic;
+      color: #78716c;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .lined-input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #e7e5e4;
+      padding: 0.5rem 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--text-main);
+      background: transparent;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .lined-input:focus {
+      border-bottom-color: var(--teal-primary);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .box-container {
+      background: var(--gold-faint);
+      padding: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid rgba(201, 169, 97, 0.2);
+    }
+
+    .quote-box {
+      margin-top: 3rem;
+      padding: 2rem;
+      border: 2px dashed rgba(43, 153, 153, 0.3);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 2rem;
+      left: 3.5rem;
+      right: 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #a8a29e;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      padding-top: 1rem;
+    }
+
+    @media print {
+      body { background: white; }
+      .worksheet-page { margin: 0; box-shadow: none; width: 100%; height: 100vh; page-break-after: always; }
     }
   </style>
 </head>
-<body class="frontmatter-page">
-<main role="main" epub:type="frontmatter">
-<section class="assessment-page" aria-label="Self-Assessment: Creative Identity Audit">
+<body>
+  <div class="worksheet-page">
+    <header class="header-section">
+      <span class="badge">Module I</span>
+      <h1>Creative Identity Audit</h1>
+      <h2>Refining Your Toolkit &amp; Artistic Voice</h2>
+    </header>
 
-<div class="header-section">
-  <div class="worksheet-badge">Self-Assessment Worksheet</div>
-  <h1 class="main-title">Creative Identity Audit</h1>
-  <p class="subtitle">Refining Your Toolkit &amp; Artistic Voice</p>
-</div>
+    <div class="content">
+      <div class="section">
+        <h3 class="section-title"><span class="section-num">1</span> Current Skill Inventory</h3>
+        <p class="prompt-text">List your top 3 technical strengths (e.g., dry cutting) and 3 areas of opportunity.</p>
+        <div class="grid-2">
+          <div class="box-container">
+            <h4 style="font-size:0.7rem; text-transform:uppercase; color:var(--gold-accent); margin:0 0 1rem 0; letter-spacing:0.1em; text-align:center;">Strengths</h4>
+            <input type="text" class="lined-input" />
+            <input type="text" class="lined-input" />
+            <input type="text" class="lined-input" />
+          </div>
+          <div class="box-container" style="background:#f5f5f4; border-color:#e7e5e4;">
+            <h4 style="font-size:0.7rem; text-transform:uppercase; color:#a8a29e; margin:0 0 1rem 0; letter-spacing:0.1em; text-align:center;">Growth Areas</h4>
+            <input type="text" class="lined-input" />
+            <input type="text" class="lined-input" />
+            <input type="text" class="lined-input" />
+          </div>
+        </div>
+      </div>
 
-<p class="intro-text">This self-assessment is designed to help you reflect on your current journey as a freelance hairstylist. Take your time to answer each question thoughtfully.</p>
+      <div class="section">
+        <h3 class="section-title"><span class="section-num">2</span> The Creative Spark</h3>
+        <p class="prompt-text">What originally sparked your passion for hairstyling? Does that spark still burn?</p>
+        <input type="text" class="lined-input" />
+        <input type="text" class="lined-input" />
+        <input type="text" class="lined-input" />
+      </div>
 
-<div class="questions-grid">
+      <div class="section">
+        <h3 class="section-title"><span class="section-num">3</span> Conscious Hairstyling</h3>
+        <p class="prompt-text">What values do you want to bring more fully into your work (e.g., sustainability, inclusivity)?</p>
+        <input type="text" class="lined-input" />
+        <input type="text" class="lined-input" />
+        <input type="text" class="lined-input" />
+      </div>
 
-  <div class="question-card">
-    <div class="question-header">
-      <div class="question-number">1</div>
-      <div class="question-text"><strong>Current Skill Inventory:</strong> List your top 3 technical strengths (e.g., dry cutting, balayage) and 3 areas where you feel a "skill gap."</div>
+      <div class="quote-box">
+        <p style="font-family:'Playfair Display', serif; font-size:1.25rem; font-style:italic; color:var(--teal-dark); margin:0 0 0.5rem 0;">"Creativity takes courage."</p>
+        <p style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--teal-primary); margin:0;">— Henri Matisse</p>
+      </div>
     </div>
-    <div class="answer-lines">
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-    </div>
+
+    <footer class="footer">
+      <span>The Artisan's Path Collection</span>
+      <span>© Curls &amp; Contemplation</span>
+    </footer>
   </div>
-
-  <div class="question-card">
-    <div class="question-header">
-      <div class="question-number">2</div>
-      <div class="question-text"><strong>Burnout Check-In:</strong> On a scale of 1-10, how ignited is your creative fire right now? Describe what is currently fueling you or draining you.</div>
-    </div>
-    <div class="answer-lines">
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-    </div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-header">
-      <div class="question-number">3</div>
-      <div class="question-text"><strong>The "Why" Rediscovery:</strong> Recall a specific moment in your career where you felt completely in your element. What were you doing? Who were you with?</div>
-    </div>
-    <div class="answer-lines">
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-    </div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-header">
-      <div class="question-number">4</div>
-      <div class="question-text"><strong>Creative Aspirations:</strong> What sparked your passion for hairstyling? What are your biggest hopes, dreams, and aspirations for your craft?</div>
-    </div>
-    <div class="answer-lines">
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-    </div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-header">
-      <div class="question-number">5</div>
-      <div class="question-text"><strong>Conscious Hairstyling:</strong> What does being a "conscious hairstylist" mean to you? What values do you want to bring more fully into your work?</div>
-    </div>
-    <div class="answer-lines">
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-    </div>
-  </div>
-
-  <div class="question-card">
-    <div class="question-header">
-      <div class="question-number">6</div>
-      <div class="question-text"><strong>Looking Ahead:</strong> What are you most excited to learn, experience, and create through the sacred art of hairstyling? What's calling to your heart?</div>
-    </div>
-    <div class="answer-lines">
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-      <div class="answer-line"></div>
-    </div>
-  </div>
-
-</div>
-
-<div class="footer-section">
-  <p class="footer-text">Curls &amp; Contemplation | Creative Identity Audit</p>
-</div>
-
-</section>
-</main>
 </body>
 </html>
