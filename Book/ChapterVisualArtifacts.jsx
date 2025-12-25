@@ -198,6 +198,7 @@ const chapters = [
     intro: 'Artificial intelligence is reshaping every industry, and beauty is no exception.',
     part: 'Part IV: Future-Focused Growth',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-xiv-quote.jpeg',
   },
   {
     number: 'XV',
