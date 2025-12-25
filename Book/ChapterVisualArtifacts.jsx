@@ -922,18 +922,6 @@ const QuizPage = ({ chapter }) => (
           <li style={styles.option}>Avoid taking risks in your career</li>
         </ol>
       </li>
-
-      <li style={styles.mcqItem}>
-        <p style={styles.questionText}>
-          5. How does the chapter describe the relationship between creativity and hairstyling?
-        </p>
-        <ol style={styles.mcqOptions}>
-          <li style={styles.option}>Creativity is secondary to technical execution</li>
-          <li style={styles.option}>Creativity should be reserved for special occasions only</li>
-          <li style={styles.option}>Creativity is essential to transforming routine work into meaningful art</li>
-          <li style={styles.option}>Creativity is unnecessary for client satisfaction</li>
-        </ol>
-      </li>
     </ol>
 
     <div style={styles.footer}>
