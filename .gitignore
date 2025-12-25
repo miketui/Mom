@@ -1,6 +1,5 @@
 # Build artifacts - do not commit
 build/
-output/
 
 # System files
 .DS_Store
