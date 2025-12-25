@@ -225,8 +225,8 @@ const chapters = [
     reference: 'Isaiah 43:19',
     intro: 'Artificial intelligence is reshaping every industry, and beauty is no exception.',
     part: 'Part IV: Future-Focused Growth',
-    quoteImage: '../OEBPS/ebook/images/chapter-xiv-quote.jpeg',
     darkTheme: true,
+    quoteImage: '../OEBPS/ebook/images/chapter-xiv-quote.jpeg',
   },
   {
     number: 'XV',
