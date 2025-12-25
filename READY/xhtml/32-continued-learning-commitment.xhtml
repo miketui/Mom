@@ -4,116 +4,75 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Continuing Learning Pledge - Unveiling Your Creative Odyssey</title>
-  <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
+  <title>Continued Learning Commitment</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    :root { --teal: #2B9999; --gold: #C9A961; }
+    body.certificate-body { margin: 0; padding: 2rem; font-family: 'Lato', sans-serif; background: #fff; }
+    .certificate-border {
+      border: 8px double var(--teal); padding: 3rem; min-height: 85vh;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      background: radial-gradient(circle, #fff 40%, rgba(201,169,97,0.05) 100%);
+      position: relative; box-sizing: border-box;
+    }
+    .corner-deco {
+      position: absolute; width: 40px; height: 40px; border-color: var(--gold); border-style: solid;
+    }
+    .tl { top: 1rem; left: 1rem; border-width: 2px 0 0 2px; }
+    .tr { top: 1rem; right: 1rem; border-width: 2px 2px 0 0; }
+    .bl { bottom: 1rem; left: 1rem; border-width: 0 0 2px 2px; }
+    .br { bottom: 1rem; right: 1rem; border-width: 0 2px 2px 0; }
+    
+    h1.cert-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #333; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    h2.cert-subtitle { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 3rem; }
+    
+    .intro-text { font-style: italic; color: #555; max-width: 600px; margin-bottom: 2rem; }
+    .pledge-list { text-align: left; max-width: 550px; margin-bottom: 2rem; line-height: 1.8; color: #555; font-size: 1.05rem; }
+    .pledge-list li { margin-bottom: 1.2rem; }
+    .closing-text { max-width: 600px; margin-bottom: 3rem; line-height: 1.6; font-size: 0.95rem; color: #666; }
+    
+    .signature-row { width: 100%; max-width: 550px; display: flex; justify-content: space-between; margin-top: auto; }
+    .sig-block { width: 45%; }
+    .sig-line { border-bottom: 1px solid #333; height: 30px; margin-bottom: 0.5rem; }
+    .sig-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #777; }
+    
+    .closing-quote { margin-top: 3rem; font-family: 'Playfair Display', serif; font-style: italic; color: var(--teal); max-width: 480px; font-size: 0.95rem; }
+  </style>
 </head>
-<body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card commitment" aria-label="Continuing Learning Pledge">
+<body class="certificate-body">
+  <div class="certificate-border">
+    <div class="corner-deco tl" aria-hidden="true"></div><div class="corner-deco tr" aria-hidden="true"></div>
+    <div class="corner-deco bl" aria-hidden="true"></div><div class="corner-deco br" aria-hidden="true"></div>
 
-      <h1 class="section-heading">CONTINUING LEARNING PLEDGE</h1>
-      <div class="decorative-line"></div>
+    <h1 class="cert-title">Continuing Learning Pledge</h1>
+    <h2 class="cert-subtitle">Commitment to Excellence</h2>
 
-      <div class="introduction">
-        <p>The most successful hairstylists understand that excellence is not a destination, but a journey of continuous growth and evolution. This pledge represents your formal commitment to lifelong learning—a powerful promise to yourself and to those you serve that will elevate your craft, expand your possibilities, and sustain your passion throughout your career.</p>
+    <p class="intro-text">The most successful hairstylists understand that excellence is not a destination, but a journey of continuous growth and evolution. This pledge represents your formal commitment to lifelong learning.</p>
+
+    <ul class="pledge-list">
+      <li>I commit to approaching each day with humility and a beginner's mindset.</li>
+      <li>I pledge to set progressive learning goals that continuously challenge and inspire me.</li>
+      <li>I recognize that my evolution as a hairstylist opens new doors of opportunity.</li>
+      <li>Other: __________________________________________________</li>
+    </ul>
+
+    <p class="closing-text">Through this commitment to continuous learning and growth, I invest not only in my abilities but in the positive impact I can have on the lives of those I serve. This vow is my promise to myself and to those I serve, to continually evolve and contribute positively, one hairstyle at a time.</p>
+
+    <div class="signature-row">
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-label">Signature</div>
       </div>
-
-      <h2 class="section-heading">My Formal Commitment to Excellence</h2>
-
-      <div class="pledge-intro">
-        <p>As a dedicated hairstylist committed to excellence in my craft, I solemnly pledge to embrace lifelong learning as my pathway to mastery. I recognize that in our ever-evolving industry, continuous education and skill development are not optional luxuries but essential foundations for success.</p>
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-label">Date</div>
       </div>
+    </div>
 
-      <h3 class="pledge-heading">I vow to:</h3>
-
-      <div class="pledge-section">
-        <h4>1. Prioritize Learning by:</h4>
-        <ul>
-          <li>Dedicating <span class="fill-in-blank">_____</span> hours each week specifically for education and skill development</li>
-          <li>Attending <span class="fill-in-blank">_____</span> industry workshops, courses, or training events per year</li>
-          <li>Investing <span class="fill-in-blank">_____</span>% of my annual income back into my professional development</li>
-          <li>Other: _________________________________</li>
-        </ul>
-      </div>
-
-      <div class="pledge-section">
-        <h4>2. Seek Diverse Knowledge by:</h4>
-        <ul>
-          <li>Reading industry publications and books related to hairstyling and beauty</li>
-          <li>Following master stylists and educators on social media and online platforms</li>
-          <li>Learning techniques from different cultural traditions and backgrounds</li>
-          <li>Exploring related disciplines such as art, fashion, photography, or business</li>
-          <li>Other: _________________________________</li>
-        </ul>
-      </div>
-
-      <div class="pledge-section">
-        <h4>3. Surround Myself with Mentors by:</h4>
-        <ul>
-          <li>Identifying and reaching out to <span class="fill-in-blank">_____</span> mentors in my field within the next 3 months</li>
-          <li>Scheduling regular check-ins with experienced colleagues for feedback and guidance</li>
-          <li>Participating in a mastermind group or community of fellow hairstylists</li>
-          <li>Other: _________________________________</li>
-        </ul>
-      </div>
-
-      <div class="pledge-section">
-        <h4>4. Embrace Curiosity and Feedback by:</h4>
-        <ul>
-          <li>Seeking constructive criticism on my work from trusted colleagues and mentors</li>
-          <li>Implementing a system to collect and review client feedback regularly</li>
-          <li>Approaching new trends and techniques with open-minded curiosity</li>
-          <li>Keeping a learning journal to track my questions, insights, and growth</li>
-          <li>Other: _________________________________</li>
-        </ul>
-      </div>
-
-      <div class="pledge-section">
-        <h4>5. Pay It Forward by:</h4>
-        <ul>
-          <li>Mentoring <span class="fill-in-blank">_____</span> emerging stylists or assistants within the next year</li>
-          <li>Sharing valuable techniques and insights with colleagues</li>
-          <li>Creating educational content to help others in the industry</li>
-          <li>Contributing to industry events, competitions, or educational platforms</li>
-          <li>Other: _________________________________</li>
-        </ul>
-      </div>
-
-      <div class="pledge-section">
-        <h4>6. Embrace the Endless Journey by:</h4>
-        <ul>
-          <li>Reviewing and updating this pledge every 6 months to reflect my evolving journey</li>
-          <li>Celebrating my growth and achievements along the way</li>
-          <li>Approaching each day with humility and a beginner's mindset</li>
-          <li>Setting progressive learning goals that continuously challenge and inspire me</li>
-          <li>Other: _________________________________</li>
-        </ul>
-      </div>
-
-      <div class="pledge-closing">
-        <p>Through this commitment to continuous learning and growth, I invest not only in my abilities but in the positive impact I can have on the lives of those I serve. I recognize that my evolution as a hairstylist opens new doors of opportunity and allows me to add greater value to my clients. This vow is my promise to myself and to those I serve, to continually evolve and contribute positively, one hairstyle at a time.</p>
-      </div>
-
-      <div class="signature-section">
-        <div class="signature-field">
-          <label>Signature:</label>
-          <div class="signature-line"></div>
-        </div>
-        <div class="signature-field">
-          <label>Date:</label>
-          <div class="signature-line"></div>
-        </div>
-        <p class="signature-note">By signing above, I make this formal commitment to my ongoing growth and excellence as a hairstylist.</p>
-      </div>
-
-      <div class="closing-quote">
-        <p>"Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution; it represents the wise choice of many alternatives."</p>
-        <p class="quote-author">- Aristotle</p>
-      </div>
-
-    </section>
-  </main>
+    <div class="closing-quote">"Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution; it represents the wise choice of many alternatives." - Aristotle</div>
+  </div>
 </body>
 </html>
+
+
