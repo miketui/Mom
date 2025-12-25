@@ -80,6 +80,7 @@
     <item id="self-assessment-1" href="xhtml/5-SelfAssessment.xhtml" media-type="application/xhtml+xml"/>
     <item id="affirmation-odyssey" href="xhtml/6-AffirmationOdyssey.xhtml" media-type="application/xhtml+xml"/>
     <item id="preface" href="xhtml/7-Preface.xhtml" media-type="application/xhtml+xml"/>
+    <item id="preface-quote" href="xhtml/7a-preface-quote.xhtml" media-type="application/xhtml+xml"/>
 
     <!-- Part I -->
     <item id="part-i" href="xhtml/8-Part-I-Foundations-of-Creative-Hairstyling.xhtml" media-type="application/xhtml+xml"/>
@@ -127,6 +128,7 @@
 
     <!-- Back Matter -->
     <item id="conclusion" href="xhtml/28-Conclusion.xhtml" media-type="application/xhtml+xml"/>
+    <item id="conclusion-quote" href="xhtml/28a-conclusion-quote.xhtml" media-type="application/xhtml+xml"/>
     <item id="quiz-key" href="xhtml/29-QuizKey.xhtml" media-type="application/xhtml+xml"/>
     <item id="self-assessment-2" href="xhtml/30-SelfAssessment.xhtml" media-type="application/xhtml+xml"/>
     <item id="affirmations-close" href="xhtml/31-affirmations-close.xhtml" media-type="application/xhtml+xml"/>
@@ -154,6 +156,7 @@
     <itemref idref="self-assessment-1"/>
     <itemref idref="affirmation-odyssey"/>
     <itemref idref="preface"/>
+    <itemref idref="preface-quote"/>
 
     <!-- Part I: Foundations of Creative Hairstyling -->
     <itemref idref="part-i"/>
@@ -201,6 +204,7 @@
 
     <!-- Back Matter -->
     <itemref idref="conclusion"/>
+    <itemref idref="conclusion-quote"/>
     <itemref idref="quiz-key"/>
     <itemref idref="self-assessment-2"/>
     <itemref idref="affirmations-close"/>
