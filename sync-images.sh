@@ -32,13 +32,20 @@ if [ ! -d "$DEST_DIR" ]; then
     mkdir -p "$DEST_DIR"
 fi
 
+# Check if source directory has files
+SOURCE_FILES=("$SOURCE_DIR"/*)
+if [ ! -e "${SOURCE_FILES[0]}" ]; then
+    echo -e "${YELLOW}Warning: No files found in $SOURCE_DIR${NC}"
+    exit 0
+fi
+
 # Copy images
 echo -e "${BLUE}Copying images from $SOURCE_DIR to $DEST_DIR...${NC}"
 cp -v "$SOURCE_DIR"/* "$DEST_DIR/"
 
-# Count files
-SOURCE_COUNT=$(ls -1 "$SOURCE_DIR" | wc -l)
-DEST_COUNT=$(ls -1 "$DEST_DIR" | wc -l)
+# Count files using find for reliability
+SOURCE_COUNT=$(find "$SOURCE_DIR" -maxdepth 1 -type f | wc -l)
+DEST_COUNT=$(find "$DEST_DIR" -maxdepth 1 -type f | wc -l)
 
 echo ""
 echo -e "${GREEN}✓ Synchronization complete!${NC}"
