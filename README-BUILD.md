@@ -53,11 +53,11 @@ This will:
 ```
 Mom/
 ├── READY/                          # Source files (validated ✓)
-│   ├── xhtml/                      # 60 XHTML files
-│   │   ├── styles/                 # 3 CSS files
-│   │   ├── images/                 # Image files
-│   │   ├── fonts/                  # 6 WOFF2 fonts
-│   │   └── *.xhtml                 # All content files
+│   └── xhtml/                      # 60 XHTML files
+│       ├── fonts/                  # 6 WOFF2 fonts
+│       ├── images/                 # Image files
+│       ├── styles/                 # 3 CSS files
+│       └── *.xhtml                 # All content files
 │
 ├── build-epub.sh                   # EPUB builder script ⚡
 ├── build-pdf.sh                    # PDF builder script ⚡
