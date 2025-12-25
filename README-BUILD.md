@@ -61,7 +61,11 @@ Mom/
 │
 ├── build-epub.sh                   # EPUB builder script ⚡
 ├── build-pdf.sh                    # PDF builder script ⚡
+├── sync-images.sh                  # Image sync script 🔄
 ├── preview-index.html              # Visual navigation
+│
+├── Book/                           # Alternative book structure
+│   └── images/                     # Synced images (32 files)
 │
 └── output/                         # Generated files
     ├── *.epub                      # EPUB3 output
@@ -250,6 +254,31 @@ Before publishing:
 
 ---
 
+## 🔄 Image Synchronization
+
+### Sync Images Script (`sync-images.sh`)
+
+Keep images synchronized between READY and Book directories:
+
+```bash
+./sync-images.sh
+```
+
+**What it does:**
+- ✓ Copies all images from `READY/xhtml/images/` to `Book/images/`
+- ✓ Preserves existing files in Book/images
+- ✓ Shows detailed copy progress
+- ✓ Reports file counts and summary
+
+**Use when:**
+- Adding new images to READY/xhtml/images
+- Updating existing images
+- Ensuring Book/images is up to date
+
+**Note:** Book/images may contain additional files not present in READY/xhtml/images. These files are preserved during synchronization.
+
+---
+
 ## 🔥 Quick Commands Reference
 
 ```bash
@@ -264,6 +293,9 @@ open http://127.0.0.1:8080/preview-index.html
 
 # Build Both
 ./build-epub.sh && ./build-pdf.sh
+
+# Sync Images (READY/xhtml/images → Book/images)
+./sync-images.sh
 
 # View EPUB
 ebook-viewer output/*.epub
