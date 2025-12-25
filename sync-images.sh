@@ -39,9 +39,9 @@ if [ "$SOURCE_COUNT" -eq 0 ]; then
     exit 0
 fi
 
-# Copy images (files only, not directories)
+# Copy images (files only, not directories) - using xargs for better performance
 echo -e "${BLUE}Copying images from $SOURCE_DIR to $DEST_DIR...${NC}"
-find "$SOURCE_DIR" -maxdepth 1 -type f -exec cp -fv {} "$DEST_DIR/" \;
+find "$SOURCE_DIR" -maxdepth 1 -type f -print0 | xargs -0 -I {} cp -fv {} "$DEST_DIR/"
 
 # Count destination files using find for reliability
 DEST_COUNT="$(find "$DEST_DIR" -maxdepth 1 -type f | wc -l)"
@@ -54,4 +54,3 @@ echo "  Source files:      $SOURCE_COUNT"
 echo "  Destination files: $DEST_COUNT"
 echo ""
 echo -e "${BLUE}Note:${NC} Book/images may contain additional files not present in READY/xhtml/images"
-echo ""
