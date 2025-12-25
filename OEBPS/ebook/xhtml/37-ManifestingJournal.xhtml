@@ -4,138 +4,254 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manifesting Journal - Unveiling Your Creative Odyssey</title>
+  <title>Manifesting Journal</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .manifest-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 1.75rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201,169,97,0.04) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid #C9A961;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.6rem;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.9rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .prompt-card {
+      background: white;
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .prompt-card.featured {
+      border-left: 4px solid #2B9999;
+    }
+    .prompt-card.secondary {
+      border-left: 4px solid #C9A961;
+    }
+    .prompt-card.tertiary {
+      border-left: 4px solid #3DB3B3;
+    }
+    .prompt-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .prompt-badge {
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .prompt-badge.teal {
+      background: #2B9999;
+      color: white;
+    }
+    .prompt-badge.gold {
+      background: #C9A961;
+      color: white;
+    }
+    .prompt-badge.light {
+      background: #3DB3B3;
+      color: white;
+    }
+    .prompt-text {
+      font-size: 0.75rem;
+      color: #444;
+      line-height: 1.4;
+      margin-bottom: 0.4rem;
+    }
+    .prompt-text em {
+      color: #2B9999;
+      font-style: italic;
+    }
+    .writing-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      min-height: 40px;
+    }
+    .writing-line {
+      border-bottom: 1px solid #ddd;
+      min-height: 1.1rem;
+    }
+    .three-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .pillar-card {
+      background: linear-gradient(135deg, rgba(43,153,153,0.06) 0%, rgba(201,169,97,0.06) 100%);
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+      text-align: center;
+    }
+    .pillar-number {
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.3rem;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+    }
+    .pillar-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+    }
+    .pillar-desc {
+      font-size: 0.65rem;
+      color: #666;
+      line-height: 1.3;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      text-align: center;
+      border-top: 2px solid rgba(201,169,97,0.3);
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card journal" aria-label="Manifesting Journal">
+<main epub:type="backmatter" role="main">
+<section class="manifest-page" aria-label="Manifesting Journal">
 
-      <h1 class="section-heading">MANIFESTING JOURNAL</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Journal Worksheet</div>
+  <h1 class="main-title">Manifesting Journal</h1>
+  <p class="subtitle">Dream Big, Then Bigger</p>
+</div>
 
-      <div class="introduction">
-        <p>Manifestation is the art of bringing your innermost desires into tangible reality through the alignment of thought, emotion, and action. As a hairstylist, your creative vision has the power to materialize when you focus your intentions with clarity and purpose. This journal provides a framework for articulating, energizing, and activating your professional dreams with deliberate practice.</p>
+<div class="content-area">
+
+  <div class="three-col-grid">
+    <div class="pillar-card">
+      <div class="pillar-number">1</div>
+      <div class="pillar-title">Clarity</div>
+      <div class="pillar-desc">Define your desires with precision. Detailed visions create detailed outcomes.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-number">2</div>
+      <div class="pillar-title">Belief</div>
+      <div class="pillar-desc">Cultivate unwavering faith in your vision and your worthiness.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-number">3</div>
+      <div class="pillar-title">Aligned Action</div>
+      <div class="pillar-desc">Take consistent steps that harmonize with your intentions.</div>
+    </div>
+  </div>
+
+  <div class="prompt-card featured">
+    <div class="prompt-header">
+      <span class="prompt-badge teal">FUTURE SELF</span>
+    </div>
+    <p class="prompt-text">Describe a "Day in the Life" of your future self 3 years from now. Where are you working? Who are your clients? How do you feel when you wake up?</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
+
+  <div class="two-col-grid">
+    <div class="prompt-card secondary">
+      <div class="prompt-header">
+        <span class="prompt-badge gold">INTENTION</span>
       </div>
-
-      <h2 class="section-heading">The Three Pillars of Effective Manifestation</h2>
-
-      <div class="manifestation-pillars">
-        <div class="pillar">
-          <h3>1. Clarity</h3>
-          <p>Define your desires with precision. Vague wishes produce vague results, while detailed visions create detailed outcomes. When you can see, feel, hear, and sense your goal with vivid specificity, you've created a blueprint for manifestation.</p>
-        </div>
-
-        <div class="pillar">
-          <h3>2. Belief</h3>
-          <p>Cultivate unwavering faith in both the possibility and your worthiness of your desires. Doubt creates resistance; confidence creates flow. Your mind must accept your vision as an eventual reality before your external world can reflect it.</p>
-        </div>
-
-        <div class="pillar">
-          <h3>3. Aligned Action</h3>
-          <p>Take consistent steps that harmonize with your vision. Manifestation isn't passive wishing—it's co-creation through inspired movement. When your actions align with your intentions, you become a powerful conduit for manifestation.</p>
-        </div>
+      <p class="prompt-text">What is the one specific feeling you want to manifest in your career this year? (e.g., Ease, Abundance, Recognition)</p>
+      <div class="writing-lines">
+        <div class="writing-line"></div>
+        <div class="writing-line"></div>
       </div>
-
-      <div class="practice-note">
-        <p>Use this journal regularly—ideally daily—to maintain focus on your vision and strengthen your manifestation practice. Date each entry to track your journey and notice patterns in your manifestation process. Remember that manifestation is both an art and a science; approach it with both creativity and discipline.</p>
+    </div>
+    <div class="prompt-card tertiary">
+      <div class="prompt-header">
+        <span class="prompt-badge light">THE BRIDGE</span>
       </div>
-
-      <div class="date-field">
-        <label>Date:</label>
-        <div class="fill-line"></div>
+      <p class="prompt-text">What is one tangible step you can take <em>today</em> to bridge the gap between where you are and that future vision?</p>
+      <div class="writing-lines">
+        <div class="writing-line"></div>
+        <div class="writing-line"></div>
       </div>
+    </div>
+  </div>
 
-      <div class="journal-sections">
-        <div class="journal-entry">
-          <h3>Gratitude Alignment</h3>
-          <p class="journal-prompt">Begin by acknowledging what you already appreciate in your hairstyling practice. Gratitude connects you to abundance and primes your energy for receiving more.</p>
-          <p><strong>I am grateful for:</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+</div>
 
-        <div class="journal-entry">
-          <h3>Milestones on Your Path</h3>
-          <p class="journal-prompt">Describe 3 specific scenarios that represent milestones on your path to manifesting your hairstyling dreams. Envision them happening and feel the positive emotions they evoke. Be as detailed and sensory as possible.</p>
+<div class="footer-section">
+  <p class="footer-text">The Artisan's Path | Manifesting Journal</p>
+</div>
 
-          <p><strong>Milestone 1: Near Future (1-3 months)</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-
-          <p><strong>Milestone 2: Mid-Term (6-12 months)</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-
-          <p><strong>Milestone 3: Long-Term Vision (1-3 years)</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Your Ideal Future</h3>
-          <p class="journal-prompt">Close your eyes and imagine your ideal future as a hairstylist. What does success look and feel like to you? Describe your vision in vivid detail, engaging all your senses.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Positive Affirmations</h3>
-          <p class="journal-prompt">Write 3 positive affirmations that align with your hairstyling vision. Craft them in present tense, as if they are already true. Repeat them to yourself daily to reinforce a mindset of growth and opportunity.</p>
-
-          <p><strong>Affirmation 1: Professional Identity</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-
-          <p><strong>Affirmation 2: Creative Expression</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-
-          <p><strong>Affirmation 3: Abundance and Impact</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Aligned Actions</h3>
-          <p class="journal-prompt">Identify specific steps you can take today that move you toward your vision. Choose actions that feel energizing and inspired rather than forced.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Evidence and Synchronicities</h3>
-          <p class="journal-prompt">Record any signs, coincidences, or progress indicators that suggest your manifestation is underway. Recognizing evidence reinforces your belief and accelerates the manifestation process.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Releasing Blocks</h3>
-          <p class="journal-prompt">Identify any limiting beliefs, fears, or doubts that may be hindering your manifestation. Write them down, then consciously release them by writing a new, empowering perspective for each.</p>
-
-          <p><strong>Limiting Belief 1:</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-
-          <p><strong>New Perspective 1:</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-
-          <p><strong>Limiting Belief 2:</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-
-          <p><strong>New Perspective 2:</strong></p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Daily Reflection</h3>
-          <p class="journal-prompt">End your manifestation practice with a moment of reflection. How did this journaling session shift your energy or perspective? What insights emerged?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-      </div>
-
-      <div class="closing-message">
-        <p>Remember: Manifestation thrives on consistency and emotional connection. Return to this journal regularly, infusing your writing with genuine feeling and expectation. The universe responds not just to your words, but to the energy behind them.</p>
-      </div>
-
-      <div class="cta-section">
-        <h4>Begin Your Manifestation Practice</h4>
-        <p>Transform your dreams into reality through focused intention, clear vision, and inspired action.</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>

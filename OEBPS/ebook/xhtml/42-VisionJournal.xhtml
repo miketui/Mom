@@ -4,84 +4,197 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vision Journal - Unveiling Your Creative Odyssey</title>
+  <title>Vision Journal</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .vision-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 1.75rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201,169,97,0.04) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid #C9A961;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.85rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .prompt-card {
+      background: white;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .prompt-card.featured {
+      flex: 2;
+      border-left: 4px solid #C9A961;
+    }
+    .prompt-card.secondary {
+      flex: 1;
+      border-left: 4px solid #2B9999;
+    }
+    .prompt-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+    .prompt-badge {
+      padding: 0.12rem 0.45rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .prompt-badge.gold {
+      background: #C9A961;
+      color: white;
+    }
+    .prompt-badge.teal {
+      background: #2B9999;
+      color: white;
+    }
+    .prompt-text {
+      font-size: 0.7rem;
+      color: #666;
+      line-height: 1.4;
+      margin-bottom: 0.35rem;
+    }
+    .writing-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .writing-line {
+      border-bottom: 1px solid #ddd;
+      min-height: 1.1rem;
+    }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      text-align: center;
+      border-top: 2px solid rgba(43,153,153,0.2);
+    }
+    .footer-quote {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.65rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card journal" aria-label="Vision Journal">
+<main epub:type="backmatter" role="main">
+<section class="vision-page" aria-label="Vision Journal">
 
-      <h1 class="section-heading">VISION JOURNAL</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Vision Worksheet</div>
+  <h1 class="main-title">Vision Journal</h1>
+  <p class="subtitle">Crafting Your Legacy</p>
+</div>
 
-      <h2 class="section-heading">Designing Your Hairstyling Future</h2>
+<div class="content-area">
 
-      <div class="introduction">
-        <p>Your vision is the compass that guides your professional journey. This journal helps you crystallize your long-term aspirations, explore the stylist you're becoming, and create a vivid mental picture of your ideal future. When you can see it clearly, you can create it intentionally.</p>
-      </div>
+  <div class="prompt-card featured">
+    <div class="prompt-header">
+      <span class="prompt-badge gold">CORE VALUES</span>
+    </div>
+    <p class="prompt-text">Identify your top 3 core values (e.g., Creativity, Integrity, Community). How do they show up in your salon today?</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-      <div class="date-field">
-        <label>Date:</label>
-        <div class="fill-line"></div>
-      </div>
+  <div class="prompt-card featured">
+    <div class="prompt-header">
+      <span class="prompt-badge teal">THE VISION STATEMENT</span>
+    </div>
+    <p class="prompt-text">Draft a succinct statement that captures your purpose. (e.g., "To empower clients to embrace their unique beauty...")</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-      <div class="journal-sections">
-        <div class="journal-entry">
-          <h3>Your Ultimate Vision</h3>
-          <p class="journal-prompt">Imagine yourself 5 years from now at the pinnacle of your hairstyling career. Where are you working? What kind of work are you doing? Who are your clients? Describe this vision in vivid, sensory detail.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+  <div class="prompt-card featured">
+    <div class="prompt-header">
+      <span class="prompt-badge gold">LEGACY</span>
+    </div>
+    <p class="prompt-text">Ten years from now, what do you want your clients and peers to say about the impact you had on them?</p>
+    <div class="writing-lines">
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+      <div class="writing-line"></div>
+    </div>
+  </div>
 
-        <div class="journal-entry">
-          <h3>Legacy and Impact</h3>
-          <p class="journal-prompt">What legacy do you want to leave in the hairstyling industry? How do you want to be remembered by your clients, colleagues, and community? What lasting impact do you want to make?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+</div>
 
-        <div class="journal-entry">
-          <h3>Your Signature Style</h3>
-          <p class="journal-prompt">What makes your work uniquely yours? What techniques, aesthetics, or approaches define your creative identity? If you could be known for one thing, what would it be?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
+<div class="footer-section">
+  <p class="footer-quote">"Your vision is not a distant fantasy—it's a destination you're actively creating."</p>
+  <p class="footer-text">The Artisan's Path | Vision Journal</p>
+</div>
 
-        <div class="journal-entry">
-          <h3>Ideal Client Experience</h3>
-          <p class="journal-prompt">Describe the experience you want every client to have from the moment they book with you to when they leave your chair. What feelings do you want them to carry with them?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Professional Milestones</h3>
-          <p class="journal-prompt">List 5-7 major milestones you want to achieve in your hairstyling career (education, certifications, awards, business goals, creative projects, collaborations, etc.).</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Values Alignment</h3>
-          <p class="journal-prompt">What core values guide your work as a hairstylist? (Examples: inclusivity, sustainability, artistry, empowerment, innovation, tradition) How do these values shape your daily decisions?</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Obstacles and Solutions</h3>
-          <p class="journal-prompt">What obstacles might stand between you and your vision? For each obstacle, brainstorm at least one potential solution or strategy to overcome it.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-
-        <div class="journal-entry">
-          <h3>Next Steps Toward Your Vision</h3>
-          <p class="journal-prompt">Based on your vision, identify 3 concrete actions you can take in the next 30 days that move you closer to this future. Be specific about what, when, and how.</p>
-          <div class="writing-area ruled-paper-bg"></div>
-        </div>
-      </div>
-
-      <div class="closing-message">
-        <p>Your vision is not a distant fantasy—it's a destination you're actively creating with every choice you make. Return to this journal regularly to refine, expand, and stay connected to the future you're building.</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>

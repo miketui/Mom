@@ -4,130 +4,251 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Post-Reading Reflection Questions - Curls &amp; Contemplation</title>
+  <title>Self-Assessment: Business Health Check</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .assessment-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201,169,97,0.04) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid #2B9999;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.8rem;
+      color: #2B9999;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .intro-text {
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 1.25rem;
+      line-height: 1.5;
+    }
+    .questions-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .question-card {
+      background: white;
+      border-left: 4px solid #C9A961;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      flex: 1;
+    }
+    .question-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+    .question-number {
+      background: linear-gradient(135deg, #C9A961 0%, #B08F4A 100%);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .question-content {
+      flex: 1;
+    }
+    .question-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #2B9999;
+      margin-bottom: 0.25rem;
+    }
+    .question-text {
+      font-size: 0.8rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    .answer-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+      flex: 1;
+    }
+    .answer-line {
+      border-bottom: 1px solid #ddd;
+      min-height: 1.3rem;
+    }
+    .reflection-section {
+      background: linear-gradient(135deg, rgba(43,153,153,0.08) 0%, rgba(201,169,97,0.08) 100%);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+    }
+    .reflection-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .reflection-icon {
+      font-size: 1.2rem;
+    }
+    .reflection-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2B9999;
+    }
+    .reflection-text {
+      font-size: 0.8rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .reflection-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .reflection-line {
+      border-bottom: 1px dashed #aaa;
+      min-height: 1.2rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      text-align: center;
+      border-top: 2px solid rgba(43,153,153,0.2);
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card worksheet" aria-label="Post-Reading Reflection Questions">
+<main epub:type="backmatter" role="main">
+<section class="assessment-page" aria-label="Self-Assessment: Business Health Check">
 
-      <h1 class="section-heading">POST-READING REFLECTION QUESTIONS</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Post-Reading Assessment</div>
+  <h1 class="main-title">Business Health Check</h1>
+  <p class="subtitle">Mastering the Business of Hairstyling</p>
+</div>
 
-      <div class="introduction">
-        <p>Now that you've completed your journey through <em>Curls &amp; Contemplation</em>, take some time to reflect deeply on what you've learned and how you'll integrate these insights into your professional practice and personal growth. These thought-provoking questions will help you solidify your learning and create an actionable path forward.</p>
+<p class="intro-text">Now that you've completed your journey through this book, reflect deeply on what you've learned and how you'll integrate these insights into your professional practice.</p>
+
+<div class="questions-container">
+
+  <div class="question-card">
+    <div class="question-header">
+      <div class="question-number">1</div>
+      <div class="question-content">
+        <div class="question-title">Financial Alignment</div>
+        <div class="question-text">Do your current service prices reflect your expertise and the cost of doing business? If not, what is holding you back from adjusting them?</div>
       </div>
+    </div>
+    <div class="answer-lines">
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+    </div>
+  </div>
 
-      <h2 class="section-heading">Deep Reflection Worksheet</h2>
-
-      <div class="activity-section">
-        <h3>1. Reflecting on your journey through these chapters, what new insights or strategies have you discovered that will help you advance your skills and well-being as a hairstylist?</h3>
-        <div class="writing-area ruled-paper-bg"></div>
+  <div class="question-card">
+    <div class="question-header">
+      <div class="question-number">2</div>
+      <div class="question-content">
+        <div class="question-title">Revenue Diversity</div>
+        <div class="question-text">List your current income streams. Brainstorm two new potential streams (e.g., affiliate products, education, digital guides).</div>
       </div>
+    </div>
+    <div class="answer-lines">
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+    </div>
+  </div>
 
-      <div class="activity-section">
-        <h3>2. How has your understanding of leadership and mentorship in the hairstyling industry evolved, and what steps will you take to inspire and uplift others?</h3>
-        <div class="writing-area ruled-paper-bg"></div>
+  <div class="question-card">
+    <div class="question-header">
+      <div class="question-number">3</div>
+      <div class="question-content">
+        <div class="question-title">Client Archetypes</div>
+        <div class="question-text">Which client archetype do you serve best (Trendsetter, Minimalist, Reassurer)? Are your marketing efforts targeting this specific group?</div>
       </div>
+    </div>
+    <div class="answer-lines">
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+    </div>
+  </div>
 
-      <div class="activity-section">
-        <h3>3. Which self-care practices or wellness strategies discussed in the chapters resonated with you the most, and how do you plan to integrate them into your daily routine?</h3>
-        <div class="writing-area ruled-paper-bg"></div>
-      </div>
+</div>
 
-      <div class="activity-section">
-        <h3>4. How has your perspective on continuous education and skill development changed, and what specific actions will you take to keep growing professionally?</h3>
-        <div class="writing-area ruled-paper-bg"></div>
-      </div>
+<div class="reflection-section">
+  <div class="reflection-header">
+    <span class="reflection-icon">&#9733;</span>
+    <span class="reflection-title">Key Insight</span>
+  </div>
+  <div class="reflection-text">What is one breakthrough insight from your reading that will transform how you approach your business?</div>
+  <div class="reflection-lines">
+    <div class="reflection-line"></div>
+    <div class="reflection-line"></div>
+  </div>
+</div>
 
-      <div class="activity-section">
-        <h3>5. In what ways do you feel more empowered to make a positive impact on your clients, community, and the hairstyling industry as a whole?</h3>
-        <div class="writing-area ruled-paper-bg"></div>
-      </div>
+<div class="footer-section">
+  <p class="footer-text">Curls &amp; Contemplation | Business Assessment</p>
+</div>
 
-      <div class="activity-section">
-        <h3>6. Looking back at your initial goals when you began this book, which ones have you made progress toward? What new goals have emerged?</h3>
-        <div class="writing-area ruled-paper-bg"></div>
-      </div>
-
-      <div class="activity-section">
-        <h3>7. On a scale of 1 to 5, how would you rate your confidence in these areas?</h3>
-
-        <div class="confidence-ratings">
-          <div class="rating-item">
-            <p class="rating-label"><strong>Technical hairstyling skills</strong></p>
-            <p class="rating-scale">Low to High Confidence</p>
-            <div class="rating-circles">
-              <span class="rating-circle">1</span>
-              <span class="rating-circle">2</span>
-              <span class="rating-circle">3</span>
-              <span class="rating-circle">4</span>
-              <span class="rating-circle">5</span>
-            </div>
-          </div>
-
-          <div class="rating-item">
-            <p class="rating-label"><strong>Business and entrepreneurial mindset</strong></p>
-            <p class="rating-scale">Low to High Confidence</p>
-            <div class="rating-circles">
-              <span class="rating-circle">1</span>
-              <span class="rating-circle">2</span>
-              <span class="rating-circle">3</span>
-              <span class="rating-circle">4</span>
-              <span class="rating-circle">5</span>
-            </div>
-          </div>
-
-          <div class="rating-item">
-            <p class="rating-label"><strong>Self-care and personal wellness</strong></p>
-            <p class="rating-scale">Low to High Confidence</p>
-            <div class="rating-circles">
-              <span class="rating-circle">1</span>
-              <span class="rating-circle">2</span>
-              <span class="rating-circle">3</span>
-              <span class="rating-circle">4</span>
-              <span class="rating-circle">5</span>
-            </div>
-          </div>
-
-          <div class="rating-item">
-            <p class="rating-label"><strong>Client communication and relationship building</strong></p>
-            <p class="rating-scale">Low to High Confidence</p>
-            <div class="rating-circles">
-              <span class="rating-circle">1</span>
-              <span class="rating-circle">2</span>
-              <span class="rating-circle">3</span>
-              <span class="rating-circle">4</span>
-              <span class="rating-circle">5</span>
-            </div>
-          </div>
-
-          <div class="rating-item">
-            <p class="rating-label"><strong>Creative expression and artistic vision</strong></p>
-            <p class="rating-scale">Low to High Confidence</p>
-            <div class="rating-circles">
-              <span class="rating-circle">1</span>
-              <span class="rating-circle">2</span>
-              <span class="rating-circle">3</span>
-              <span class="rating-circle">4</span>
-              <span class="rating-circle">5</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="activity-section">
-        <h3>8. What is your personal commitment statement as you move forward in your hairstyling journey?</h3>
-        <div class="writing-area ruled-paper-bg" style="min-height: 200px;"></div>
-      </div>
-
-      <div class="closing-quote">
-        <p>"The journey of transformation begins with honest reflection and bold commitment to growth."</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>

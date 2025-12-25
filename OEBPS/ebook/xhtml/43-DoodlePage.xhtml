@@ -4,43 +4,216 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Creative Doodle Page - Unveiling Your Creative Odyssey</title>
+  <title>Creative Doodle Page</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .doodle-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 1.75rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: #FFFFFF;
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #C9A961;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A961 0%, #D4B976 100%);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+      color: #2B9999;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.85rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .prompts-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      padding: 0.5rem;
+      background: rgba(43,153,153,0.04);
+      border-radius: 8px;
+    }
+    .prompt-chip {
+      background: white;
+      border: 1px solid rgba(43,153,153,0.3);
+      border-radius: 20px;
+      padding: 0.2rem 0.6rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      color: #2B9999;
+    }
+    .doodle-area {
+      flex: 1;
+      border: 3px solid #C9A961;
+      border-radius: 12px;
+      background: white;
+      position: relative;
+      min-height: 350px;
+    }
+    .doodle-area::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px dashed rgba(201,169,97,0.3);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+    .corner-decoration {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #2B9999;
+    }
+    .corner-tl {
+      top: 15px;
+      left: 15px;
+      border-right: none;
+      border-bottom: none;
+    }
+    .corner-tr {
+      top: 15px;
+      right: 15px;
+      border-left: none;
+      border-bottom: none;
+    }
+    .corner-bl {
+      bottom: 15px;
+      left: 15px;
+      border-right: none;
+      border-top: none;
+    }
+    .corner-br {
+      bottom: 15px;
+      right: 15px;
+      border-left: none;
+      border-top: none;
+    }
+    .notes-section {
+      margin-top: 0.75rem;
+      background: rgba(201,169,97,0.06);
+      border-radius: 8px;
+      padding: 0.6rem 0.9rem;
+    }
+    .notes-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .notes-badge {
+      background: #2B9999;
+      color: white;
+      padding: 0.12rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .notes-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .notes-line {
+      border-bottom: 1px solid #ccc;
+      min-height: 1rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.5rem;
+      text-align: center;
+      border-top: 2px solid rgba(43,153,153,0.2);
+    }
+    .footer-quote {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.65rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card doodle" aria-label="Creative Doodle Page">
+<main epub:type="backmatter" role="main">
+<section class="doodle-page" aria-label="Creative Doodle Page">
 
-      <h1 class="section-heading">CREATIVE DOODLE PAGE</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Creative Worksheet</div>
+  <h1 class="main-title">Doodle Page</h1>
+  <p class="subtitle">Visual Brainstorming &amp; Style Exploration</p>
+</div>
 
-      <h2 class="section-heading">Visual Brainstorming &amp; Style Exploration</h2>
+<div class="prompts-row">
+  <span class="prompt-chip">Sketch a dream hairstyle</span>
+  <span class="prompt-chip">Design a color pattern</span>
+  <span class="prompt-chip">Doodle abstract shapes</span>
+  <span class="prompt-chip">Map a cutting technique</span>
+  <span class="prompt-chip">Draw textural patterns</span>
+  <span class="prompt-chip">Experiment with flow</span>
+</div>
 
-      <div class="introduction">
-        <p>Your hands create art every day. This page invites you to sketch, doodle, and visually explore hairstyle ideas, color combinations, cutting patterns, or abstract creative concepts. Let your pen wander without judgment—sometimes the best ideas emerge when we give ourselves permission to play.</p>
-      </div>
+<div class="doodle-area">
+  <div class="corner-decoration corner-tl"></div>
+  <div class="corner-decoration corner-tr"></div>
+  <div class="corner-decoration corner-bl"></div>
+  <div class="corner-decoration corner-br"></div>
+</div>
 
-      <div class="doodle-prompts">
-        <p><strong>Ideas to explore:</strong> Sketch a dream hairstyle | Design a color placement pattern | Doodle abstract shapes that inspire you | Map out a cutting technique | Create a mood board collage | Draw textural patterns | Experiment with line and flow</p>
-      </div>
+<div class="notes-section">
+  <div class="notes-header">
+    <span class="notes-badge">NOTES &amp; COLOR FORMULAS</span>
+  </div>
+  <div class="notes-lines">
+    <div class="notes-line"></div>
+    <div class="notes-line"></div>
+  </div>
+</div>
 
-      <div class="doodle-area" style="min-height: 28rem; border: 2px solid #d4af37; padding: 1rem; margin: 2rem 0; background: white;">
-        <!-- Large blank space for doodling and sketching -->
-      </div>
+<div class="footer-section">
+  <p class="footer-quote">"Creativity thrives in freedom. Let this page be your playground."</p>
+  <p class="footer-text">The Artisan's Path | Doodle Page</p>
+</div>
 
-      <div class="notes-section">
-        <h3>Notes &amp; Color Formulas:</h3>
-        <p class="journal-prompt">Use this space to jot down any notes, color formulas, technique reminders, or ideas that emerged from your doodling.</p>
-        <div class="writing-area ruled-paper-bg" style="min-height: 8rem;"></div>
-      </div>
-
-      <div class="closing-message">
-        <p style="text-align: center; font-style: italic;">Creativity thrives in freedom. Let this page be your playground for visual exploration and artistic experimentation.</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>

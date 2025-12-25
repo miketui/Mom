@@ -4,83 +4,276 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Affirmations Close - Unveiling Your Creative Odyssey</title>
+  <title>Affirmations: Stepping Into Leadership</title>
   <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    .affirmation-page {
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.04) 100%);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid #C9A961;
+    }
+    .worksheet-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #2B9999 0%, #3DB3B3 100%);
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .main-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.6rem;
+      color: #2B9999;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+    .subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.95rem;
+      color: #C9A961;
+      font-style: italic;
+    }
+    .intro-text {
+      font-size: 0.8rem;
+      color: #666;
+      text-align: center;
+      max-width: 550px;
+      margin: 0.75rem auto 1rem;
+      line-height: 1.5;
+    }
+    .affirmations-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    .affirmation-card {
+      background: white;
+      border: 2px dashed #2B9999;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 2px 8px rgba(43,153,153,0.1);
+    }
+    .affirmation-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #2B9999 0%, #1F7272 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: white;
+      font-size: 1.2rem;
+    }
+    .affirmation-content {
+      flex: 1;
+    }
+    .affirmation-text {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1rem;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+    .affirmation-sub {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem;
+      color: #666;
+      line-height: 1.4;
+    }
+    .reflection-section {
+      background: linear-gradient(135deg, rgba(201,169,97,0.08) 0%, rgba(43,153,153,0.08) 100%);
+      border-radius: 12px;
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .reflection-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .reflection-badge {
+      background: #C9A961;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    .reflection-prompt {
+      font-size: 0.8rem;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+    .reflection-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .reflection-line {
+      border-bottom: 1px solid #ccc;
+      min-height: 1.5rem;
+    }
+    .affirmation-complete {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid rgba(201,169,97,0.3);
+    }
+    .complete-header {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #C9A961;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.08em;
+    }
+    .complete-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+    .complete-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .complete-number {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #2B9999;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #2B9999;
+    }
+    .complete-line {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      min-height: 1rem;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      text-align: center;
+      border-top: 2px solid rgba(43,153,153,0.2);
+    }
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      color: #999;
+      letter-spacing: 0.1em;
+    }
+  </style>
 </head>
 <body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card affirmations" aria-label="Final Affirmation Worksheet">
+<main epub:type="backmatter" role="main">
+<section class="affirmation-page" aria-label="Affirmations: Stepping Into Leadership">
 
-      <h1 class="section-heading">FINAL AFFIRMATION WORKSHEET</h1>
-      <div class="decorative-line"></div>
+<div class="header-section">
+  <div class="worksheet-badge">Final Affirmation Worksheet</div>
+  <h1 class="main-title">Stepping Into Leadership</h1>
+  <p class="subtitle">Empowering Yourself &amp; Others</p>
+</div>
 
-      <div class="introduction">
-        <p>As you stand at this significant milestone in your creative journey, it's time to weave the essence of your discoveries into a unique, powerful affirmation. This is more than just a collection of words—it's a personal manifesto that captures the core of your inner wisdom and professional identity.</p>
-        <p>The power of affirmations lies in their ability to rewire our thought patterns and beliefs. When crafted with intention and repeated regularly, they can transform how we see ourselves and our creative potential. This final affirmation will serve as both a celebration of your journey and a compass for your continued growth.</p>
-      </div>
+<p class="intro-text">These affirmations celebrate your journey and illuminate your path forward. Speak them with conviction as you step into your role as a creative leader.</p>
 
-      <h2 class="section-heading">Craft Your Personal Affirmation</h2>
+<div class="affirmations-container">
+  <div class="affirmation-card">
+    <div class="affirmation-icon">&#9733;</div>
+    <div class="affirmation-content">
+      <p class="affirmation-text">"I lead with integrity and skill."</p>
+      <p class="affirmation-sub">My influence extends beyond the chair to my community and peers.</p>
+    </div>
+  </div>
+  <div class="affirmation-card">
+    <div class="affirmation-icon">&#9830;</div>
+    <div class="affirmation-content">
+      <p class="affirmation-text">"I am worthy of abundance and success."</p>
+      <p class="affirmation-sub">I set boundaries and prices that honor my expertise and well-being.</p>
+    </div>
+  </div>
+  <div class="affirmation-card">
+    <div class="affirmation-icon">&#9827;</div>
+    <div class="affirmation-content">
+      <p class="affirmation-text">"My vision is my anchor."</p>
+      <p class="affirmation-sub">I navigate industry changes with curiosity and resilience.</p>
+    </div>
+  </div>
+</div>
 
-      <div class="affirmation-samples">
-        <h3>Sample Affirmations for Inspiration</h3>
-        <ul>
-          <li>I create with courage, clarity, and compassion.</li>
-          <li>My craft uplifts, respects, and empowers every client.</li>
-          <li>I honor diverse textures, stories, and cultures.</li>
-          <li>My skills grow through practice, study, and patience.</li>
-          <li>I align art, ethics, and wellness in my work.</li>
-        </ul>
-      </div>
+<div class="reflection-section">
+  <div class="reflection-header">
+    <span class="reflection-badge">REFLECTION</span>
+  </div>
+  <p class="reflection-prompt">Choose one affirmation above. How can you embody this statement in your salon interactions today? What specific action will you take?</p>
+  <div class="reflection-lines">
+    <div class="reflection-line"></div>
+    <div class="reflection-line"></div>
+    <div class="reflection-line"></div>
+  </div>
+</div>
 
-      <div class="reflection-prompt">
-        <p>Reflect on your journey through this book, the insights you've gained, and the self-awareness you've cultivated. Consider the transformations you've experienced and the vision you hold for your future as a creative professional. Now, craft your personal 12-line affirmation below, making each line a powerful declaration of who you are becoming.</p>
-      </div>
+<div class="affirmation-complete">
+  <div class="complete-header">YOUR COMPLETE 12-LINE AFFIRMATION (Fill as you progress through the book)</div>
+  <div class="complete-grid">
+    <div class="complete-item"><span class="complete-number">1</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">2</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">3</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">4</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">5</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">6</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">7</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">8</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">9</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">10</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">11</span><div class="complete-line"></div></div>
+    <div class="complete-item"><span class="complete-number">12</span><div class="complete-line"></div></div>
+  </div>
+</div>
 
-      <div class="affirmation-lines">
-        <h3>Your Complete 12-Line Affirmation</h3>
-        <ol>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-          <li><div class="writing-area"></div></li>
-        </ol>
-      </div>
+<div class="footer-section">
+  <p class="footer-text">The Artisan's Path | Leadership Affirmations</p>
+</div>
 
-      <div class="practice-guide">
-        <h3>Making Your Affirmation a Practice</h3>
-        <dl>
-          <dt>Morning ritual:</dt>
-          <dd>Read your affirmation aloud each morning as you begin your day, allowing the words to set your intention.</dd>
-
-          <dt>Visual reminder:</dt>
-          <dd>Consider writing your affirmation on beautiful paper and placing it in your workspace where you'll see it regularly.</dd>
-
-          <dt>Embodiment:</dt>
-          <dd>As you recite each line, visualize yourself already embodying these qualities and living these truths.</dd>
-
-          <dt>Evolution:</dt>
-          <dd>Revisit your affirmation every few months and refine it as you continue to grow and evolve in your creative practice.</dd>
-
-          <dt>Voice recording:</dt>
-          <dd>Record yourself speaking your affirmation with conviction and listen to it during moments when you need inspiration or confidence.</dd>
-        </dl>
-      </div>
-
-      <div class="closing-message">
-        <p>This affirmation is more than words; it's a crafted symbol of your path, a guiding light for your future. As you articulate each line, let the vibration of the words resonate deeply, affirming your capabilities, dreams, and the evolving artist you are becoming. Your words have power—use them to create the reality you envision.</p>
-      </div>
-
-    </section>
-  </main>
+</section>
+</main>
 </body>
 </html>
