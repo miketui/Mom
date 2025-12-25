@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMART Goals - The Artisan's Path</title>
+  <link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/print.css" media="print"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap');
+
+    body { background: #f8f8f8; font-family: 'Lato', sans-serif; margin: 0; }
+
+    .worksheet-page {
+      max-width: 850px; min-height: 1100px; margin: 2rem auto; background: white;
+      padding: 4rem; position: relative; border-left: 12px solid #2B9999;
+    }
+
+    h1 { font-family: 'Playfair Display'; font-size: 3rem; color: #2B9999; margin: 0; line-height: 1; }
+    .sub { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: #C9A961; display: block; margin-top: 0.5rem; margin-bottom: 3rem; }
+
+    .main-goal { margin-bottom: 3rem; }
+    .goal-input { width: 100%; border: none; border-bottom: 2px solid #2B9999; font-family: 'Playfair Display'; font-size: 1.5rem; padding: 0.5rem 0; outline: none; }
+
+    .smart-row { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; align-items: flex-start; }
+    .letter {
+      background: #eefcfc; color: #2B9999; width: 50px; height: 50px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display'; font-weight: 700; font-size: 1.5rem;
+      border-radius: 4px; flex-shrink: 0;
+    }
+    .row-content { flex: 1; border-bottom: 1px solid #f0f0f0; padding-bottom: 1rem; }
+    .row-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #555; margin-bottom: 0.25rem; }
+    .row-desc { font-size: 0.7rem; color: #999; font-style: italic; margin-bottom: 0.5rem; }
+    .row-input { width: 100%; border: none; outline: none; font-size: 1rem; color: #333; }
+
+    .commitment-box {
+      background: #222; color: #f0f0f0; padding: 2rem; border-radius: 6px;
+      margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;
+    }
+    .date-input { background: transparent; border: none; color: #C9A961; font-family: 'Playfair Display'; font-size: 1.5rem; border-bottom: 1px solid #555; width: 150px; text-align: center; }
+
+    @media print { .worksheet-page { margin: 0; border-left-width: 0; padding-left: 4rem; } }
+  </style>
+</head>
+<body>
+  <div class="worksheet-page">
+    <h1>SMART Goals</h1>
+    <span class="sub">Turning Vision Into Action</span>
+
+    <div class="main-goal">
+      <p style="font-size:0.7rem; font-weight:bold; text-transform:uppercase; color:#999; margin-bottom:0.5rem;">Primary Goal Focus</p>
+      <input class="goal-input" placeholder="e.g., Increase Retail Revenue by 20%" />
+    </div>
+
+    <div class="smart-row">
+      <div class="letter">S</div>
+      <div class="row-content">
+        <div class="row-title">Specific</div>
+        <div class="row-desc">What exactly do you want to achieve?</div>
+        <input class="row-input" />
+      </div>
+    </div>
+    <div class="smart-row">
+      <div class="letter">M</div>
+      <div class="row-content">
+        <div class="row-title">Measurable</div>
+        <div class="row-desc">How will you track progress? (Numbers)</div>
+        <input class="row-input" />
+      </div>
+    </div>
+    <div class="smart-row">
+      <div class="letter">A</div>
+      <div class="row-content">
+        <div class="row-title">Achievable</div>
+        <div class="row-desc">Is this realistic given your resources?</div>
+        <input class="row-input" />
+      </div>
+    </div>
+    <div class="smart-row">
+      <div class="letter">R</div>
+      <div class="row-content">
+        <div class="row-title">Relevant</div>
+        <div class="row-desc">Does this align with your core values?</div>
+        <input class="row-input" />
+      </div>
+    </div>
+    <div class="smart-row">
+      <div class="letter">T</div>
+      <div class="row-content">
+        <div class="row-title">Time-Bound</div>
+        <div class="row-desc">When is the deadline?</div>
+        <input class="row-input" />
+      </div>
+    </div>
+
+    <div class="commitment-box">
+      <div>
+        <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.2em; color:#999; margin-bottom:0.5rem;">Commitment Deadline</div>
+        <input type="text" class="date-input" placeholder="Date" />
+      </div>
+      <div style="font-size:3rem; color:#C9A961;">&#10140;</div>
+    </div>
+  </div>
+</body>
+</html>

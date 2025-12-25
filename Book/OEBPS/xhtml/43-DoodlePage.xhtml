@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Space - The Artisan's Path</title>
+  <link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/print.css" media="print"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap');
+
+    :root { --teal: #2B9999; }
+    body { background: #fdfdfd; font-family: 'Lato', sans-serif; margin: 0; }
+
+    .worksheet-page {
+      max-width: 850px; min-height: 1100px; margin: 2rem auto; background: white;
+      padding: 3rem; position: relative; border: 1px dashed #ddd;
+    }
+
+    .header { text-align: center; margin-bottom: 2rem; }
+    h1 { font-family: 'Playfair Display'; font-style: italic; color: #444; font-size: 2rem; margin: 0; }
+    .tags { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+    .tag { background: #f0f0f0; padding: 4px 10px; border-radius: 20px; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: #777; }
+
+    .canvas {
+      width: 100%; height: 700px; border: 2px solid #f0f0f0; border-radius: 8px;
+      position: relative; margin-bottom: 2rem;
+      background-image: radial-gradient(#ddd 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .watermark {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-family: 'Playfair Display'; font-size: 3rem; color: #eee; font-style: italic;
+    }
+
+    .notes { border-top: 1px solid #eee; padding-top: 1rem; }
+    .notes h4 { font-size: 0.7rem; color: var(--teal); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 0.5rem 0; }
+    .line { border-bottom: 1px solid #eee; height: 1.5rem; width: 100%; }
+
+    @media print { .worksheet-page { margin: 0; border: none; } }
+  </style>
+</head>
+<body>
+  <div class="worksheet-page">
+    <div class="header">
+      <h1>Creative Space</h1>
+      <div class="tags">
+        <span class="tag">Sketch</span>
+        <span class="tag">Pattern</span>
+        <span class="tag">Abstract</span>
+        <span class="tag">Flow</span>
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="watermark">Draw Here</div>
+    </div>
+
+    <div class="notes">
+      <h4>Formulas / Notes</h4>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+</body>
+</html>

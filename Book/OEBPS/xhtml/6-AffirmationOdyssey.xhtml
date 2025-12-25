@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Affirmation Odyssey - The Artisan's Path</title>
+  <link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/print.css" media="print"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap');
+
+    :root { --teal: #2B9999; --gold: #C9A961; }
+    body { background: #fdfdfd; font-family: 'Lato', sans-serif; margin: 0; }
+
+    .worksheet-page {
+      max-width: 850px; min-height: 1100px; margin: 2rem auto; background: white;
+      padding: 4rem; position: relative; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+
+    .header { text-align: center; margin-bottom: 3rem; }
+    .badge { background: var(--teal); color: white; font-size: 0.6rem; letter-spacing: 0.2em; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #333; margin: 1rem 0 0.5rem; }
+    h2 { font-size: 0.9rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin: 0; }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    .card { background: #fafafa; border: 1px solid #f0f0f0; padding: 1.5rem; text-align: center; border-radius: 4px; }
+    .card p { font-family: 'Playfair Display', serif; font-style: italic; color: var(--teal); font-size: 1.1rem; margin: 0; }
+
+    .main-prompt { margin-bottom: 3rem; }
+    .box-input {
+      width: 100%; height: 120px; border: 1px solid var(--gold); border-radius: 8px;
+      padding: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.25rem;
+      color: #444; background: rgba(201, 169, 97, 0.05); resize: none; outline: none;
+    }
+
+    .daily-integration { border-top: 1px solid #eee; padding-top: 2rem; }
+    .line { border-bottom: 1px solid #ddd; height: 2rem; margin-bottom: 1rem; width: 100%; }
+
+    .star-icon {
+      width: 40px; height: 40px; margin: 2rem auto 0; display: block;
+      color: var(--gold); opacity: 0.5;
+    }
+
+    @media print { .worksheet-page { margin: 0; box-shadow: none; border: none; } }
+  </style>
+</head>
+<body>
+  <div class="worksheet-page">
+    <div class="header">
+      <span class="badge">Mindset</span>
+      <h1>Affirmation Odyssey</h1>
+      <h2>Building Creative Confidence</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card"><p>"I am capable and strong."</p></div>
+      <div class="card"><p>"I evolve and improve daily."</p></div>
+      <div class="card"><p>"My work brings joy."</p></div>
+      <div class="card"><p>"I trust my unique vision."</p></div>
+    </div>
+
+    <div class="main-prompt">
+      <h3 style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:#999; margin-bottom:1rem;">Craft Your Narrative</h3>
+      <p style="font-size:0.95rem; color:#555; margin-bottom:1.5rem;">Combine the sentiments above into a single, powerful sentence that defines your current chapter.</p>
+      <textarea class="box-input" placeholder="My affirmation is..."></textarea>
+    </div>
+
+    <div class="daily-integration">
+      <h3 style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:#999; margin-bottom:1rem;">Daily Integration</h3>
+      <p style="font-size:0.95rem; color:#555; margin-bottom:1rem;">How will you embody this truth today? (e.g., Speak up in a meeting, try a bold technique)</p>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+  </div>
+</body>
+</html>
