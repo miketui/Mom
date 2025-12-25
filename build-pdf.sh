@@ -74,8 +74,13 @@ fi
 print_step "Converting EPUB to PDF..."
 
 if [ "$CONVERTER" = "calibre" ]; then
+    # 6x9 inch Print-on-Demand format
+    # Page size: 6in x 9in = 432pt x 648pt
+    # Margins: Inside (gutter) 0.875in=63pt, Outside 0.625in=45pt, Top/Bottom 0.75in=54pt
+    # Using extra-css to override CSS variables with hardcoded values
     ebook-convert "$EPUB_FILE" "$PDF_FILE" \
-        --paper-size letter \
+        --custom-size 432x648 \
+        --unit point \
         --pdf-page-numbers \
         --chapter "//*[name()='h1' or name()='h2']" \
         --level1-toc "//*[name()='h1']" \
@@ -84,13 +89,16 @@ if [ "$CONVERTER" = "calibre" ]; then
         --pdf-sans-family "Montserrat" \
         --pdf-default-font-size 11 \
         --pdf-mono-font-size 10 \
-        --margin-left 72 \
-        --margin-right 72 \
-        --margin-top 72 \
-        --margin-bottom 72 \
+        --margin-left 63 \
+        --margin-right 45 \
+        --margin-top 54 \
+        --margin-bottom 54 \
         --preserve-cover-aspect-ratio \
         --embed-all-fonts \
-        --pdf-add-toc
+        --pdf-add-toc \
+        --extra-css "READY/xhtml/styles/print.css" \
+        --filter-css "font-display" \
+        2>&1 | grep -v "CSSStyleDeclaration\|CSSVariable\|PropertyValue\|Unknown Property\|Unexpected token"
 else
     # Pandoc conversion
     pandoc "$EPUB_FILE" \
