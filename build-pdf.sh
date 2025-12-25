@@ -77,6 +77,7 @@ if [ "$CONVERTER" = "calibre" ]; then
     # 6x9 inch Print-on-Demand format
     # Page size: 6in x 9in = 432pt x 648pt
     # Margins: Inside (gutter) 0.875in=63pt, Outside 0.625in=45pt, Top/Bottom 0.75in=54pt
+    # Using extra-css to override CSS variables with hardcoded values
     ebook-convert "$EPUB_FILE" "$PDF_FILE" \
         --custom-size 432x648 \
         --unit point \
@@ -94,7 +95,10 @@ if [ "$CONVERTER" = "calibre" ]; then
         --margin-bottom 54 \
         --preserve-cover-aspect-ratio \
         --embed-all-fonts \
-        --pdf-add-toc
+        --pdf-add-toc \
+        --extra-css "READY/xhtml/styles/print.css" \
+        --filter-css "font-display" \
+        2>&1 | grep -v "CSSStyleDeclaration\|CSSVariable\|PropertyValue\|Unknown Property\|Unexpected token"
 else
     # Pandoc conversion
     pandoc "$EPUB_FILE" \
