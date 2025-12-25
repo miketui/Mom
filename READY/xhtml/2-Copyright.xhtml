@@ -4,48 +4,46 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curls &amp; Contemplation - Copyright Page</title>
-  <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
+  <title>Copyright - Curls &amp; Contemplation</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+    body.copyright-body { 
+      margin: 0; padding: 4rem 3rem; font-family: 'Lato', sans-serif; 
+      background: #fff; color: #555; min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      box-sizing: border-box;
+    }
+    .divider { width: 40px; height: 2px; background: #C9A961; margin-bottom: 2rem; }
+    .copyright-statement { margin-bottom: 1.5rem; font-weight: bold; color: #333; }
+    .rights-text { margin-bottom: 2rem; text-align: justify; font-size: 0.85rem; line-height: 1.6; }
+    .isbn-block { font-family: monospace; color: #333; margin-bottom: 2rem; }
+    .publisher-info { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #2B9999; }
+  </style>
 </head>
-<body class="frontmatter-page">
-<main epub:type="frontmatter copyright-page" role="main">
-<section class="frontmatter-shell copyright-page" aria-label="Copyright Page">
-<div class="copyright-content">
+<body class="copyright-body">
+  <section class="frontmatter-shell copyright-page" aria-label="Copyright Page">
+    <div class="divider" aria-hidden="true"></div>
 
-<!-- Decorative top element using CSS -->
-<div class="elegant-divider" aria-hidden="true"></div>
+    <div class="copyright-statement" epub:type="copyright-statement">
+      Copyright &#169; 2025 by Michael David Warren Jr.
+    </div>
 
-<!-- Copyright notice -->
-<div class="copyright-notice" epub:type="copyright-statement">
-Copyright &#169; 2025 by Michael David.
-</div>
+    <div class="rights-text" epub:type="notice">
+      All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations used in reviews or promotions.
+    </div>
 
-<!-- Rights reserved text -->
-<div class="rights-text" epub:type="notice">
-All rights reserved. No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations used in reviews or promotions.
-</div>
+    <div class="isbn-block">
+      ISBN: 978-0-9876543-2-1
+    </div>
 
-<!-- ISBN information -->
-<div class="isbn-info">
-<span class="isbn-label">ISBN:</span> 978-0-9876543-2-1
-</div>
-
-<!-- Decorative divider -->
-<div class="decorative-line" aria-hidden="true"></div>
-
-<!-- Publisher information -->
-<div class="publisher-label">Publisher Information:</div>
-<div class="publisher-info">Self</div>
-<div class="publisher-info">Los Angeles, California</div>
-<div class="publisher-info">2025</div>
-
-<!-- Bottom decorative element -->
-<div class="section-separator" aria-hidden="true"></div>
-
-</div>
-</section>
-</main>
+    <div class="publisher-info">
+      Published by Self<br/>
+      Los Angeles, California<br/>
+      2025
+    </div>
+  </section>
 </body>
 </html>
+
+
