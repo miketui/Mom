@@ -33,7 +33,7 @@ if [ ! -d "$DEST_DIR" ]; then
 fi
 
 # Check if source directory has files
-if [ $(find "$SOURCE_DIR" -maxdepth 1 -type f | wc -l) -eq 0 ]; then
+if [ "$(find "$SOURCE_DIR" -maxdepth 1 -type f | wc -l)" -eq 0 ]; then
     echo -e "${YELLOW}Warning: No files found in $SOURCE_DIR${NC}"
     exit 0
 fi
@@ -43,8 +43,8 @@ echo -e "${BLUE}Copying images from $SOURCE_DIR to $DEST_DIR...${NC}"
 find "$SOURCE_DIR" -maxdepth 1 -type f -exec cp -fv {} "$DEST_DIR/" \;
 
 # Count files using find for reliability
-SOURCE_COUNT=$(find "$SOURCE_DIR" -maxdepth 1 -type f | wc -l)
-DEST_COUNT=$(find "$DEST_DIR" -maxdepth 1 -type f | wc -l)
+SOURCE_COUNT="$(find "$SOURCE_DIR" -maxdepth 1 -type f | wc -l)"
+DEST_COUNT="$(find "$DEST_DIR" -maxdepth 1 -type f | wc -l)"
 
 echo ""
 echo -e "${GREEN}✓ Synchronization complete!${NC}"

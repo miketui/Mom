@@ -56,8 +56,8 @@ Mom/
 │   ├── xhtml/                      # 60 XHTML files
 │   │   ├── styles/                 # 3 CSS files
 │   │   ├── images/                 # Image files
+│   │   ├── fonts/                  # 6 WOFF2 fonts
 │   │   └── *.xhtml                 # All content files
-│   └── fonts/                      # 6 WOFF2 fonts
 │
 ├── build-epub.sh                   # EPUB builder script ⚡
 ├── build-pdf.sh                    # PDF builder script ⚡
