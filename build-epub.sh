@@ -104,12 +104,12 @@ cp "$READY_DIR"/xhtml/styles/*.css "$EPUB_DIR/OEBPS/styles/"
 print_success "$(ls -1 $READY_DIR/xhtml/styles/*.css | wc -l) CSS files copied"
 
 print_step "Copying images..."
-cp "$READY_DIR"/images/* "$EPUB_DIR/OEBPS/images/"
-print_success "$(ls -1 $READY_DIR/images/* | wc -l) image files copied"
+cp "$READY_DIR"/xhtml/images/* "$EPUB_DIR/OEBPS/images/"
+print_success "$(ls -1 $READY_DIR/xhtml/images/* | wc -l) image files copied"
 
 print_step "Copying fonts..."
-cp "$READY_DIR"/fonts/* "$EPUB_DIR/OEBPS/fonts/"
-print_success "$(ls -1 $READY_DIR/fonts/* | wc -l) font files copied"
+cp "$READY_DIR"/xhtml/fonts/* "$EPUB_DIR/OEBPS/fonts/"
+print_success "$(ls -1 $READY_DIR/xhtml/fonts/* | wc -l) font files copied"
 
 # Step 4b: Validate XHTML files before packaging
 print_step "Validating XHTML files..."
