@@ -254,11 +254,6 @@ const styles = {
     borderRadius: tokens.radius.full,
     cursor: 'pointer',
     transition: 'all 0.2s ease',
-    outline: 'none',
-  },
-  navButtonFocus: {
-    outline: `2px solid ${tokens.colors.goldAccent}`,
-    outlineOffset: '2px',
   },
   navButtonActive: {
     backgroundColor: tokens.colors.goldAccent,
@@ -664,11 +659,6 @@ const styles = {
     borderRadius: tokens.radius.full,
     cursor: 'pointer',
     transition: 'all 0.2s ease',
-    outline: 'none',
-  },
-  pageTabFocus: {
-    outline: `2px solid ${tokens.colors.tealDark}`,
-    outlineOffset: '2px',
   },
   pageTabActive: {
     backgroundColor: tokens.colors.tealPrimary,
