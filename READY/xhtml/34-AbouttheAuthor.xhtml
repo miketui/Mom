@@ -5,80 +5,122 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About the Author - Curls &amp; Contemplation</title>
-  <link rel="stylesheet" type="text/css" href="styles/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+    
+    :root { --teal: #2B9999; --gold: #C9A961; --dark: #1F7272; }
+    
+    body.bio-body { 
+      margin: 0; padding: 3rem 2rem; font-family: 'Lato', sans-serif; 
+      background: #fafafa; color: #444; 
+    }
+    
+    .profile-card {
+      max-width: 700px; margin: 0 auto; background: #fff; padding: 4rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--teal);
+      text-align: center;
+    }
+
+    /* Image Styling */
+    .image-container {
+      width: 180px; height: 180px; margin: 0 auto 2rem;
+      border-radius: 50%; overflow: hidden;
+      border: 4px solid #fff; outline: 2px solid var(--gold);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .author-img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+
+    /* Headings */
+    h1.section-heading {
+      font-family: 'Playfair Display', serif; font-size: 0.9rem; 
+      letter-spacing: 0.2em; text-transform: uppercase; 
+      color: var(--gold); margin-bottom: 1rem;
+    }
+
+    h2.author-name {
+      font-family: 'Playfair Display', serif; font-size: 2.5rem; 
+      color: var(--dark); margin: 0 0 0.5rem 0; line-height: 1.1;
+    }
+
+    .social-handle {
+      display: block; font-family: 'Lato', sans-serif; font-weight: 700; 
+      color: var(--teal); font-size: 1.1rem; margin-bottom: 3rem;
+      text-decoration: none; letter-spacing: 0.05em;
+    }
+
+    /* Content Text */
+    .bio-content {
+      text-align: left; font-size: 0.95rem; line-height: 1.8; 
+      color: #555;
+    }
+    
+    .bio-content p { margin-bottom: 1.5rem; }
+
+    .highlight-quote {
+      font-family: 'Playfair Display', serif; font-style: italic; 
+      font-size: 1.25rem; color: var(--dark); 
+      border-left: 3px solid var(--gold); padding-left: 1.5rem;
+      margin: 2rem 0; line-height: 1.6;
+    }
+
+    .closing-line {
+      font-weight: bold; color: var(--teal); text-align: center;
+      margin-top: 3rem; font-size: 1.1rem; font-family: 'Playfair Display', serif;
+    }
+
+    @media (max-width: 600px) {
+      .profile-card { padding: 2rem; }
+      .image-container { width: 140px; height: 140px; }
+      h2.author-name { font-size: 2rem; }
+    }
+  </style>
 </head>
-<body class="backmatter-page">
-  <main epub:type="backmatter" role="main">
-    <section class="backmatter-card author-bio" aria-label="About the Author">
+<body class="bio-body">
+  <section class="profile-card" aria-label="About the Author">
+    
+    <h1 class="section-heading">About the Author</h1>
+    
+    <div class="image-container">
+      <img src="images/Michael.jpeg" alt="Michael David Warren" class="author-img" />
+    </div>
 
-      <h1 class="section-heading">ABOUT THE AUTHOR</h1>
-      <p class="subtitle">Meet the visionary behind Curls &amp; Contemplation</p>
-      <div class="decorative-line"></div>
+    <h2 class="author-name">Michael David Warren</h2>
+    <a href="https://instagram.com/md.warren" class="social-handle">@md.warren</a>
 
-      <h2 class="section-heading">The Beautiful Rebellion</h2>
+    <div class="bio-content">
+      <p>Michael David Warren built a career the industry said was impossible.</p>
 
-      <p>Three weeks before Michael David Warren Jr. was supposed to begin a promising corporate career, he stood in the cramped office of Arrojo Cosmetology School in NYC, holding his life savings in a worn envelope. The receptionist asked if he was lost. He wasn't—though everyone who loved him thought he must be.</p>
+      <p>He never swept a salon floor. Never climbed the traditional ladder. Never waited for permission. Instead, he went straight to the arena—assisting hair legends Guido Palau, Jimmy Paul, and Jawara, learning under pressure, proving that an unconventional path could lead somewhere extraordinary.</p>
 
-      <p>"My grandfather had just helped me put a down payment on a sensible apartment," Michael recalls, eyes gleaming with the mischief that has become his signature. "That night I called him and said I'd returned the deposit. The silence that followed was deafening. Then he said something I'll never forget: 'Some people need safety. Some people need meaning. I've always known which one you were.'"</p>
+      <p>That path took him to London, where he became Rihanna's day-to-day hairstylist, and into the world of high-stakes creativity: keying Nike's "Greatest Dynasty Ever" campaign, styling major red carpets at the SAG Awards and BET Awards, contributing editorial work to Harper's Bazaar, W Magazine, Wonderland, and Coveteur, and shaping runway collections for Sergio Hudson.</p>
 
-      <p>Arrojo became more than a school—it became the first chapter in a narrative Michael had been silently writing his entire life. While classmates perfected techniques for future salon positions, Michael was designing an education that would serve his bigger vision: a career unconfined by four walls, unbounded by others' expectations.</p>
+      <p>Over more than twelve years, Michael's work has carried him across Tokyo, Stockholm, Mexico City, and Paris—building a global career that doesn't depend on one chair, one city, or one system.</p>
 
-      <p>"On graduation day, most of my class was applying to salons. I was applying for a passport," he says. "I knew every salon offer would become a comfortable cage, and comfort has always been my greatest fear."</p>
+      <p>But the work that changed him most didn't happen on a set.</p>
 
-      <h3>The Nomadic Education</h3>
+      <p>During lockdown, a client called in tears. Depression had swallowed her whole. Her hair was matted, tangled beyond what she could manage alone. She couldn't face her own reflection. Michael sat with her at her kitchen table for hours, gently working through every knot while she cried. When he finished, she reached toward the mirror and whispered five words he will never forget:</p>
 
-      <p>The salon world seemed perplexed by Michael's approach. He would join prestigious teams just long enough to master specific techniques or philosophies, absorbing the expertise of industry titans like Yusef Williams, Naeemah Lafond, and Vernon François before deliberately departing, often turning down promotions that would have anchored him to one location.</p>
+      <div class="highlight-quote">"I forgot she was still in there."</div>
 
-      <p>"They thought I lacked commitment," Michael explains. "What I lacked was interest in a conventional path. I was committed to freedom—the freedom to work with musicians in Paris one week and teach in Johannesburg the next. The freedom to say no to clients who didn't align with my values, even when my bank account suggested otherwise."</p>
+      <p>That night, Michael started writing. Because he realized no amount of technical mastery prepares you for the moment when your craft becomes someone's lifeline. And no stylist should ever be caught without the tools—business, wellness, boundaries, presence—to sustain both their clients and themselves.</p>
 
-      <p>This philosophy transformed Michael into what the industry now recognizes as the quintessential modern hairstylist: part artist, part entrepreneur, part cultural anthropologist. His passport became a textural library—each stamp representing not just a location but an approach to understanding beauty beyond Western standards.</p>
+      <p><em>Curls &amp; Contemplation</em> is the book Michael needed when he was couch-surfing and terrified, when the voice in his head whispered <em>who do you think you are?</em> and the only answer was to keep going anyway.</p>
 
-      <p>"In Tokyo, I learned that great stylists listen with their hands. In Copenhagen, I discovered that sustainability isn't a trend but a responsibility. In Lagos, I witnessed how hair rituals create sacred spaces between people. No salon could have taught me these things. The world was always meant to be my classroom."</p>
+      <p>It's for the freelancer suffocating under the industry's single blueprint. For the artist who knows that technique alone won't save them. For the stylist at 2am, exhausted and searching, who needs someone to finally say: Your work matters more than you know. Every time you help someone see themselves again, you're doing sacred work.</p>
 
-      <h3>The Liberation of Freelance</h3>
+      <p>This isn't a quick-fix manual or surface-level tips. It's an interactive journey—real tools, real reflection, real strategy—for building a career that honors both the craft and the person holding the shears.</p>
 
-      <p>The turning point in Michael's career came when he stopped apologizing for his unorthodox approach and began evangelizing it instead. What the industry had initially perceived as restlessness, he reframed as revolutionary—a deliberate rejection of systems that reward conformity over creativity.</p>
+      <p>Michael is based in London. He still gets nervous before every big job. He recharges in solitude after the intensity of a set. And every single day, without fail, he calls his mum—because she's one of the people who kept him grounded when everything was uncertain. He credits his grandmother as the first person who named his gift, believing his hands could make something beautiful long before the world did.</p>
 
-      <p>"I remember a salon owner telling me I'd never build client loyalty without 'consistency,'" Michael says with the quiet confidence of someone whose waitlist now extends months. "What he meant was physical consistency—same chair, same corner, same view. What I've proven is that loyalty isn't about geography. It's about transformation. My clients follow me because I evolve, and in turn, help them evolve too."</p>
+      <p class="closing-line">This book is his way of believing in yours.</p>
+    </div>
 
-      <p>This evolution continues today. Between writing sessions for this book, Michael traveled to three continents, collaborated with humanitarian organizations bringing dignity through hair services to displaced communities, and continued his own education through masterclasses with artisans both within and beyond the beauty industry.</p>
-
-      <p>"The moment I believe I've learned everything is the moment I should retire," he states firmly. "Curiosity is the antidote to stagnation. I'm still taking classes, still making mistakes, still discovering new approaches. That hunger keeps my work alive."</p>
-
-      <h3>The Heart Behind the Book</h3>
-
-      <p><em>CURLS &amp; CONTEMPLATION</em> isn't merely a technical manual—it's the culmination of a philosophy that values liberation over limitation. What began as journal entries scribbled on international flights and voice notes recorded between clients has transformed into what Michael describes as "a permission slip for those who feel trapped by industry expectations."</p>
-
-      <p>"I wrote this for the stylist sitting in a breakroom wondering if their dreams are too big," he shares, voice softening. "For the talented creator who feels their wings being clipped by hourly rates and someone else's business model. For anyone who suspects there might be more available to them than what they've been shown."</p>
-
-      <p>His voice catches slightly—a rare moment of visible emotion from someone known for his steadiness. "This is the book I needed when I was sleeping on friends' couches between gigs, questioning everything. The book that would have shortened my journey through trial and error. The book that says: trust the voice inside you that wants more than security—it knows exactly where you need to go."</p>
-
-      <p>In a world increasingly dominated by algorithms and automation, Michael David Warren Jr. stands as a testament to the enduring power of human touch, intuition, and authenticity. His story reminds us that sometimes the most direct path to our purpose requires leaving the map behind entirely.</p>
-
-      <p>As he writes in the book's final chapter: "True freedom isn't the absence of obligations, but the presence of choice. Choose your constraints carefully—make sure they're worthy of containing your one wild and precious life."</p>
-
-      <div class="connect-section">
-        <h3>Connect with Michael David</h3>
-        <dl>
-          <dt>Website</dt>
-          <dd>https://www.michaeldavidhair.com</dd>
-
-          <dt>Instagram</dt>
-          <dd>https://www.instagram.com/michaeldavidhair</dd>
-
-          <dt>Newsletter</dt>
-          <dd>https://www.michaeldavidhair.com/newsletter</dd>
-        </dl>
-      </div>
-
-      <div class="closing-quote">
-        <p>"The most beautiful rebellion is becoming exactly who you were meant to be, regardless of who the world thinks you should become."</p>
-        <p class="quote-author">- Michael David Warren Jr.</p>
-      </div>
-
-    </section>
-  </main>
+  </section>
 </body>
 </html>
+
+
