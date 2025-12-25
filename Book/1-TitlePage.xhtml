@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curls &amp; Contemplation - Title Page</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+    :root { --teal: #2B9999; --gold: #C9A961; --dark: #1F7272; }
+    body.title-page-body { 
+      margin: 0; padding: 0; height: 100vh; display: flex; flex-direction: column; 
+      justify-content: center; align-items: center; text-align: center;
+      background: radial-gradient(circle at center, #fff 0%, #fcfcfc 100%);
+      border: 12px solid #fff; outline: 2px solid var(--gold);
+      box-sizing: border-box; position: relative; overflow: hidden;
+      font-family: 'Lato', sans-serif;
+    }
+    .corner-deco {
+      position: absolute; width: 120px; height: 120px; 
+      border-style: double; border-width: 4px; border-color: var(--teal);
+      opacity: 0.2;
+    }
+    .top-right { top: 20px; right: 20px; border-left: 0; border-bottom: 0; }
+    .bottom-left { bottom: 20px; left: 20px; border-right: 0; border-top: 0; }
+    h1.main-title {
+      font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1;
+      color: var(--dark); margin: 0 0 1.5rem 0; letter-spacing: 0.02em;
+    }
+    .subtitle {
+      font-family: 'Lato', sans-serif; font-size: 1.1rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 4rem;
+      border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+      padding: 1rem 0; display: inline-block; width: 60%;
+    }
+    .author-name {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem; font-style: italic;
+      color: #555; margin-top: auto; margin-bottom: 4rem;
+    }
+  </style>
+</head>
+<body class="title-page-body">
+  <section class="frontmatter-shell title-page" aria-label="Title Page">
+    <div class="corner-deco top-right" aria-hidden="true"></div>
+    <div class="corner-deco bottom-left" aria-hidden="true"></div>
+    
+    <h1 class="main-title" epub:type="title">CURLS &amp;<br/>CONTEMPLATION</h1>
+    <h2 class="subtitle" epub:type="subtitle">A Stylist's Interactive Journey Journal</h2>
+    
+    <div class="author-name" epub:type="creator">Michael David Warren Jr.</div>
+  </section>
+</body>
+</html>
+
+
