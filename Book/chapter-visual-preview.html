@@ -68,6 +68,9 @@
 
       /* GRADIENTS */
       --rule-gold: linear-gradient(90deg, var(--clr-gold-accent), transparent 60%);
+
+      /* DARK THEME VARIANTS */
+      --clr-gold-muted-dark: rgba(201, 169, 97, 0.15);
     }
 
     /* ====================================================================
@@ -144,6 +147,11 @@
       background-color: var(--clr-teal-light);
     }
 
+    .chapter-nav button:focus {
+      outline: 2px solid var(--clr-gold-accent);
+      outline-offset: 2px;
+    }
+
     .chapter-nav button.active {
       background-color: var(--clr-gold-accent);
       border-color: var(--clr-gold-accent);
@@ -177,6 +185,11 @@
 
     .page-tabs button:hover {
       border-color: var(--clr-teal-primary);
+    }
+
+    .page-tabs button:focus {
+      outline: 2px solid var(--clr-teal-dark);
+      outline-offset: 2px;
     }
 
     .page-tabs button.active {
@@ -271,7 +284,7 @@
 
     .dark-theme .part-badge {
       color: var(--clr-gold-light);
-      background-color: rgba(201, 169, 97, 0.15);
+      background-color: var(--clr-gold-muted-dark);
     }
 
     /* Chapter Number Figure */
@@ -949,7 +962,7 @@
 
     // Brushstroke SVG
     const brushstrokeSVG = `
-      <svg viewBox="0 0 180 130" class="chapter-number-brush" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 180 130" class="chapter-number-brush" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M20 65c0-25 15-45 70-45s70 20 70 45-15 45-70 45-70-20-70-45z" fill="#2B9999" opacity="0.95"/>
         <path d="M25 62c5-20 20-38 65-38s55 15 62 38c-5 20-20 38-62 38s-60-18-65-38z" fill="#3DB3B3" opacity="0.6"/>
       </svg>
@@ -1074,30 +1087,30 @@
 
           <div style="flex: 1;">
             <div class="prompt-container">
-              <label class="prompt-label">
+              <div class="prompt-label">
                 <span class="prompt-number">1.</span>
                 What key insight from this chapter resonated most with your personal experience?
-              </label>
+              </div>
               <div class="line"></div>
               <div class="line"></div>
               <div class="line"></div>
             </div>
 
             <div class="prompt-container">
-              <label class="prompt-label">
+              <div class="prompt-label">
                 <span class="prompt-number">2.</span>
                 Identify one actionable step you will implement in your practice this week:
-              </label>
+              </div>
               <div class="line"></div>
               <div class="line"></div>
               <div class="line"></div>
             </div>
 
             <div class="prompt-container">
-              <label class="prompt-label">
+              <div class="prompt-label">
                 <span class="prompt-number">3.</span>
                 How might these concepts help you better serve your clients?
-              </label>
+              </div>
               <div class="line"></div>
               <div class="line"></div>
               <div class="line"></div>

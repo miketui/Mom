@@ -27,6 +27,7 @@ const tokens = {
     goldLight: '#D4B976',
     goldDark: '#B08F4A',
     goldMuted: 'rgba(201, 169, 97, 0.2)',
+    goldMutedDark: 'rgba(201, 169, 97, 0.15)',
     goldTransparent: 'rgba(201, 169, 97, 0.08)',
     ink: '#0F1616',
     inkMedium: '#2B2B2B',
@@ -253,6 +254,11 @@ const styles = {
     borderRadius: tokens.radius.full,
     cursor: 'pointer',
     transition: 'all 0.2s ease',
+    outline: 'none',
+  },
+  navButtonFocus: {
+    outline: `2px solid ${tokens.colors.goldAccent}`,
+    outlineOffset: '2px',
   },
   navButtonActive: {
     backgroundColor: tokens.colors.goldAccent,
@@ -616,7 +622,7 @@ const styles = {
   },
   partBadgeDark: {
     color: tokens.colors.goldLight,
-    backgroundColor: 'rgba(201, 169, 97, 0.15)',
+    backgroundColor: tokens.colors.goldMutedDark,
   },
 
   // Footer
@@ -658,6 +664,11 @@ const styles = {
     borderRadius: tokens.radius.full,
     cursor: 'pointer',
     transition: 'all 0.2s ease',
+    outline: 'none',
+  },
+  pageTabFocus: {
+    outline: `2px solid ${tokens.colors.tealDark}`,
+    outlineOffset: '2px',
   },
   pageTabActive: {
     backgroundColor: tokens.colors.tealPrimary,
@@ -669,12 +680,13 @@ const styles = {
 // ============================================================================
 // BRUSHSTROKE SVG COMPONENT
 // ============================================================================
-const BrushstrokeSVG = ({ dark = false }) => (
+const BrushstrokeSVG = () => (
   <svg
     viewBox="0 0 180 130"
     style={styles.brushstroke}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
   >
     <path
       d="M20 65c0-25 15-45 70-45s70 20 70 45-15 45-70 45-70-20-70-45z"
@@ -901,30 +913,30 @@ const WorksheetPage = ({ chapter }) => (
 
     <div style={{ flex: 1 }}>
       <div style={styles.promptContainer}>
-        <label style={styles.promptLabel}>
+        <div style={styles.promptLabel}>
           <span style={styles.promptNumber}>1.</span>
           What key insight from this chapter resonated most with your personal experience?
-        </label>
+        </div>
         <div style={styles.line}></div>
         <div style={styles.line}></div>
         <div style={styles.line}></div>
       </div>
 
       <div style={styles.promptContainer}>
-        <label style={styles.promptLabel}>
+        <div style={styles.promptLabel}>
           <span style={styles.promptNumber}>2.</span>
           Identify one actionable step you will implement in your practice this week:
-        </label>
+        </div>
         <div style={styles.line}></div>
         <div style={styles.line}></div>
         <div style={styles.line}></div>
       </div>
 
       <div style={styles.promptContainer}>
-        <label style={styles.promptLabel}>
+        <div style={styles.promptLabel}>
           <span style={styles.promptNumber}>3.</span>
           How might these concepts help you better serve your clients?
-        </label>
+        </div>
         <div style={styles.line}></div>
         <div style={styles.line}></div>
         <div style={styles.line}></div>
@@ -1022,6 +1034,18 @@ const ChapterVisualArtifacts = () => {
 
   return (
     <div style={styles.artifactsContainer}>
+      {/* CSS for focus styles (pseudo-classes not supported in inline styles) */}
+      <style>{`
+        .nav-button:focus {
+          outline: 2px solid ${tokens.colors.goldAccent};
+          outline-offset: 2px;
+        }
+        .page-tab:focus {
+          outline: 2px solid ${tokens.colors.tealDark};
+          outline-offset: 2px;
+        }
+      `}</style>
+
       {/* Header */}
       <header style={{
         backgroundColor: tokens.colors.ink,
@@ -1054,6 +1078,7 @@ const ChapterVisualArtifacts = () => {
           <button
             key={idx}
             onClick={() => setActiveChapter(idx)}
+            className="nav-button"
             style={{
               ...styles.navButton,
               ...(activeChapter === idx ? styles.navButtonActive : {}),
@@ -1071,6 +1096,7 @@ const ChapterVisualArtifacts = () => {
             <button
               key={type.id}
               onClick={() => setActivePageType(type.id)}
+              className="page-tab"
               style={{
                 ...styles.pageTab,
                 ...(activePageType === type.id ? styles.pageTabActive : {}),
