@@ -156,55 +156,55 @@
     <itemref idref="self-assessment-1"/>
     <itemref idref="affirmation-odyssey"/>
     <itemref idref="preface"/>
-    <itemref idref="preface-quote"/>
+    <itemref idref="preface-quote" linear="no"/>
 
     <!-- Part I: Foundations of Creative Hairstyling -->
     <itemref idref="part-i"/>
     <itemref idref="chapter-i"/>
-    <itemref idref="chapter-i-quote"/>
+    <itemref idref="chapter-i-quote" linear="no"/>
     <itemref idref="chapter-ii"/>
-    <itemref idref="chapter-ii-quote"/>
+    <itemref idref="chapter-ii-quote" linear="no"/>
     <itemref idref="chapter-iii"/>
-    <itemref idref="chapter-iii-quote"/>
+    <itemref idref="chapter-iii-quote" linear="no"/>
 
     <!-- Part II: Building Your Professional Practice -->
     <itemref idref="part-ii"/>
     <itemref idref="chapter-iv"/>
-    <itemref idref="chapter-iv-quote"/>
+    <itemref idref="chapter-iv-quote" linear="no"/>
     <itemref idref="chapter-v"/>
-    <itemref idref="chapter-v-quote"/>
+    <itemref idref="chapter-v-quote" linear="no"/>
     <itemref idref="chapter-vi"/>
-    <itemref idref="chapter-vi-quote"/>
+    <itemref idref="chapter-vi-quote" linear="no"/>
     <itemref idref="chapter-vii"/>
-    <itemref idref="chapter-vii-quote"/>
+    <itemref idref="chapter-vii-quote" linear="no"/>
     <itemref idref="chapter-viii"/>
-    <itemref idref="chapter-viii-quote"/>
+    <itemref idref="chapter-viii-quote" linear="no"/>
 
     <!-- Part III: Advanced Business Strategies -->
     <itemref idref="part-iii"/>
     <itemref idref="chapter-ix"/>
-    <itemref idref="chapter-ix-quote"/>
+    <itemref idref="chapter-ix-quote" linear="no"/>
     <itemref idref="chapter-x"/>
-    <itemref idref="chapter-x-quote"/>
+    <itemref idref="chapter-x-quote" linear="no"/>
     <itemref idref="chapter-xi"/>
-    <itemref idref="chapter-xi-quote"/>
+    <itemref idref="chapter-xi-quote" linear="no"/>
     <itemref idref="chapter-xii"/>
-    <itemref idref="chapter-xii-quote"/>
+    <itemref idref="chapter-xii-quote" linear="no"/>
     <itemref idref="chapter-xiii"/>
-    <itemref idref="chapter-xiii-quote"/>
+    <itemref idref="chapter-xiii-quote" linear="no"/>
 
     <!-- Part IV: Future-Focused Growth -->
     <itemref idref="part-iv"/>
     <itemref idref="chapter-xiv"/>
-    <itemref idref="chapter-xiv-quote"/>
+    <itemref idref="chapter-xiv-quote" linear="no"/>
     <itemref idref="chapter-xv"/>
-    <itemref idref="chapter-xv-quote"/>
+    <itemref idref="chapter-xv-quote" linear="no"/>
     <itemref idref="chapter-xvi"/>
-    <itemref idref="chapter-xvi-quote"/>
+    <itemref idref="chapter-xvi-quote" linear="no"/>
 
     <!-- Back Matter -->
     <itemref idref="conclusion"/>
-    <itemref idref="conclusion-quote"/>
+    <itemref idref="conclusion-quote" linear="no"/>
     <itemref idref="quiz-key"/>
     <itemref idref="self-assessment-2"/>
     <itemref idref="affirmations-close"/>
