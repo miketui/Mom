@@ -227,8 +227,8 @@ Before publishing:
 ### Common Edits
 - **CSS**: `READY/xhtml/styles/style.css`
 - **Content**: Any `.xhtml` file in `READY/xhtml/`
-- **Images**: Check `READY/images/`
-- **Fonts**: Check `READY/fonts/`
+- **Images**: Check `READY/xhtml/images/`
+- **Fonts**: Check `READY/xhtml/fonts/`
 
 ---
 
@@ -358,8 +358,8 @@ python3 -m http.server 8080 --bind 127.0.0.1
 - Or Pandoc: `sudo apt-get install pandoc`
 
 ### Images not showing?
-- Check paths in XHTML: should be `../images/filename`
-- Verify images exist: `ls READY/images/`
+- Check paths in XHTML: should be `../images/filename` or `images/filename`
+- Verify images exist: `ls READY/xhtml/images/`
 
 ---
 
