@@ -5,76 +5,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Interactive Journaling Guide - Unveiling Your Creative Odyssey</title>
+  <link rel="stylesheet" type="text/css" href="../style/fonts.css"/>
   <link rel="stylesheet" type="text/css" href="../style/style.css"/>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap');
-    :root { --teal: #2B9999; --gold: #C9A961; --dark: #1F7272; }
-    
-    body.journal-body { 
-      margin: 0; padding: 3rem 2rem; font-family: 'Lato', sans-serif; 
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(43,153,153,0.03) 100%);
-      color: #444; line-height: 1.6;
-    }
-    
-    .journal-card {
-      max-width: 700px; margin: 0 auto; background: #fff; padding: 4rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--teal);
-    }
-
-    h1.main-heading {
-      font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--dark);
-      text-align: center; margin-bottom: 1.5rem; letter-spacing: 0.05em;
-    }
-    
-    .decorative-line { height: 3px; width: 60px; background: var(--gold); margin: 0 auto 2.5rem; }
-    
-    .intro-text { 
-      text-align: center; font-size: 1.05rem; margin-bottom: 3rem; 
-      color: #555; max-width: 600px; margin-left: auto; margin-right: auto;
-    }
-
-    h2.sub-heading {
-      font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--teal);
-      margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;
-    }
-
-    /* Journey List Styling */
-    .journey-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .journey-item { 
-      background: #fafafa; padding: 1.5rem; border-left: 3px solid var(--gold);
-      transition: transform 0.2s;
-    }
-    .journey-item h3 { 
-      font-family: 'Playfair Display', serif; font-size: 1rem; margin: 0 0 0.5rem 0; 
-      color: var(--dark); font-weight: bold; 
-    }
-    .journey-item p { margin: 0; font-size: 0.85rem; color: #666; }
-
-    /* Usage Guide Styling */
-    .usage-guide { 
-      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; 
-      background: rgba(201, 169, 97, 0.05); padding: 2rem; border-radius: 8px;
-    }
-    .usage-pair { margin-bottom: 1rem; }
-    dt { font-weight: bold; color: var(--teal); margin-bottom: 0.25rem; font-family: 'Playfair Display', serif; }
-    dd { margin: 0; font-size: 0.9rem; color: #555; }
-
-    .closing-message { 
-      text-align: center; font-style: italic; font-size: 1.1rem; color: var(--gold); 
-      margin: 3rem 0; font-family: 'Playfair Display', serif; font-weight: bold;
-    }
-
-    .cta-box {
-      background: var(--dark); color: white; padding: 2rem; text-align: center; border-radius: 4px;
-    }
-    .cta-box h4 { margin: 0 0 0.5rem 0; font-family: 'Playfair Display', serif; font-size: 1.2rem; }
-    .cta-box p { margin: 0; font-size: 0.9rem; opacity: 0.9; }
-
-    @media (max-width: 600px) {
-      .journey-list, .usage-guide { grid-template-columns: 1fr; }
-      .journal-card { padding: 2rem; }
-    }
-  </style>
 </head>
 <body class="journal-body">
   <main epub:type="backmatter" role="main">

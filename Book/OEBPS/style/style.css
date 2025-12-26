@@ -1096,7 +1096,494 @@ figcaption {
 }
 
 /* ====================================================================
-   17. PRINT MEDIA QUERY (Basic)
+   17. CONSOLIDATED INLINE STYLES
+   Migrated from individual XHTML files for e-reader compatibility
+   ==================================================================== */
+
+/* Alias variables for inline style compatibility */
+:root {
+  --teal: #2B9999;
+  --gold: #C9A961;
+  --dark: #1F7272;
+}
+
+/* Title Page Body */
+body.title-page-body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #fff 0%, #fcfcfc 100%);
+  border: 12px solid #fff;
+  outline: 2px solid var(--clr-gold-accent);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+
+body.title-page-body .corner-deco {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-style: double;
+  border-width: 4px;
+  border-color: var(--clr-teal-primary);
+  opacity: 0.2;
+}
+
+body.title-page-body .top-right {
+  top: 20px;
+  right: 20px;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+body.title-page-body .bottom-left {
+  bottom: 20px;
+  left: 20px;
+  border-right: 0;
+  border-top: 0;
+}
+
+body.title-page-body h1.main-title {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--clr-teal-dark);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+body.title-page-body .subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--clr-gold-accent);
+  margin-bottom: 4rem;
+  border-top: 1px solid var(--clr-gold-accent);
+  border-bottom: 1px solid var(--clr-gold-accent);
+  padding: 1rem 0;
+  display: inline-block;
+  width: 60%;
+}
+
+body.title-page-body .author-name {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #555;
+  margin-top: auto;
+  margin-bottom: 4rem;
+}
+
+/* Copyright Page Body */
+body.copyright-body {
+  margin: 0;
+  padding: 4rem 3rem;
+  font-family: var(--font-sans);
+  background: #fff;
+  color: #555;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+body.copyright-body .divider {
+  width: 40px;
+  height: 2px;
+  background: var(--clr-gold-accent);
+  margin-bottom: 2rem;
+}
+
+body.copyright-body .copyright-statement {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+body.copyright-body .rights-text {
+  margin-bottom: 2rem;
+  text-align: justify;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+body.copyright-body .isbn-block {
+  font-family: monospace;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+body.copyright-body .publisher-info {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-teal-primary);
+}
+
+/* Dedication Page Body */
+body.dedication-body {
+  margin: 0;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+body.dedication-body .dedication-container {
+  max-width: 600px;
+  text-align: center;
+}
+
+body.dedication-body h1.dedication-heading {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  color: var(--clr-gold-accent);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+body.dedication-body .dedication-section {
+  margin-bottom: 2.5rem;
+}
+
+body.dedication-body p.dedication-text {
+  font-family: 'Playfair Display', var(--font-body);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+body.dedication-body strong {
+  color: var(--clr-teal-primary);
+  font-weight: normal;
+}
+
+body.dedication-body .final-line {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+/* TOC Page Styles */
+body.toc-body {
+  margin: 0;
+  padding: 3rem 2rem;
+  font-family: var(--font-sans);
+  background: #fff;
+}
+
+body.toc-body .toc-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+body.toc-body h1.toc-main-title {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 2.5rem;
+  color: var(--clr-teal-dark);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+body.toc-body .toc-subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--clr-gold-accent);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+body.toc-body .toc-section {
+  margin-bottom: 2rem;
+}
+
+body.toc-body .toc-part-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-teal-primary);
+  border-bottom: 2px solid var(--clr-gold-accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+body.toc-body .toc-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted #ddd;
+}
+
+body.toc-body .toc-entry a {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+body.toc-body .toc-entry a:hover {
+  color: var(--clr-teal-primary);
+}
+
+body.toc-body .toc-entry .page-num {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* Worksheet & Journal Page Styles */
+.worksheet-page {
+  max-width: 850px;
+  min-height: 1100px;
+  margin: 2rem auto;
+  border: 1px solid #eee;
+  padding: 4rem;
+  box-sizing: border-box;
+  background-image: radial-gradient(var(--clr-teal-primary) 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  background-color: white;
+}
+
+.paper-card {
+  background: white;
+  padding: 2.5rem;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  margin-bottom: 2rem;
+}
+
+.worksheet-page h1 {
+  font-family: 'Playfair Display', var(--font-body);
+  color: var(--clr-teal-primary);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.worksheet-page h2 {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--clr-gold-accent);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.prompt-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.lined-area {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.box-area {
+  width: 100%;
+  height: 100px;
+  border: 1px solid var(--clr-teal-primary);
+  border-radius: 4px;
+  background: rgba(43,153,153,0.02);
+  resize: none;
+  padding: 1rem;
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 1.1rem;
+}
+
+.transform-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.arrow {
+  color: var(--clr-gold-accent);
+  font-size: 1.5rem;
+}
+
+/* Assessment & Affirmation Page Styles */
+body.assessment-body,
+body.affirmation-body {
+  margin: 0;
+  padding: 3rem 2rem;
+  font-family: var(--font-sans);
+  background: #fff;
+  min-height: 100vh;
+}
+
+.assessment-container,
+.affirmation-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.assessment-container h1,
+.affirmation-container h1 {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 2.2rem;
+  color: var(--clr-teal-dark);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.assessment-container .page-subtitle,
+.affirmation-container .page-subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--clr-gold-accent);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+/* Quiz Key & Bibliography Page Styles */
+body.quiz-key-body,
+body.bibliography-body {
+  margin: 0;
+  padding: 3rem 2rem;
+  font-family: var(--font-sans);
+  background: #fff;
+}
+
+.quiz-key-container,
+.bibliography-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-key-container h1,
+.bibliography-container h1 {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 2.2rem;
+  color: var(--clr-teal-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Acknowledgments & About Author Page Styles */
+body.acknowledgments-body,
+body.about-author-body {
+  margin: 0;
+  padding: 3rem 2rem;
+  font-family: var(--font-sans);
+  background: #fff;
+  min-height: 100vh;
+}
+
+.acknowledgments-container,
+.about-author-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.acknowledgments-container h1,
+.about-author-container h1 {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 2rem;
+  color: var(--clr-teal-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Collective/CTA Page Styles */
+body.collective-body {
+  margin: 0;
+  padding: 3rem 2rem;
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.collective-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.collective-container h1 {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 2.2rem;
+  color: var(--clr-teal-dark);
+  margin-bottom: 1rem;
+}
+
+/* Journal Start & Doodle Page Styles */
+body.journal-start-body,
+body.doodle-body {
+  margin: 0;
+  padding: 3rem 2rem;
+  font-family: var(--font-sans);
+  background: #fff;
+  min-height: 100vh;
+}
+
+.journal-start-container,
+.doodle-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.journal-start-container h1,
+.doodle-container h1 {
+  font-family: 'Playfair Display', var(--font-body);
+  font-size: 2rem;
+  color: var(--clr-teal-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Generic worksheet print styles */
+@media print {
+  .worksheet-page {
+    margin: 0;
+    border: none;
+    background-size: 0;
+  }
+  .paper-card {
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+}
+
+/* ====================================================================
+   18. PRINT MEDIA QUERY (Basic)
    ==================================================================== */
 
 @media print {
