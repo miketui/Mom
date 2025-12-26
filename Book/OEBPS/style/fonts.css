@@ -50,6 +50,59 @@
 }
 
 /*
+ * FONT ALIASES
+ * Map Google Fonts names to local embedded fonts for offline e-reader compatibility.
+ * Lato -> Montserrat (similar sans-serif)
+ * Playfair Display -> Libre Baskerville (similar elegant serif)
+ */
+
+/* Lato alias - maps to Montserrat */
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Playfair Display alias - maps to Libre Baskerville */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/librebaskerville-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/librebaskerville-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/librebaskerville-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
  * GLOBAL TYPOGRAPHY ASSIGNMENTS
  * Maps generic HTML elements to your specific font stack.
  */
