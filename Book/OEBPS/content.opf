@@ -82,49 +82,6 @@
     <item id="preface" href="xhtml/7-Preface.xhtml" media-type="application/xhtml+xml"/>
     <item id="preface-quote" href="xhtml/7a-preface-quote.xhtml" media-type="application/xhtml+xml"/>
 
-    <!-- Part I -->
-    <item id="part-i" href="xhtml/8-Part-I-Foundations-of-Creative-Hairstyling.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-i" href="xhtml/9-chapter-i-unveiling-your-creative-odyssey.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-i-quote" href="xhtml/9a-chapter-i-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-ii" href="xhtml/10-chapter-ii-refining-your-creative-toolkit.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-ii-quote" href="xhtml/10a-chapter-ii-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-iii" href="xhtml/11-chapter-iii-reigniting-your-creative-fire.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-iii-quote" href="xhtml/11a-chapter-iii-quote.xhtml" media-type="application/xhtml+xml"/>
-
-    <!-- Part II -->
-    <item id="part-ii" href="xhtml/12-Part-II-Building-Your-Professional-Practice.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-iv" href="xhtml/13-chapter-iv-the-art-of-networking-in-freelance-hairstyling.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-iv-quote" href="xhtml/13a-chapter-iv-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-v" href="xhtml/14-chapter-v-cultivating-creative-excellence-through-mentorship.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-v-quote" href="xhtml/14a-chapter-v-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-vi" href="xhtml/15-chapter-vi-mastering-the-business-of-hairstyling.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-vi-quote" href="xhtml/15a-chapter-vi-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-vii" href="xhtml/16-chapter-vii-embracing-wellness-and-self-care.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-vii-quote" href="xhtml/16a-chapter-vii-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-viii" href="xhtml/17-chapter-viii-advancing-skills-through-continuous-education.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-viii-quote" href="xhtml/17a-chapter-viii-quote.xhtml" media-type="application/xhtml+xml"/>
-
-    <!-- Part III -->
-    <item id="part-iii" href="xhtml/18-Part-III-Advanced-Business-Strategies.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-ix" href="xhtml/19-chapter-ix-stepping-into-leadership.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-ix-quote" href="xhtml/19a-chapter-ix-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-x" href="xhtml/20-chapter-x-crafting-enduring-legacies.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-x-quote" href="xhtml/20a-chapter-x-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xi" href="xhtml/21-chapter-xi-advanced-digital-strategies-for-freelance-hairstylists.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xi-quote" href="xhtml/21a-chapter-xi-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xii" href="xhtml/22-chapter-xii-financial-wisdom-building-sustainable-ventures.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xii-quote" href="xhtml/22a-chapter-xii-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xiii" href="xhtml/23-chapter-xiii-embracing-ethics-and-sustainability-in-hairstyling.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xiii-quote" href="xhtml/23a-chapter-xiii-quote.xhtml" media-type="application/xhtml+xml"/>
-
-    <!-- Part IV -->
-    <item id="part-iv" href="xhtml/24-Part-IV-Future-Focused-Growth.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xiv" href="xhtml/25-chapter-xiv-the-impact-of-ai-on-the-beauty-industry.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xiv-quote" href="xhtml/25a-chapter-xiv-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xv" href="xhtml/26-chapter-xv-cultivating-resilience-and-well-being-in-hairstyling.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xv-quote" href="xhtml/26a-chapter-xv-quote.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xvi" href="xhtml/27-chapter-xvi-tresses-and-textures-embracing-diversity-in-hairstyling.xhtml" media-type="application/xhtml+xml"/>
-    <item id="chapter-xvi-quote" href="xhtml/27a-chapter-xvi-quote.xhtml" media-type="application/xhtml+xml"/>
 
     <!-- Back Matter -->
     <item id="conclusion" href="xhtml/28-Conclusion.xhtml" media-type="application/xhtml+xml"/>
@@ -158,49 +115,6 @@
     <itemref idref="preface"/>
     <itemref idref="preface-quote"/>
 
-    <!-- Part I: Foundations of Creative Hairstyling -->
-    <itemref idref="part-i"/>
-    <itemref idref="chapter-i"/>
-    <itemref idref="chapter-i-quote"/>
-    <itemref idref="chapter-ii"/>
-    <itemref idref="chapter-ii-quote"/>
-    <itemref idref="chapter-iii"/>
-    <itemref idref="chapter-iii-quote"/>
-
-    <!-- Part II: Building Your Professional Practice -->
-    <itemref idref="part-ii"/>
-    <itemref idref="chapter-iv"/>
-    <itemref idref="chapter-iv-quote"/>
-    <itemref idref="chapter-v"/>
-    <itemref idref="chapter-v-quote"/>
-    <itemref idref="chapter-vi"/>
-    <itemref idref="chapter-vi-quote"/>
-    <itemref idref="chapter-vii"/>
-    <itemref idref="chapter-vii-quote"/>
-    <itemref idref="chapter-viii"/>
-    <itemref idref="chapter-viii-quote"/>
-
-    <!-- Part III: Advanced Business Strategies -->
-    <itemref idref="part-iii"/>
-    <itemref idref="chapter-ix"/>
-    <itemref idref="chapter-ix-quote"/>
-    <itemref idref="chapter-x"/>
-    <itemref idref="chapter-x-quote"/>
-    <itemref idref="chapter-xi"/>
-    <itemref idref="chapter-xi-quote"/>
-    <itemref idref="chapter-xii"/>
-    <itemref idref="chapter-xii-quote"/>
-    <itemref idref="chapter-xiii"/>
-    <itemref idref="chapter-xiii-quote"/>
-
-    <!-- Part IV: Future-Focused Growth -->
-    <itemref idref="part-iv"/>
-    <itemref idref="chapter-xiv"/>
-    <itemref idref="chapter-xiv-quote"/>
-    <itemref idref="chapter-xv"/>
-    <itemref idref="chapter-xv-quote"/>
-    <itemref idref="chapter-xvi"/>
-    <itemref idref="chapter-xvi-quote"/>
 
     <!-- Back Matter -->
     <itemref idref="conclusion"/>
