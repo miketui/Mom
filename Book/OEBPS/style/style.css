@@ -1,0 +1,1132 @@
+/*
+  style.css — ACISS Design System for The Artisan's Path
+  Complete Stylesheet with All Corrections
+  
+  Colors: Teal (#2B9999) & Gold (#C9A961)
+  Fonts: Libre Baskerville (Body), Cinzel Decorative (Display), Montserrat (Headers/UI)
+  
+  Version: 2.1 - Final Corrected
+*/
+
+@import url('fonts.css');
+
+/* ====================================================================
+   1. CSS VARIABLES & RESET
+   ==================================================================== */
+:root {
+  /* Brand Colors */
+  --clr-teal-primary: #2B9999;
+  --clr-teal-dark: #1F7272;
+  --clr-teal-light: #3DB3B3;
+  --clr-teal-faint: rgba(43, 153, 153, 0.08);
+  
+  --clr-gold-accent: #C9A961;
+  --clr-gold-dark: #B08F4A;
+  --clr-gold-light: #D4B976;
+  --clr-gold-faint: rgba(201, 169, 97, 0.1);
+
+  /* Neutrals */
+  --clr-ink: #1a1a1a;
+  --clr-text: #444444;
+  --clr-paper: #ffffff;
+  --clr-cream: #f9f7f2;
+  --clr-line: #e0e0e0;
+  --clr-muted: #888888;
+
+  /* Typography */
+  --font-display: 'Cinzel Decorative', Georgia, serif;
+  --font-body: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Montserrat', Arial, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--clr-text);
+  background-color: var(--clr-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ====================================================================
+   2. UTILITY CLASSES
+   ==================================================================== */
+.decorative-line {
+  height: 2px;
+  width: 80px;
+  background: var(--clr-gold-accent);
+  margin: var(--space-md) auto;
+  border: none;
+}
+
+.elegant-divider {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--clr-teal-primary), transparent);
+  margin: var(--space-lg) 0;
+  opacity: 0.5;
+}
+
+.rule-gold {
+  border: none;
+  height: 1px;
+  background: var(--clr-gold-accent);
+  margin: var(--space-md) 0;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+.text-teal { color: var(--clr-teal-primary); }
+.text-gold { color: var(--clr-gold-accent); }
+.accent-muted { color: var(--clr-muted); }
+
+.hidden { display: none !important; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ====================================================================
+   3. FRONTMATTER STYLES (Title, Copyright, Dedication)
+   ==================================================================== */
+
+.frontmatter-shell {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Title Page */
+.title-page-body {
+  border: 12px solid var(--clr-paper);
+  outline: 2px solid var(--clr-gold-accent);
+  background: radial-gradient(circle, #fff 0%, #fcfcfc 100%);
+}
+
+h1.frontmatter-title, h1.main-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--clr-teal-dark);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+h2.subtitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--clr-gold-dark);
+  text-align: center;
+  border-top: 1px solid var(--clr-gold-accent);
+  border-bottom: 1px solid var(--clr-gold-accent);
+  padding: var(--space-sm) 0;
+  margin: 0 auto var(--space-xl);
+  display: inline-block;
+  width: 80%;
+}
+
+.author {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--clr-ink);
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Copyright Page */
+.copyright-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: var(--space-xl);
+}
+
+.copyright-notice, .rights-text {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-md);
+}
+
+.isbn-info {
+  font-family: 'Courier New', monospace;
+  color: var(--clr-ink);
+  font-weight: bold;
+}
+
+.publisher-info {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-teal-primary);
+}
+
+/* Dedication */
+.dedication-page { text-align: center; }
+.dedication-title {
+  color: var(--clr-gold-accent);
+  font-family: var(--font-display);
+  border-bottom: 1px solid var(--clr-line);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+.dedication-verse {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: var(--space-lg);
+  color: var(--clr-text);
+}
+.dedication-section { margin-bottom: var(--space-md); }
+.dedication-section strong { color: var(--clr-teal-primary); font-weight: 700; }
+
+/* ====================================================================
+   4. TABLE OF CONTENTS
+   ==================================================================== */
+
+.toc-container { max-width: 650px; margin: 0 auto; }
+.contents-title, .toc-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--clr-teal-primary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.toc-part-title {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--clr-teal-dark);
+  border-bottom: 2px solid var(--clr-gold-accent);
+  padding-bottom: 0.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.toc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px dotted var(--clr-line);
+  padding-bottom: 0.25rem;
+}
+
+.toc-link {
+  text-decoration: none;
+  color: var(--clr-text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.toc-link:hover { color: var(--clr-gold-dark); }
+
+.toc-chapter-num {
+  font-family: var(--font-display);
+  font-weight: bold;
+  color: var(--clr-gold-accent);
+  margin-right: 1rem;
+  display: inline-block;
+  min-width: 2rem;
+}
+
+.toc-page-number {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--clr-muted);
+}
+
+/* ====================================================================
+   5. WORKSHEETS & JOURNALS (Interactive Elements)
+   ==================================================================== */
+
+.worksheet-card {
+  background: var(--clr-paper);
+  border: 1px solid var(--clr-line);
+  padding: var(--space-md);
+  margin: var(--space-md) auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  page-break-inside: avoid;
+}
+
+.worksheet-header {
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.worksheet-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--clr-teal-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.worksheet-instructions {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--clr-muted);
+  font-style: italic;
+}
+
+.worksheet-footer {
+  margin-top: var(--space-md);
+  text-align: center;
+}
+
+.print-instruction {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Question Cards within Worksheets */
+.question-card, .prompt-card, .journal-entry {
+  margin-bottom: var(--space-md);
+  page-break-inside: avoid;
+}
+
+.question-header, .prompt-header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: var(--space-sm);
+}
+
+.question-number {
+  background: var(--clr-teal-primary);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.question-text, .prompt-text {
+  font-weight: bold;
+  color: var(--clr-teal-dark);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+/* Writing Areas */
+.answer-lines, .writing-lines, .writing-area {
+  margin-top: var(--space-sm);
+  width: 100%;
+}
+
+.answer-line, .writing-line, .line {
+  border-bottom: 1px solid var(--clr-line);
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.ruled-paper-bg {
+  background-image: repeating-linear-gradient(transparent, transparent 29px, var(--clr-line) 30px);
+  background-size: 100% 30px;
+  line-height: 30px;
+  min-height: 150px;
+}
+
+/* Badges for Journals */
+.prompt-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.prompt-badge.teal { background: var(--clr-teal-faint); color: var(--clr-teal-dark); }
+.prompt-badge.gold { background: var(--clr-gold-faint); color: var(--clr-gold-dark); }
+
+/* Rating Scales */
+.rating-circles {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.rating-circle {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--clr-teal-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-teal-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ====================================================================
+   6. BIBLIOGRAPHY & QUIZ KEY
+   ==================================================================== */
+
+/* Bibliography */
+.bib-container { max-width: 800px; margin: 0 auto; }
+.bib-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--clr-teal-primary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+.bib-list { list-style: none; padding: 0; margin: 0; }
+.bib-entry {
+  padding-left: 2rem;
+  text-indent: -2rem; /* Hanging Indent */
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--clr-text);
+}
+.bib-entry a { color: var(--clr-teal-primary); text-decoration: none; word-break: break-all; }
+.bib-entry a:hover { text-decoration: underline; }
+
+/* Quiz Answer Key */
+.key-container { max-width: 800px; margin: 0 auto; }
+.key-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--clr-teal-primary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+.answer-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-lg) 0;
+  font-family: var(--font-sans);
+}
+.answer-table th {
+  background-color: var(--clr-teal-primary);
+  color: #fff;
+  padding: 0.75rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.answer-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--clr-line);
+  text-align: center;
+}
+.answer-table tr:nth-child(even) { background-color: var(--clr-teal-faint); }
+.chapter-col { font-weight: 700; color: var(--clr-teal-dark); }
+
+/* ====================================================================
+   7. CERTIFICATES & BACKMATTER
+   ==================================================================== */
+
+.certificate-border {
+  border: 4px double var(--clr-gold-accent);
+  padding: var(--space-lg);
+  margin: var(--space-md) auto;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.certificate-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--clr-teal-dark);
+  margin-bottom: var(--space-md);
+}
+
+.signature-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--space-lg);
+}
+
+.signature-field {
+  text-align: center;
+}
+
+.signature-line {
+  width: 150px;
+  border-bottom: 1px solid var(--clr-ink);
+  margin-bottom: 0.5rem;
+  height: 30px;
+}
+
+.signature-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-muted);
+}
+
+/* About Author */
+.about-author-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.author-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto var(--space-md);
+  display: block;
+  border: 3px solid var(--clr-gold-accent);
+}
+
+.author-bio {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* ====================================================================
+   8. CHAPTER PAGE - Base Styles
+   ==================================================================== */
+
+.chapter-page {
+  background-color: var(--clr-paper);
+}
+
+/* ====================================================================
+   9. CHAPTER TITLE PAGE
+   ==================================================================== */
+
+.chap-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 90vh;
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  page-break-after: always;
+}
+
+/* Roman Numeral on Brushstroke */
+.chapter-number-figure {
+  position: relative;
+  width: 180px;
+  height: 120px;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chapter-number-brush {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.chapter-number-roman {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--clr-paper);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  margin: 0;
+  padding: 0;
+}
+
+/* Title Stack with Gold Bar */
+.title-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.title-bar {
+  width: 60px;
+  height: 4px;
+  background-color: var(--clr-gold-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.title-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.title-line {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--clr-teal-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+}
+
+/* Bible Quote */
+.bible-quote-container {
+  max-width: 500px;
+  margin: var(--space-md) auto var(--space-lg);
+  padding-left: var(--space-md);
+  border-left: 3px solid var(--clr-gold-accent);
+  text-align: left;
+}
+
+.bible-quote-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--clr-text);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.6;
+}
+
+.bible-quote-reference {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--clr-gold-dark);
+  font-weight: 600;
+}
+
+/* Introduction Section */
+.introduction-heading {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-teal-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.introduction-paragraph {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.introduction-paragraph p {
+  margin-bottom: 1rem;
+  text-indent: 0;
+}
+
+/* Drop Cap - Using ::first-letter */
+.dropcap-first-letter p:first-child::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.1em;
+  padding-top: 0.05em;
+  color: var(--clr-teal-primary);
+  font-weight: 400;
+}
+
+/* Drop Cap - Using strong tag fallback */
+.introduction-paragraph p:first-of-type strong:first-child,
+.dropcap-first-letter p:first-of-type strong:first-child {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  float: left;
+  line-height: 0.85;
+  padding-right: 0.08em;
+  padding-top: 0.05em;
+  color: var(--clr-teal-primary);
+  font-weight: 400;
+}
+
+/* ====================================================================
+   10. CHAPTER BODY CONTENT
+   ==================================================================== */
+
+.chap-body {
+  padding: var(--space-md);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content-area {
+  margin-bottom: var(--space-lg);
+}
+
+.chap-body h2 {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--clr-teal-dark);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--clr-gold-accent);
+  padding-bottom: 0.5rem;
+}
+
+.chap-body h3 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-teal-primary);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.chap-body h4 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-teal-dark);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.chap-body p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Action Steps Box */
+.action-steps {
+  background: var(--clr-teal-faint);
+  border-left: 4px solid var(--clr-teal-primary);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  page-break-inside: avoid;
+}
+
+.action-steps h2 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-teal-dark);
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+  border-bottom: none;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.action-steps ol, .action-steps ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.action-steps li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.action-steps li em {
+  color: var(--clr-teal-dark);
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Case Study Box */
+.case-study {
+  background: var(--clr-gold-faint);
+  border: 1px solid var(--clr-gold-accent);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  page-break-inside: avoid;
+}
+
+.case-study h2 {
+  color: var(--clr-gold-dark);
+  border-bottom-color: var(--clr-gold-accent);
+}
+
+/* Page Breaks */
+.page-break {
+  page-break-after: always;
+  break-after: page;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+/* ====================================================================
+   11. QUOTE/IMAGE PAGES
+   ==================================================================== */
+
+.quote-page {
+  background-color: var(--clr-paper);
+  margin: 0;
+  padding: 0;
+}
+
+.image-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  page-break-before: always;
+  page-break-after: always;
+}
+
+.quote-figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.quote-figure img {
+  max-width: 100%;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ====================================================================
+   12. PART DIVIDER PAGES
+   ==================================================================== */
+
+.part-body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.part-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  page-break-after: always;
+}
+
+.part-container {
+  max-width: 650px;
+  padding: var(--space-lg);
+  background: var(--clr-paper);
+  border-top: 8px solid var(--clr-teal-primary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.part-number {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--clr-gold-accent);
+  margin-bottom: var(--space-sm);
+}
+
+h1.part-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--clr-teal-dark);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+h2.part-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--clr-gold-accent);
+  margin-bottom: var(--space-md);
+  font-weight: 400;
+}
+
+.part-border {
+  width: 150px;
+  height: auto;
+  margin: var(--space-md) auto;
+}
+
+p.intro-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--clr-text);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+p.intro-text:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  color: var(--clr-teal-primary);
+  font-weight: 700;
+}
+
+/* ====================================================================
+   13. FOOTNOTES & ENDNOTES
+   ==================================================================== */
+
+.footnotes, .endnotes {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--clr-line);
+  font-size: 0.85rem;
+}
+
+.footnotes h2, .endnotes h2 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--clr-teal-primary);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footnotes ol, .endnotes ol {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.footnotes li, .endnotes li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sup a, .fnref a {
+  color: var(--clr-teal-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+sup a:hover, .fnref a:hover {
+  text-decoration: underline;
+}
+
+/* Back link arrow */
+.endnotes li a[href^="#fnref"],
+.footnotes li a[href^="#fnref"] {
+  margin-left: 0.5em;
+  font-size: 0.9em;
+}
+
+/* ====================================================================
+   14. LINKS & INTERACTIVE ELEMENTS
+   ==================================================================== */
+
+a {
+  color: var(--clr-teal-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--clr-teal-dark);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--clr-teal-light);
+  outline-offset: 2px;
+}
+
+/* ====================================================================
+   15. IMAGES & FIGURES
+   ==================================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: var(--space-md) 0;
+  text-align: center;
+}
+
+figcaption {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--clr-muted);
+  font-style: italic;
+  margin-top: var(--space-xs);
+}
+
+/* ====================================================================
+   16. RESPONSIVE ADJUSTMENTS
+   ==================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+  }
+  
+  h1.frontmatter-title, h1.main-title {
+    font-size: 2.5rem;
+  }
+  
+  h1.part-title {
+    font-size: 2rem;
+  }
+  
+  .title-line {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .chapter-number-figure {
+    width: 140px;
+    height: 90px;
+  }
+  
+  .chapter-number-roman {
+    font-size: 2.5rem;
+  }
+  
+  .title-line {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .bible-quote-container {
+    padding-left: var(--space-sm);
+    max-width: 100%;
+  }
+  
+  .chap-title {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  .introduction-paragraph {
+    max-width: 100%;
+  }
+  
+  .dropcap-first-letter p:first-child::first-letter,
+  .introduction-paragraph p:first-of-type strong:first-child {
+    font-size: 2.8rem;
+  }
+  
+  .part-container {
+    padding: var(--space-md);
+    margin: var(--space-sm);
+  }
+  
+  .worksheet-card {
+    padding: var(--space-sm);
+  }
+  
+  .rating-circles {
+    gap: 0.5rem;
+  }
+  
+  .rating-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ====================================================================
+   17. PRINT MEDIA QUERY (Basic)
+   ==================================================================== */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .page-break {
+    page-break-after: always;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .chap-title,
+  .part-page,
+  .image-quote {
+    page-break-after: always;
+  }
+  
+  .action-steps,
+  .question-card,
+  .worksheet-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* ====================================================================
+   END OF STYLESHEET
+   ==================================================================== */
