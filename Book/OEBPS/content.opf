@@ -27,9 +27,6 @@
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
 
     <!-- Stylesheets -->
-    <item id="style-main" href="styles/style.css" media-type="text/css"/>
-    <item id="style-fonts" href="styles/fonts.css" media-type="text/css"/>
-    <item id="style-print" href="styles/print.css" media-type="text/css"/>
 
     <!-- Fonts -->
     <item id="font-cinzel" href="fonts/CinzelDecorative.woff2" media-type="font/woff2"/>
