@@ -11,25 +11,43 @@
 </head>
 <body>
   <div class="worksheet-page">
-    <div class="header">
+    <header class="worksheet-header">
+      <span class="badge">Creative</span>
       <h1>Creative Space</h1>
-      <div class="tags">
-        <span class="tag">Sketch</span>
-        <span class="tag">Pattern</span>
-        <span class="tag">Abstract</span>
-        <span class="tag">Flow</span>
-      </div>
+      <h2>Where Ideas Take Shape</h2>
+    </header>
+
+    <div class="tags">
+      <span class="tag">Sketch</span>
+      <span class="tag">Pattern</span>
+      <span class="tag">Abstract</span>
+      <span class="tag">Flow</span>
+      <span class="tag">Color</span>
+      <span class="tag">Texture</span>
     </div>
 
+    <p class="prompt-text">This is your playground. Sketch a new style concept, map out a color formula, doodle while you think, or let your hands wander freely. Creativity has no rules here.</p>
+
     <div class="canvas">
-      <div class="watermark">Draw Here</div>
+      <!-- Open creative space -->
     </div>
 
     <div class="notes">
-      <h4>Formulas / Notes</h4>
-      <div class="line"></div>
-      <div class="line"></div>
+      <h4>Color Formulas / Technical Notes</h4>
+      <input type="text" class="lined-input" placeholder="Formula, timing, technique notes..."/>
+      <input type="text" class="lined-input"/>
     </div>
+
+    <div class="box-container">
+      <h4>Inspiration Source</h4>
+      <p class="prompt-text">What sparked this creative moment?</p>
+      <input type="text" class="lined-input" placeholder="A client request, a mood, a reference image..."/>
+    </div>
+
+    <footer class="footer">
+      <span>Curls &amp; Contemplation</span>
+      <span>Creative Space</span>
+    </footer>
   </div>
 </body>
 </html>
