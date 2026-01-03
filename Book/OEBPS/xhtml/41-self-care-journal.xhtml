@@ -11,60 +11,68 @@
 </head>
 <body>
   <div class="worksheet-page">
-    <div class="header">
+    <header class="worksheet-header">
+      <span class="badge">Wellness</span>
       <h1>Self-Care Journal</h1>
       <h2>Embracing Wellness &amp; Resilience</h2>
-    </div>
+    </header>
 
     <div class="grid-2">
       <div class="prompt">
         <h3>Body Scan</h3>
-        <p>Where are you holding tension?</p>
-        <textarea class="box"></textarea>
+        <p class="prompt-text">Where are you holding tension today? What does your body need?</p>
+        <textarea placeholder="Notice your shoulders, neck, back, hands..."></textarea>
       </div>
       <div class="prompt">
-        <h3>Boundaries</h3>
-        <p>What did you say "No" to this week?</p>
-        <textarea class="box"></textarea>
+        <h3>Boundaries Check</h3>
+        <p class="prompt-text">What did you say "No" to this week? How did it feel?</p>
+        <textarea placeholder="Reflect on protecting your energy..."></textarea>
       </div>
     </div>
 
-    <h3 style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:#555; margin-bottom:1rem;">Minimum Viable Self-Care Tracker</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Practice</th>
-          <th style="text-align:center;">M</th><th style="text-align:center;">T</th><th style="text-align:center;">W</th><th style="text-align:center;">T</th><th style="text-align:center;">F</th><th style="text-align:center;">S</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="habit-col">Hydration</td>
-          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
-        </tr>
-        <tr>
-          <td class="habit-col">Micro-Stretches</td>
-          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
-        </tr>
-        <tr>
-          <td class="habit-col">Mindful Breathing</td>
-          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
-        </tr>
-        <tr>
-          <td class="habit-col">Lunch Break Taken</td>
-          <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="gratitude">
-      <h3 style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--teal);">Gratitude for Self</h3>
-      <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
+    <div class="section">
+      <h3 class="section-title"><span class="section-num">✓</span> Weekly Self-Care Tracker</h3>
+      <p class="prompt-text">Check off each practice as you complete it daily.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Practice</th>
+            <th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="habit-col">Hydration (8+ glasses)</td>
+            <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
+          </tr>
+          <tr>
+            <td class="habit-col">Micro-Stretches (5 min)</td>
+            <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
+          </tr>
+          <tr>
+            <td class="habit-col">Mindful Breathing (3 min)</td>
+            <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
+          </tr>
+          <tr>
+            <td class="habit-col">Full Lunch Break Taken</td>
+            <td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td><td class="day-col"><span class="checkbox"></span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div class="section">
+      <h3 class="section-title"><span class="section-num">♥</span> Gratitude for Self</h3>
+      <p class="prompt-text">What are you grateful for about yourself this week?</p>
+      <input type="text" class="lined-input"/>
+      <input type="text" class="lined-input"/>
+      <input type="text" class="lined-input"/>
+    </div>
+
+    <footer class="footer">
+      <span>Curls &amp; Contemplation</span>
+      <span>Self-Care Journal</span>
+    </footer>
   </div>
 </body>
 </html>

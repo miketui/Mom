@@ -11,24 +11,36 @@
 </head>
 <body>
   <div class="worksheet-page">
-    <div style="text-align:center; margin-bottom:2rem;">
-      <h1 style="font-family:'Playfair Display'; font-size:1.8rem; color:#444; margin:0;">Daily Reflection</h1>
-    </div>
+    <header class="worksheet-header">
+      <span class="badge">Reflection</span>
+      <h1>Daily Reflection</h1>
+      <h2>Capturing Moments of Growth</h2>
+    </header>
 
     <div class="header">
       <div class="meta-group">
         <span class="label">Date</span>
-        <input class="input-meta" />
+        <input class="input-meta" type="text" placeholder="MM/DD/YYYY"/>
       </div>
-      <div class="meta-group" style="text-align:right;">
-        <span class="label">Topic</span>
-        <input class="input-meta" style="text-align:right;" />
+      <div class="meta-group">
+        <span class="label">Topic / Theme</span>
+        <input class="input-meta" type="text" placeholder="Today's focus..."/>
       </div>
     </div>
 
     <div class="journal-lines">
-      <textarea class="page-content"></textarea>
+      <textarea class="page-content" placeholder="Begin your reflection here. What happened today? What did you learn? What are you grateful for? What challenges did you face and how did you handle them?"></textarea>
     </div>
+
+    <div class="quote-box">
+      <p>"In the journal I do not just express myself more openly than I could to any person; I create myself."</p>
+      <span class="text-gold">— Susan Sontag</span>
+    </div>
+
+    <footer class="footer">
+      <span>Curls &amp; Contemplation</span>
+      <span>Daily Reflection</span>
+    </footer>
   </div>
 </body>
 </html>

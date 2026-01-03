@@ -11,46 +11,63 @@
 </head>
 <body>
   <div class="worksheet-page">
-    <div style="background:white; padding:1rem; margin-bottom:2rem;">
+    <header class="worksheet-header">
+      <span class="badge">Visualization</span>
       <h1>Manifesting Journal</h1>
       <h2>Dream Big, Then Bigger</h2>
-    </div>
+    </header>
 
-    <div class="paper-card">
-      <span class="prompt-label" style="color:var(--teal);">Future Self Visualization</span>
-      <p style="font-size:0.9rem; font-style:italic; color:#666; margin-bottom:1.5rem;">Describe a "Day in the Life" 3 years from now. Where are you? Who are your clients?</p>
-      <div class="lined-area"></div>
-      <div class="lined-area"></div>
-      <div class="lined-area"></div>
-      <div class="lined-area"></div>
-      <div class="lined-area"></div>
+    <div class="section">
+      <h3 class="section-title"><span class="section-num">1</span> Future Self Visualization</h3>
+      <p class="prompt-text">Describe a "Day in the Life" 3 years from now. Where are you working? Who are your clients? What does success feel like?</p>
+      <div class="box-container">
+        <input type="text" class="lined-input"/>
+        <input type="text" class="lined-input"/>
+        <input type="text" class="lined-input"/>
+        <input type="text" class="lined-input"/>
+        <input type="text" class="lined-input"/>
+      </div>
     </div>
 
     <div class="grid-2">
-      <div class="paper-card">
-        <span class="prompt-label" style="color:var(--gold);">Core Intention</span>
-        <p style="font-size:0.8rem; color:#888; margin-bottom:0.5rem;">One feeling to manifest:</p>
-        <textarea class="box-area"></textarea>
+      <div class="box-container">
+        <h4>Core Intention</h4>
+        <p class="prompt-text">One feeling I want to manifest:</p>
+        <textarea placeholder="e.g., Confidence, Abundance, Peace..."></textarea>
       </div>
-      <div class="paper-card">
-        <span class="prompt-label">The Bridge</span>
-        <p style="font-size:0.8rem; color:#888; margin-bottom:0.5rem;">One step to take today:</p>
-        <textarea class="box-area" style="border-color:#ccc; background:#fafafa;"></textarea>
+      <div class="box-container">
+        <h4>The Bridge</h4>
+        <p class="prompt-text">One step I can take today:</p>
+        <textarea placeholder="e.g., Reach out to a mentor, Practice a new technique..."></textarea>
       </div>
     </div>
 
-    <div class="paper-card">
-      <span class="prompt-label">Releasing Limiting Beliefs</span>
-      <div class="transform-row">
-        <div style="flex:1;">
-          <input type="text" placeholder="Old Belief..." style="width:100%; border:none; border-bottom:1px solid #ccc; font-family:'Playfair Display'; font-style:italic; padding:0.5rem;"/>
-        </div>
-        <span class="arrow">→</span>
-        <div style="flex:1;">
-          <input type="text" placeholder="New Truth..." style="width:100%; border:none; border-bottom:1px solid var(--teal); font-family:'Playfair Display'; font-weight:bold; color:var(--teal); padding:0.5rem;"/>
+    <div class="section">
+      <h3 class="section-title"><span class="section-num">2</span> Releasing Limiting Beliefs</h3>
+      <p class="prompt-text">Transform negative thoughts into empowering truths.</p>
+      <div class="box-container">
+        <div class="grid-2">
+          <div>
+            <h4>Old Belief</h4>
+            <input type="text" class="lined-input" placeholder="I'm not experienced enough..."/>
+          </div>
+          <div>
+            <h4>New Truth</h4>
+            <input type="text" class="lined-input" placeholder="Every expert was once a beginner..."/>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="quote-box">
+      <p>"The future belongs to those who believe in the beauty of their dreams."</p>
+      <span class="text-gold">— Eleanor Roosevelt</span>
+    </div>
+
+    <footer class="footer">
+      <span>Curls &amp; Contemplation</span>
+      <span>Manifesting Journal</span>
+    </footer>
   </div>
 </body>
 </html>

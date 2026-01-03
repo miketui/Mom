@@ -11,39 +11,64 @@
 </head>
 <body>
   <div class="worksheet-page">
-    <h1>Business Health Check</h1>
-    <h2>Strategic Alignment &amp; Sustainability</h2>
+    <header class="worksheet-header">
+      <span class="badge">Business</span>
+      <h1>Business Health Check</h1>
+      <h2>Strategic Alignment &amp; Sustainability</h2>
+    </header>
 
-    <div class="section-title">01 Financial Foundation</div>
-    <p style="font-size:0.9rem; color:#666; font-style:italic; margin-bottom:1rem;">Do your current service prices reflect your expertise, overhead, and future goals?</p>
-    <input type="text" class="lined-input" />
-    <input type="text" class="lined-input" />
-
-    <div class="section-title" style="margin-top:2.5rem;">02 Revenue Diversity</div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
-      <div>
-        <h4 style="font-size:0.7rem; uppercase; color:#999; letter-spacing:0.1em;">Current Streams</h4>
-        <textarea style="width:100%; height:100px; border:1px solid #eee; padding:1rem; resize:none; font-family:'Playfair Display'; background:#fafafa;"></textarea>
-      </div>
-      <div>
-        <h4 style="font-size:0.7rem; uppercase; color:var(--teal-primary); letter-spacing:0.1em;">Potential New Streams</h4>
-        <textarea style="width:100%; height:100px; border:1px solid #eee; padding:1rem; resize:none; font-family:'Playfair Display'; background:#f0fcfc;"></textarea>
+    <div class="module">
+      <div class="module-title">01 Financial Foundation</div>
+      <p class="prompt-text">Do your current service prices reflect your expertise, overhead, and future goals? Be honest about where you're undervaluing yourself.</p>
+      <div class="box-container">
+        <h4>Current Pricing Analysis</h4>
+        <input type="text" class="lined-input" placeholder="My signature service is priced at..."/>
+        <input type="text" class="lined-input" placeholder="My true hourly value including prep time is..."/>
       </div>
     </div>
 
-    <div class="section-title" style="margin-top:2.5rem;">03 Client Archetypes</div>
-    <p style="font-size:0.9rem; color:#666; font-style:italic; margin-bottom:1rem;">Who do you serve best? (The Trendsetter, The Minimalist, The Reassurer?)</p>
-    <input type="text" class="lined-input" />
-    <input type="text" class="lined-input" />
-
-    <div class="insight-box">
-      <h4 style="font-family:'Playfair Display'; font-style:italic; font-weight:400; margin:0; font-size:1.2rem;">Key Insight</h4>
-      <input type="text" class="insight-input" placeholder="One action I will take this week..." />
+    <div class="module">
+      <div class="module-title">02 Revenue Diversity</div>
+      <div class="grid-2">
+        <div class="box-container">
+          <h4>Current Income Streams</h4>
+          <p class="prompt-text">List all ways you currently generate income:</p>
+          <textarea placeholder="Services, retail, education, content..."></textarea>
+        </div>
+        <div class="box-container">
+          <h4>Untapped Potential</h4>
+          <p class="prompt-text">What new revenue streams could you explore?</p>
+          <textarea placeholder="Workshops, product lines, online courses..."></textarea>
+        </div>
+      </div>
     </div>
 
-    <div style="position:absolute; bottom:2rem; left:0; right:0; text-align:center; font-size:0.6rem; letter-spacing:0.2em; color:#ccc; text-transform:uppercase;">
-      Curls &amp; Contemplation | Module VI
+    <div class="module">
+      <div class="module-title">03 Ideal Client Archetypes</div>
+      <p class="prompt-text">Who energizes you most? Who drains you? Understanding your ideal client transforms your business.</p>
+      <div class="grid-2">
+        <div class="box-container">
+          <h4>My Dream Client</h4>
+          <input type="text" class="lined-input" placeholder="Values, personality, needs..."/>
+        </div>
+        <div class="box-container">
+          <h4>Clients I'll Refer Out</h4>
+          <input type="text" class="lined-input" placeholder="Red flags to recognize..."/>
+        </div>
+      </div>
     </div>
+
+    <div class="commitment-box">
+      <div>
+        <h4>This Week's Key Action</h4>
+        <input type="text" class="lined-input" placeholder="One strategic step I'll take..."/>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Curls &amp; Contemplation</span>
+      <span>Business Health Check</span>
+    </footer>
   </div>
 </body>
 </html>
