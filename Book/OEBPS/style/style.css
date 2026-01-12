@@ -941,6 +941,23 @@ h2.subtitle {
   visibility: hidden;
 }
 
+/* Defensive page breaks - modern syntax for Kindle/EPUB3 compatibility */
+html {
+  break-before: page;
+  page-break-before: always;
+}
+
+.chap-title,
+.part-page,
+.part-container,
+.image-quote,
+.quote-page,
+.worksheet-page,
+.frontmatter-shell {
+  break-before: page;
+  break-after: page;
+}
+
 /* ====================================================================
    11. QUOTE/IMAGE PAGES
    ==================================================================== */
