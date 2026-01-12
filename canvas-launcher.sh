@@ -59,6 +59,7 @@ ${BLUE}Commands:${NC}
   help              Show this help message
 
 ${BLUE}Available Canvas Types:${NC}
+  book-viewer       📚 Book XHTML viewer (view your book content)
   calendar          Calendar management interface
   document          Document editing/viewing
   flight            Flight booking interface
@@ -129,7 +130,7 @@ launch_canvas() {
 
     # Create new tmux session with canvas
     tmux new-session -d -s "$SESSION_NAME" -c "$CANVAS_DIR"
-    tmux send-keys -t "$SESSION_NAME" "cd $CANVAS_DIR && bun run canvas/src/cli.ts spawn $canvas_type" C-m
+    tmux send-keys -t "$SESSION_NAME" "cd $CANVAS_DIR && bun run canvas/src/cli.ts show $canvas_type" C-m
 
     print_msg "$GREEN" "✓ Canvas launched successfully!"
     print_msg "$BLUE" "📌 Attaching to session..."
