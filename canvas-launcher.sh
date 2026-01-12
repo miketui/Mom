@@ -65,6 +65,7 @@ ${BLUE}Available Canvas Types:${NC}
   flight-tracker    Flight tracking display
   system            System resource monitoring
   weather           Weather information display
+  book-viewer       Book XHTML viewer (for viewing your Book content)
 
 ${BLUE}Examples:${NC}
   ./canvas-launcher.sh launch calendar
