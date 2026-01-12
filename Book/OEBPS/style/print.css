@@ -163,6 +163,26 @@ section[epub\:type="part"],
 .quote-page,
 .image-quote {
   page-break-before: always;
+  break-before: page;
+}
+
+/* Defensive page breaks - modern syntax for PDF/POD compatibility */
+html {
+  break-before: page;
+  page-break-before: always;
+}
+
+.chap-title,
+.part-page,
+.part-container,
+.image-quote,
+.quote-page,
+.worksheet-page,
+.frontmatter-shell {
+  break-before: page;
+  break-after: page;
+  page-break-before: always;
+  page-break-after: always;
 }
 
 /* Prevent orphaned headings */
